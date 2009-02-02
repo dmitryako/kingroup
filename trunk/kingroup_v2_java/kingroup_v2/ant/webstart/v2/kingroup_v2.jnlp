@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+"
+      codebase="http://www.it.jcu.edu.au/kingroup"
+  >
+  <information>
+    <title>KinGroup v2</title>
+    <vendor>by Dmitry Konovalov</vendor>
+    <homepage href="/kingroup_v2" />
+    <description>test</description>
+  </information>
+  <offline-allowed/>
+  <security>
+    <!--<j2ee-application-client-permissions/>-->
+    <all-permissions/>
+  </security>
+  <resources>
+    <j2se version="1.2+" />
+    <jar href="kingroup_v2.jar"/>
+    <jar href="java3d-utils-src.jar"/>
+  </resources>
+  <application-desc main-class="kingroup_v2.KinGroupV2Startup" />
+</jnlp>

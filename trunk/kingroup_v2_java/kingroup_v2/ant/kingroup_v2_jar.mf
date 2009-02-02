@@ -1,0 +1,2 @@
+Manifest-Version: 1.0
+Main-Class: kingroup_v2.KinGroupV2Startup
