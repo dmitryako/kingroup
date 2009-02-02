@@ -1,0 +1,121 @@
+<project name="FullSibsAccuracy" default="compile_all" basedir="../../../..">
+
+  <property name="clss" value="../classes"/>
+  <property name="src" value="."/>
+  <property name="lib" value="../../lib/"/>
+  <property name="jar" value="${lib}FullSibsAccuracy.jar"/>
+  <property name="includes" value="${lib}junit.jar;${lib}jfreechart-0.9.21.jar;${lib}jcommon-0.9.7.jar"/>
+  <!--   <property name="include_jars"  value="${lib}junit.jar ${lib}jfreechart-0.9.21.jar ${lib}jcommon-0.9.7.jar" />-->
+  <property name="include_jars" value="jfreechart-0.9.21.jar"/>
+
+  <target name="echo" description="echo all values">
+    <echo message="basedir = ${basedir}"/>
+    <echo message="src_dir = ${src}"/>
+    <echo message="cls_dir = ${clss}"/>
+  </target>
+
+  <target name="prepare" depends="echo" description="prepare for build">
+    <mkdir dir="${clss}"/>
+  </target>
+
+  <target name="cleanup" depends="echo" description="cleanup">
+    <delete>
+      <fileset dir="${clss}" casesensitive="yes">
+        <filename name="**/*.class"/>
+      </fileset>
+    </delete>
+  </target>
+
+  <target name="make_jar" depends="echo,compile_all" description="make a jar file">
+    <jar destfile="${jar}"
+         manifest="org\kingroup\papers\kingroup2005_fullsibs\manifest.mf">
+      <fileset dir="${clss}" casesensitive="yes">
+        <filename name="common/**/*.class"/>
+        <exclude name="**/*JUnit.class"/>
+      </fileset>
+      <fileset dir="${clss}" casesensitive="yes">
+        <filename name="org/kingroup/**/*.class"/>
+        <exclude name="**/*JUnit.class"/>
+      </fileset>
+      <fileset dir="${clss}" casesensitive="yes">
+        <filename name="org/jfreex/**/*.class"/>
+        <exclude name="**/*JUnit.class"/>
+      </fileset>
+      <fileset dir="${clss}" casesensitive="yes">
+        <filename name="org/ledax/**/*.class"/>
+        <exclude name="**/*JUnit.class"/>
+      </fileset>
+      <fileset dir="${src}" casesensitive="yes">
+        <filename name="**/*.gif"/>
+      </fileset>
+      <!--         <fileset dir="${lib}" casesensitive="yes" >-->
+      <!--            <filename name="${include_jars}" />-->
+      <!--         </fileset>-->
+    </jar>
+
+  </target>
+
+  <target name="compile_all" depends="echo,prepare" description="compile all for -target 1.4">
+    <javac
+      classpath="${includes}"
+      srcdir="${src}"
+      destdir="${clss}"
+      target="1.4"/>
+  </target>
+
+  <target name="force_compile_all" depends="cleanup,compile_all" description="force compile all">
+  </target>
+
+
+  <target name="make_mutation_jar" depends="echo,compile_all" description="make a jar file">
+    <jar destfile="${lib}mutation.jar"
+         manifest="org\kingroup\papers\kingroup2005_fullsibs\FullSibsFigure5_mutation.mf">
+      <fileset dir="${clss}" casesensitive="yes">
+        <filename name="common/**/*.class"/>
+        <exclude name="**/*JUnit.class"/>
+      </fileset>
+      <fileset dir="${clss}" casesensitive="yes">
+        <filename name="org/kingroup/**/*.class"/>
+        <exclude name="**/*JUnit.class"/>
+      </fileset>
+      <fileset dir="${clss}" casesensitive="yes">
+        <filename name="org/jfreex/**/*.class"/>
+        <exclude name="**/*JUnit.class"/>
+      </fileset>
+      <fileset dir="${clss}" casesensitive="yes">
+        <filename name="org/ledax/**/*.class"/>
+        <exclude name="**/*JUnit.class"/>
+      </fileset>
+      <fileset dir="${src}" casesensitive="yes">
+        <filename name="**/*.gif"/>
+      </fileset>
+    </jar>
+  </target>
+
+  <target name="make_dropout_jar" depends="echo,compile_all" description="make a jar file">
+    <jar destfile="${lib}dropout.jar"
+         manifest="org\kingroup\papers\kingroup2005_fullsibs\FullSibsFigure5_dropout.mf">
+      <fileset dir="${clss}" casesensitive="yes">
+        <filename name="common/**/*.class"/>
+        <exclude name="**/*JUnit.class"/>
+      </fileset>
+      <fileset dir="${clss}" casesensitive="yes">
+        <filename name="org/kingroup/**/*.class"/>
+        <exclude name="**/*JUnit.class"/>
+      </fileset>
+      <fileset dir="${clss}" casesensitive="yes">
+        <filename name="org/jfreex/**/*.class"/>
+        <exclude name="**/*JUnit.class"/>
+      </fileset>
+      <fileset dir="${clss}" casesensitive="yes">
+        <filename name="org/ledax/**/*.class"/>
+        <exclude name="**/*JUnit.class"/>
+      </fileset>
+      <fileset dir="${src}" casesensitive="yes">
+        <filename name="**/*.gif"/>
+      </fileset>
+    </jar>
+  </target>
+
+</project>
+
