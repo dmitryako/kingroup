@@ -8,16 +8,16 @@
 <!--  <target name="build_jar" depends="compile_with_1_4" description="build a jar file" >-->
   <target name="build_jar" description="build a jar file" >
     <jar destfile="kingroup_v2.jar" manifest="kingroup_v2_jar.mf" >
-      <fileset dir="C:\dev\bin\classes" casesensitive="yes" >
+      <fileset dir="..\..\..\..\classes" casesensitive="yes" >
         <filename name="**/*.class" />
       </fileset>
-      <fileset dir="C:\dev\kingroup\src\kingroup_java" casesensitive="yes" >
+      <fileset dir="..\..\..\kingroup_java" casesensitive="yes" >
         <filename name="**/*.gif"/>
       </fileset>
-      <fileset dir="C:\dev\kingroup\src\kingroup_v2_java" casesensitive="yes" >
+      <fileset dir="..\..\..\kingroup_v2_java" casesensitive="yes" >
         <filename name="**/*.gif"/>
       </fileset>
-      <fileset dir="C:\dev\tsvlib\src\tsvlib_java" casesensitive="yes" >
+      <fileset dir="..\..\..\tsvlib_java" casesensitive="yes" >
         <filename name="**/*.gif"/>
       </fileset>
     </jar>
@@ -25,38 +25,30 @@
              alias="kingroup_v2"
              storepass="kingroup"
              jar="kingroup_v2.jar"/>
-    <copy file="kingroup_v2.jar" todir="C:\dev\kingroup\www_kingroup_org\kingroup_www_v2\kingroup_v2" overwrite="true" />
+    <move file="kingroup_v2.jar" todir="..\..\..\www_kingroup_org\googlecode" overwrite="true" />
   </target>
 
-<!--  <target name="compile_with_1_4" description="compile for target 1.4">-->
-<!--  <javac srcdir="../kingroup_v2_java/kingroup_v2" destdir="../classes" target="1.4">-->
-<!--    <filename name="KinGroupV2Startup.java" />-->
-<!--  </javac>-->
-<!--  </target>-->
-
-  <target name="build_jar_dev" description="build a jar file" >
-    <jar destfile="kingroup_v2_dev.jar" manifest="kingroup_v2_jar.mf" >
-      <fileset dir="../classes" casesensitive="yes" >
-        <filename name="**/*.class" />
-      </fileset>
-      <fileset dir="../kingroup_java" casesensitive="yes" >
-        <filename name="**/*.gif"/>
-      </fileset>
-      <fileset dir="../kingroup_v2_java" casesensitive="yes" >
-        <filename name="**/*.gif"/>
-      </fileset>
-      <fileset dir="../../tsvlib/tsvlib_java" casesensitive="yes" >
-        <filename name="**/*.gif"/>
-      </fileset>
-    </jar>
-    <signjar keystore="webstart/v2/kingroup_v2_keys"
-             alias="kingroup_v2"
-             storepass="kingroup"
-             jar="kingroup_v2_dev.jar"/>
-    <copy file="kingroup_v2_dev.jar" todir="E:\dev\kingroup\www_kingroup_org\kingroup_www_v2\kingroup_v2_dev" overwrite="true" />
-    <!--<copy file="java3d-utils-src.jar" todir="E:\dev\kingroup\www_kingroup_org\kingroup_www_v2" overwrite="true" />-->
-  </target>
-
+    <target name="build_jar_dev" description="build a jar file" >
+      <jar destfile="kingroup_v2_dev.jar" manifest="kingroup_v2_jar.mf" >
+        <fileset dir="..\..\..\..\classes" casesensitive="yes" >
+          <filename name="**/*.class" />
+        </fileset>
+        <fileset dir="..\..\..\kingroup_java" casesensitive="yes" >
+          <filename name="**/*.gif"/>
+        </fileset>
+        <fileset dir="..\..\..\kingroup_v2_java" casesensitive="yes" >
+          <filename name="**/*.gif"/>
+        </fileset>
+        <fileset dir="..\..\..\tsvlib_java" casesensitive="yes" >
+          <filename name="**/*.gif"/>
+        </fileset>
+      </jar>
+      <signjar keystore="webstart/v2/kingroup_v2_dev_keys"
+               alias="kingroup_v2_dev"
+               storepass="kingroup"
+               jar="kingroup_v2_dev.jar"/>
+      <move file="kingroup_v2_dev.jar" todir="..\..\..\www_kingroup_org\googlecode" overwrite="true" />
+    </target>
 
 </project>
 
