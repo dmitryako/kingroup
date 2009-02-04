@@ -33,8 +33,7 @@ public class KinshipSortedMtrxView  extends MVCTableView {
   protected SysPopMtrxI mtrx;
   protected Kinship kinship;
   public final static int N_COLS = 5;
-  public final static int N_EXTRA_ROWS = 2;
-  private int MAX_N_ROWS = 1000;
+  private int MAX_N_ROWS = 10000;
   private static final int WRITE_TO_FILE_STEP = 1;
   private static final int WRITE_TO_JTABLE_STEP = 2;
   private static final int N_STEPS = 3;
@@ -93,27 +92,32 @@ public class KinshipSortedMtrxView  extends MVCTableView {
       }     };
     Collections.sort(sorted, comp);
 
-    int nRow = sorted.size() + N_EXTRA_ROWS;
+    int nColHeaders = 0;
+    if (kinship.getShowColumnHeaders()) {
+      nColHeaders = 2;
+    }
+
+    int nRow = sorted.size() + nColHeaders;
     int nCol = getNCol();
 
-    File file = null;
-    TextFile text = null;
-    String DELIM = null;
-    if (kinship.getSaveToFile()) {
-      new UCSaveResultsFileUI().run();
-      Kingroup bean = KinGroupV2Project.getInstance();
-      KinshipFileFormat format = bean.getKinshipFileFormat();
-      DELIM = format.getUserColumnDelim();
-      String name = bean.getLastSavedFileName();
-      file = bean.makeFile(name);
-      text = new TextFile();
-      text.setFileName(file.getName());
-    }
+//    File file = null;
+//    TextFile text = null;
+//    String DELIM = null;
+//    if (kinship.getSaveToFile()) {
+//      new UCSaveResultsFileUI().run();
+//      Kingroup bean = KinGroupV2Project.getInstance();
+//      KinshipFileFormat format = bean.getKinshipFileFormat();
+//      DELIM = format.getUserColumnDelim();
+//      String name = bean.getLastSavedFileName();
+//      file = bean.makeFile(name);
+//      text = new TextFile();
+//      text.setFileName(file.getName());
+//    }
 
     if (nRow > MAX_N_ROWS) {
       KinGroupV2MainUI.getInstance().setStatus(" !!!NOTE!!! Displayed only "+MAX_N_ROWS+" out of "+nRow+" rows");
 //      JOptionPane.showMessageDialog(null, "nRow=" + nRow);
-      nRow = MAX_N_ROWS +  + N_EXTRA_ROWS;
+      nRow = MAX_N_ROWS +  + nColHeaders;
     }
 
     String[][] rowData = new String[nRow][nCol];
@@ -128,16 +132,16 @@ public class KinshipSortedMtrxView  extends MVCTableView {
     colNames[2] = "PairID";
     colNames[3] = "PairGroup";
     colNames[4] = tag;
-    if (mtrx.getName() != null && mtrx.getName().length() > 0)
-      rowData[0][0] = "group: " + mtrx.getName();
-    else
-      rowData[0][0] = "whole pop";
 
-    loadMeanValue(rowData, avr);
-//    rowData[0][4] = tag;
-
-    for (int c = 0; c < nCol; c++) {
-      rowData[N_EXTRA_ROWS-1][c] = colNames[c];
+    if (kinship.getShowColumnHeaders()) {
+      if (mtrx.getName() != null && mtrx.getName().length() > 0)
+        rowData[0][0] = "group: " + mtrx.getName();
+      else
+        rowData[0][0] = "whole pop";
+      loadMeanValue(rowData, avr);
+      for (int c = 0; c < nCol; c++) {
+        rowData[nColHeaders-1][c] = colNames[c];
+      }
     }
 
     for (int r = 0; r < sorted.size(); r++) {
@@ -148,21 +152,21 @@ public class KinshipSortedMtrxView  extends MVCTableView {
       }
 
       if (r < MAX_N_ROWS) {
-        rowData[r+N_EXTRA_ROWS][0] = popView.getId(mtrx.getId(item.r));
-        rowData[r+N_EXTRA_ROWS][1] = popView.getGroupId(mtrx.getId(item.r));
-        rowData[r+N_EXTRA_ROWS][2] = popView.getId(mtrx.getId(item.c));
-        rowData[r+N_EXTRA_ROWS][3] = popView.getGroupId(mtrx.getId(item.c));
-        rowData[r+N_EXTRA_ROWS][4] = loadValue(item.d);
+        rowData[r+nColHeaders][0] = popView.getId(mtrx.getId(item.r));
+        rowData[r+nColHeaders][1] = popView.getGroupId(mtrx.getId(item.r));
+        rowData[r+nColHeaders][2] = popView.getId(mtrx.getId(item.c));
+        rowData[r+nColHeaders][3] = popView.getGroupId(mtrx.getId(item.c));
+        rowData[r+nColHeaders][4] = loadValue(item.d);
 //      loadMeanCol(rowData, r, item.d - avr);
       }
-      if (text != null) {
-        String line = popView.getId(mtrx.getId(item.r)) + DELIM
-          + popView.getGroupId(mtrx.getId(item.r)) + DELIM
-          + popView.getId(mtrx.getId(item.c)) + DELIM
-          + popView.getGroupId(mtrx.getId(item.c)) + DELIM
-          + loadValue(item.d);
-        text.addLine(line);
-      }
+//      if (text != null) {
+//        String line = popView.getId(mtrx.getId(item.r)) + DELIM
+//          + popView.getGroupId(mtrx.getId(item.r)) + DELIM
+//          + popView.getId(mtrx.getId(item.c)) + DELIM
+//          + popView.getGroupId(mtrx.getId(item.c)) + DELIM
+//          + loadValue(item.d);
+//        text.addLine(line);
+//      }
     }
 
     if (progress != null
@@ -170,9 +174,9 @@ public class KinshipSortedMtrxView  extends MVCTableView {
       return new JTable();
     }
 
-    if (text != null  && file != null) {
-      text.write(file, KingroupFrame.getInstance());
-    }
+//    if (text != null  && file != null) {
+//      text.write(file, KingroupFrame.getInstance());
+//    }
 
     if (progress != null
       && progress.isCanceled(WRITE_TO_JTABLE_STEP, 0, N_STEPS)) {

@@ -23,7 +23,8 @@ public class Kinship {
   private boolean displayHalfMatrix;
   private boolean displaySorted;
   private boolean displaySortedById;
-  private boolean saveToFile;
+  private boolean showColumnHeaders;
+//  private boolean saveToFile;
   private boolean displayAscending;
   private boolean displayByGroup;
   private boolean displayLogs;
@@ -80,7 +81,8 @@ public class Kinship {
     setDisplayHalfMatrix(true);
     setDisplaySorted(false);
     setDisplaySortedById(false);
-    setSaveToFile(false);
+    setShowColumnHeaders(true);
+//    setSaveToFile(false);
     setDisplayAscending(false);
     setDisplaySigFlag(true);
 //    setDisplayPValue(true);
@@ -280,13 +282,21 @@ public class Kinship {
     return displayPValues;
   }
 
-  public boolean getSaveToFile()
-  {
-    return saveToFile;
+//  public boolean getSaveToFile()
+//  {
+//    return saveToFile;
+//  }
+//
+//  public void setSaveToFile(boolean saveToFile)
+//  {
+//    this.saveToFile = saveToFile;
+//  }
+
+  public boolean getShowColumnHeaders() {
+    return showColumnHeaders;
   }
 
-  public void setSaveToFile(boolean saveToFile)
-  {
-    this.saveToFile = saveToFile;
+  public void setShowColumnHeaders(boolean showColumnHeaders) {
+    this.showColumnHeaders = showColumnHeaders;
   }
 }

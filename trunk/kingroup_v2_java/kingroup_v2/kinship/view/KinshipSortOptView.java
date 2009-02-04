@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
  */
 public class KinshipSortOptView extends GridBagView
 {
-  private JCheckBox saveToFile;
+  private JCheckBox showHeaders;
   private JCheckBox sort;
   private JRadioButton desc;
   private JRadioButton ascend;
@@ -29,7 +29,7 @@ public class KinshipSortOptView extends GridBagView
     endRow(desc);
     endRow(ascend);
     endRow(sortByID);
-    endRow(saveToFile);
+    endRow(showHeaders);
   }
   private void init() {
     Border border = BorderFactory.createEtchedBorder();
@@ -50,8 +50,10 @@ public class KinshipSortOptView extends GridBagView
 
     sort = new JCheckBox("sort");
     sortByID = new JCheckBox("sort by id");
-    saveToFile = new JCheckBox("save to file");
-    saveToFile.setToolTipText("to save and then view large data sets");
+    showHeaders = new JCheckBox("headers");
+    showHeaders.setToolTipText("show column headers");
+//    showHeaders = new JCheckBox("save to file");
+//    showHeaders.setToolTipText("to save and then view large data sets");
 
     sort.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e)      {
@@ -64,7 +66,7 @@ public class KinshipSortOptView extends GridBagView
     ascend.setSelected(model.getDisplayAscending());
     sort.setSelected(model.getDisplaySorted());
     sortByID.setSelected(model.getDisplaySortedById());
-    saveToFile.setSelected(model.getSaveToFile());
+    showHeaders.setSelected(model.getShowColumnHeaders());
     enableOptions();
   }
 
@@ -73,14 +75,14 @@ public class KinshipSortOptView extends GridBagView
     desc.setEnabled(sort.isSelected());
     ascend.setEnabled(sort.isSelected());
     sortByID.setEnabled(sort.isSelected());
-    saveToFile.setEnabled(sort.isSelected());
+    showHeaders.setEnabled(sort.isSelected());
   }
 
   public void loadTo(Kinship model) {
     model.setDisplayAscending(ascend.isSelected());
     model.setDisplaySorted(sort.isSelected());
     model.setDisplaySortedById(sortByID.isSelected());
-    model.setSaveToFile(saveToFile.isSelected());
+    model.setShowColumnHeaders(showHeaders.isSelected());
   }
 }
 
