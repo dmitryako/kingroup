@@ -44,14 +44,14 @@ public class UCPedigreeCalcSigLevels extends UCKinshipCalcSigLevels
       JOptionPane.showMessageDialog(mainGui, error);
       return false;
     }
-    if (nullArr.length > 1  && !kinship.getDisplaySigFlag()) {
-      String error = "Significance levels with complex null hypothesis is working"
-        +"\nBUT p-values are needed to be checked.\n"
-        +"Please contact dmitry.konovalov@jcu.edu.au if you need this functionality.";
-      log.severe(error);
-      JOptionPane.showMessageDialog(mainGui, error);
-      return false;
-    }
+//    if (nullArr.length > 1  && !kinship.getDisplaySigFlag()) {
+//      String error = "Significance levels with complex null hypothesis is working"
+//        +"\nBUT p-values are needed to be checked.\n"
+//        +"Please contact dmitry.konovalov@jcu.edu.au if you need this functionality.";
+//      log.severe(error);
+//      JOptionPane.showMessageDialog(mainGui, error);
+//      return false;
+//    }
     if (nullArr.length == 0) {
       String error = "Unable to proceed with the significance test:"
         +"\nMissing null hypothesis.";
@@ -73,11 +73,10 @@ public class UCPedigreeCalcSigLevels extends UCKinshipCalcSigLevels
     complexNullIBD.copyTo(saved);      // SAVE
     complexNullIBD.setComplex(false);
 
-//    PedigreeRatioHist hist = new PedigreeRatioHist();
     table = null;
     for (KinshipIBD nullIBD : nullArr)     {
       nullIBD.copyTo(complexNullIBD);
-//      hist.add(tmpTable.getLogs());
+
       if (table == null) {
         table = new KinshipRatioSimArr(kinship);
         table.calc(kinship, pop);
@@ -87,11 +86,9 @@ public class UCPedigreeCalcSigLevels extends UCKinshipCalcSigLevels
         tmpTable.calc(kinship, pop);
         table.merge(tmpTable);
       }
+
     }
     saved.copyTo(complexNullIBD);      // RESTORE
-
-//    PedigreeRatioHistView histView = new PedigreeRatioHistView(hist);
-//    optView.setHistView(histView);
 
     KinshipRatioSimTableView view = new KinshipRatioSimTableView(kinship, table);
     optView.setRatioSimTableView(view);

@@ -5,6 +5,7 @@ import pattern.mvc.MVCTableView;
 import tsvlib.project.ProjectLogger;
 
 import javax.swing.*;
+import javax.swing.table.TableModel;
 
 /**
  * Copyright KinGroup Team.
@@ -16,10 +17,16 @@ public class KinshipRelatedSortedArrayView  extends MVCTableView {
   {
     KinshipSortedMtrxView[] views = new KinshipSortedMtrxView[mtrxArr.length];
     for (int i = 0; i < mtrxArr.length; i++) {
+      if (i == 0) {
+        
+      }
       views[i] = new KinshipSortedMtrxView(mtrxArr[i], kinship, tag);
     }
     JTable t = makeTableView(views);
     assemble(t);
+
+//    TableModel tm = t.getModel();
+//    tm.getValueAt()
   }
 }
 

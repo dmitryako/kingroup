@@ -1,2 +1,4 @@
 Manifest-Version: 1.0
+Created-By: Dmitry Konovalov
+Signature-Version: 2.090204
 Main-Class: kingroup_v2.KinGroupV2Startup

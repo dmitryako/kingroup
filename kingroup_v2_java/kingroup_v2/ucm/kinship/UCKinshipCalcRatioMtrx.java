@@ -3,9 +3,11 @@ import kingroup_v2.KinGroupV2MainUI;
 import kingroup_v2.KinGroupV2Project;
 import kingroup_v2.Kingroup;
 import kingroup_v2.KingroupFrame;
+import kingroup_v2.ucm.save_results.UCSaveResultsFileUI;
 import kingroup_v2.kinship.Kinship;
 import kingroup_v2.kinship.KinshipIBD;
 import kingroup_v2.kinship.KinshipIBDFactory;
+import kingroup_v2.kinship.KinshipFileFormat;
 import kingroup_v2.kinship.like.KinshipLogMtrx;
 import kingroup_v2.kinship.like.KinshipRatioMtrx;
 import kingroup_v2.kinship.like.KinshipRatioSimTable;
@@ -21,6 +23,8 @@ import tsvlib.project.ProjectLogger;
 import javax.swing.*;
 import javax.swingx.ProgressWnd;
 import javax.swingx.tablex.TableViewWithOpt;
+import javax.iox.TextFile;
+import java.io.File;
 
 /**
  * Copyright KinGroup Team.
@@ -63,7 +67,6 @@ public class UCKinshipCalcRatioMtrx implements UCController {
     MVCTableView view = null;
 
     if (kinship.getDisplayByGroup()) {
-
       progress = new ProgressWnd(KingroupFrame.getInstance(), "Groups");
 
       SysPop[] arr = mainUI.getSysGroups();
@@ -91,6 +94,7 @@ public class UCKinshipCalcRatioMtrx implements UCController {
 
       view = KinshipRatioMtrxViewFactory.makeView(m, kinship, sigTable);
     }
+
     if (progress != null)
       progress.close();
     
