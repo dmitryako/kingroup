@@ -38,6 +38,7 @@ public class Kinship {
   private float alleleErrorRate;
   private KinshipAlleleFreqOpt alleleFreqOpt;
   private boolean displayPValues;
+  private boolean showAll;
 
   public Kinship() {
     init();
@@ -298,5 +299,13 @@ public class Kinship {
 
   public void setShowColumnHeaders(boolean showColumnHeaders) {
     this.showColumnHeaders = showColumnHeaders;
+  }
+
+  public boolean getShowAll() {
+    return showAll;
+  }
+
+  public void setShowAll(boolean showAll) {
+    this.showAll = showAll;
   }
 }

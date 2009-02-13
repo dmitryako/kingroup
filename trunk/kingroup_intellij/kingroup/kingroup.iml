@@ -17,6 +17,7 @@
       <excludeFolder url="file://$MODULE_DIR$/../../install" />
       <excludeFolder url="file://$MODULE_DIR$/.." />
       <excludeFolder url="file://$MODULE_DIR$/../../kingroup_netb" />
+      <excludeFolder url="file://$MODULE_DIR$/../../www_kingroup_org" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
