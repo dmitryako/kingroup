@@ -100,24 +100,12 @@ public class KinshipSortedMtrxView  extends MVCTableView {
     int nRow = sorted.size() + nColHeaders;
     int nCol = getNCol();
 
-//    File file = null;
-//    TextFile text = null;
-//    String DELIM = null;
-//    if (kinship.getSaveToFile()) {
-//      new UCSaveResultsFileUI().run();
-//      Kingroup bean = KinGroupV2Project.getInstance();
-//      KinshipFileFormat format = bean.getKinshipFileFormat();
-//      DELIM = format.getUserColumnDelim();
-//      String name = bean.getLastSavedFileName();
-//      file = bean.makeFile(name);
-//      text = new TextFile();
-//      text.setFileName(file.getName());
-//    }
-
-    if (nRow > MAX_N_ROWS) {
+    if (!kinship.getShowAll() && nRow > MAX_N_ROWS) {
       KinGroupV2MainUI.getInstance().setStatus(" !!!NOTE!!! Displayed only "+MAX_N_ROWS+" out of "+nRow+" rows");
-//      JOptionPane.showMessageDialog(null, "nRow=" + nRow);
-      nRow = MAX_N_ROWS +  + nColHeaders;
+      nRow = MAX_N_ROWS + nColHeaders;
+    }
+    else {
+      KinGroupV2MainUI.getInstance().setStatus(" Displaying " + nRow + " rows ..." );
     }
 
     String[][] rowData = new String[nRow][nCol];
@@ -147,11 +135,11 @@ public class KinshipSortedMtrxView  extends MVCTableView {
     for (int r = 0; r < sorted.size(); r++) {
       ThisSortItem item = sorted.get(r);
       if (progress != null
-        && progress.isCanceled(r, 0, Math.min(sorted.size(), MAX_N_ROWS))) {
+        && progress.isCanceled(r, 0, Math.min(sorted.size(), nRow))) {
         return new JTable();
       }
 
-      if (r < MAX_N_ROWS) {
+      if (kinship.getShowAll()  ||  r < MAX_N_ROWS) {
         rowData[r+nColHeaders][0] = popView.getId(mtrx.getId(item.r));
         rowData[r+nColHeaders][1] = popView.getGroupId(mtrx.getId(item.r));
         rowData[r+nColHeaders][2] = popView.getId(mtrx.getId(item.c));
@@ -159,24 +147,12 @@ public class KinshipSortedMtrxView  extends MVCTableView {
         rowData[r+nColHeaders][4] = loadValue(item.d);
 //      loadMeanCol(rowData, r, item.d - avr);
       }
-//      if (text != null) {
-//        String line = popView.getId(mtrx.getId(item.r)) + DELIM
-//          + popView.getGroupId(mtrx.getId(item.r)) + DELIM
-//          + popView.getId(mtrx.getId(item.c)) + DELIM
-//          + popView.getGroupId(mtrx.getId(item.c)) + DELIM
-//          + loadValue(item.d);
-//        text.addLine(line);
-//      }
     }
 
     if (progress != null
       && progress.isCanceled(WRITE_TO_FILE_STEP, 0, N_STEPS)) {
       return new JTable();
     }
-
-//    if (text != null  && file != null) {
-//      text.write(file, KingroupFrame.getInstance());
-//    }
 
     if (progress != null
       && progress.isCanceled(WRITE_TO_JTABLE_STEP, 0, N_STEPS)) {
@@ -187,6 +163,7 @@ public class KinshipSortedMtrxView  extends MVCTableView {
 
     if (progress != null)
       progress.close();
+    KinGroupV2MainUI.getInstance().setStatus(" Done");      
     return res;
   }
 
