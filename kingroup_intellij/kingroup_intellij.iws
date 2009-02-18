@@ -16,11 +16,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/Kinship.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/Kinship.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipSortedMtrxView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipSortedMtrxView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ant/kingroup_v2_jar.xml" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ant/kingroup_v2_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipSortOptView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipSortOptView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KinGroupV2Startup.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KinGroupV2Startup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/allele/freq/KonHegFreqAlgOptView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/allele/freq/KonHegFreqAlgOptView.java" />
     </list>
     <ignored path="kingroup_intellij.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,37 +86,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UCShowPairwiseROpt.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/kinship/UCShowPairwiseROpt.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="49" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.5703226">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UCCalcPairwiseR.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/relatedness/UCCalcPairwiseR.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="17" selection-start="1914" selection-end="1914" vertical-scroll-proportion="0.68026316">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PairwiseRMtrxCalculator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/relatedness/PairwiseRMtrxCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="33" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.022368422">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="KinshipSortedMtrxView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipSortedMtrxView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="30" selection-start="3310" selection-end="3310" vertical-scroll-proportion="0.022368422">
+            <state line="103" column="30" selection-start="3310" selection-end="3310" vertical-scroll-proportion="0.02852349">
               <folding />
             </state>
           </provider>
@@ -127,16 +98,16 @@
       <file leaf-file-name="KinGroupV2Startup.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KinGroupV2Startup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="22" selection-start="712" selection-end="712" vertical-scroll-proportion="0.022368422">
+            <state line="10" column="27" selection-start="304" selection-end="304" vertical-scroll-proportion="0.25671142">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kingroup_v2_jar.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="kingroup_v2_jar.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ant/kingroup_v2_jar.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="34" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.34912044">
+            <state line="27" column="34" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.79826087">
               <folding />
             </state>
           </provider>
@@ -154,16 +125,43 @@
       <file leaf-file-name="PairwiseROptView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/PairwiseROptView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="28" selection-start="570" selection-end="570" vertical-scroll-proportion="0.022368422">
+            <state line="20" column="28" selection-start="570" selection-end="570" vertical-scroll-proportion="0.02852349">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KinshipSortOptView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="KinshipSortOptView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipSortOptView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="20" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.022368422">
+            <state line="44" column="20" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.02852349">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KingroupFrame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KingroupFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="266" column="66" selection-start="9308" selection-end="9308" vertical-scroll-proportion="0.02852349">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UCKonHegFreqAlgShowOpt.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/pop/UCKonHegFreqAlgShowOpt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="53" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.63993454">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KonHegFreqAlgOptView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/allele/freq/KonHegFreqAlgOptView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="44" selection-start="949" selection-end="949" vertical-scroll-proportion="0.02852349">
               <folding />
             </state>
           </provider>
@@ -172,7 +170,7 @@
       <file leaf-file-name="Kinship.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/Kinship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="303" column="18" selection-start="7885" selection-end="7892" vertical-scroll-proportion="0.79210526">
+            <state line="303" column="18" selection-start="7885" selection-end="7892" vertical-scroll-proportion="1.0100671">
               <folding />
             </state>
           </provider>
@@ -216,6 +214,20 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="kingroup" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup_intellij" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\kingroup\kingroup_src_090202_from_svn" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
     </subPane>
@@ -269,6 +281,25 @@
         <option name="Make" value="true" />
       </method>
     </tempConfiguration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
@@ -284,13 +315,6 @@
       <method>
         <option name="Make" value="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
@@ -310,18 +334,6 @@
         <value defaultName="moduleWithDependencies" />
       </option>
       <envs />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.KinGroupV2Startup" />
@@ -379,25 +391,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="998" extended-state="6" />
-    <editor active="true" />
+    <frame x="1" y="1" width="1278" height="988" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24979724" order="1" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25183973" order="1" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="1" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="3" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17458433" order="8" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1766827" order="8" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24979724" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25183973" order="0" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
@@ -481,51 +493,30 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KingroupFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="393" column="67" selection-start="15290" selection-end="15290" vertical-scroll-proportion="0.41002572">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/kinship/UCShowPairwiseROpt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="49" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.5703226">
+        <state line="37" column="49" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/relatedness/UCCalcPairwiseR.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="17" selection-start="1914" selection-end="1914" vertical-scroll-proportion="0.68026316">
+        <state line="58" column="17" selection-start="1914" selection-end="1914" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/relatedness/PairwiseRMtrxCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="33" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.022368422">
+        <state line="42" column="33" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipSortedMtrxView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="30" selection-start="3310" selection-end="3310" vertical-scroll-proportion="0.022368422">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KinGroupV2Startup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="22" selection-start="712" selection-end="712" vertical-scroll-proportion="0.022368422">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ant/kingroup_v2_jar.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="34" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.34912044">
+        <state line="103" column="30" selection-start="3310" selection-end="3310" vertical-scroll-proportion="0.02852349">
           <folding />
         </state>
       </provider>
@@ -539,21 +530,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/PairwiseROptView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="570" selection-end="570" vertical-scroll-proportion="0.022368422">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/Kinship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="303" column="18" selection-start="7885" selection-end="7892" vertical-scroll-proportion="0.79210526">
+        <state line="20" column="28" selection-start="570" selection-end="570" vertical-scroll-proportion="0.02852349">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipSortOptView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="20" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.022368422">
+        <state line="44" column="20" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.02852349">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KingroupFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="266" column="66" selection-start="9308" selection-end="9308" vertical-scroll-proportion="0.02852349">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/pop/UCKonHegFreqAlgShowOpt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="53" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.63993454">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/allele/freq/KonHegFreqAlgOptView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="44" selection-start="949" selection-end="949" vertical-scroll-proportion="0.02852349">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/Kinship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="303" column="18" selection-start="7885" selection-end="7892" vertical-scroll-proportion="1.0100671">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KinGroupV2Startup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="27" selection-start="304" selection-end="304" vertical-scroll-proportion="0.25671142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ant/kingroup_v2_jar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="34" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.79826087">
           <folding />
         </state>
       </provider>
