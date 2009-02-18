@@ -26,7 +26,7 @@ public class KonHegFreqAlgOptView extends GridBagView implements KingroupViewI {
   private IntTextField nIter;
   private static final int FIELD_SIZE = 7;
   private static final int MIN_N_ITER = 10;
-  private static final int MAX_N_ITER = 10000;
+  private static final int MAX_N_ITER = 1000000;
 
   protected DisplayOptView displayView;
 
