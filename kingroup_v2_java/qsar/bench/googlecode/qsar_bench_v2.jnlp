@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- JNLP File for the the QSAR-BENCH program -->
+<!-- see: http://java.sun.com/j2se/1.4.2/docs/guide/jws/developersguide/syntax.html -->
+<jnlp 
+  spec="1.0+"
+  codebase="http://qsarbench.googlecode.com/files"
+  href="qsar_bench_v2.jnlp"  >             <!-- ***VERSION HERE*** -->
+  <information>
+    <title>QSAR-BENCH v2</title>
+    <vendor>Dmitry Konovalov</vendor>
+    <homepage href="http://qsarbench.googlecode.com/" />
+    <description>The QSAR-BENCH program</description>
+    <description kind="short">A program for builing and testing Quantitative Structure-Activity/Property relationship (QSAR/QSPR) models.</description>
+    <icon href="qsar_bench_logo_30.gif"/>
+    <offline-allowed/>
+    <shortcut>
+        <desktop/>
+        <menu submenu="QSAR-BENCH"/>
+    </shortcut>
+  </information>
+  <security>
+    <!--<j2ee-application-client-permissions/>-->
+    <all-permissions/>
+  </security>
+  <resources>
+    <j2se version="1.5+" initial-heap-size="64m" max-heap-size="512m" />
+    <jar href="qsar_bench_v2.jar" />      <!-- ***VERSION HERE*** -->
+  </resources>
+  <application-desc main-class="qsar.bench.UCStartQSARBench" />
+</jnlp>
