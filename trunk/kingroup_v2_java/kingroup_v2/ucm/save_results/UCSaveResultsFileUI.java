@@ -50,7 +50,6 @@ public class UCSaveResultsFileUI extends SaveFileUI
     if (uc != null) {
       uc.run();
     }
-//    new UCSaveResultsFile().write(file);
     return true;
   }
 }

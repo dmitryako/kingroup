@@ -7,6 +7,7 @@
       <antReference projectDefault="true" />
       <customJdkName value="" />
       <maximumHeapSize value="128" />
+      <maximumStackSize value="32" />
       <properties />
     </buildFile>
   </component>
@@ -104,6 +105,7 @@
     <option name="ADDITIONAL_OPTIONS_STRING" value="" />
     <option name="MAXIMUM_HEAP_SIZE" value="128" />
   </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
@@ -277,6 +279,9 @@
       </item>
     </group>
   </component>
+  <component name="ProjectDetails">
+    <option name="projectName" value="kingroup_intellij" />
+  </component>
   <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="true" id="Add" />
@@ -296,7 +301,7 @@
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
-  <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6 (2)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/../../classes" />
   </component>
   <component name="ProjectView">
@@ -312,14 +317,6 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="ResourceManagerContainer">
     <option name="myResourceBundles">
@@ -399,7 +396,7 @@
     <option name="ACTIVE_ACTIONS" value="" />
   </component>
   <component name="SvnBranchConfigurationManager">
-    <option name="myVersion" value="123" />
+    <option name="myVersion" value="124" />
   </component>
   <component name="SvnConfiguration">
     <option name="USER" value="" />
@@ -436,5 +433,15 @@
     <mapping directory="$PROJECT_DIR$/.." vcs="svn" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
+  <component name="libraryTable">
+    <library name="java3d">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/../../../../Program Files/Java/Java3D/1.5.1/lib/ext" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$PROJECT_DIR$/../../../../Program Files/Java/Java3D/1.5.1/lib/ext" recursive="false" />
+    </library>
+  </component>
 </project>
 

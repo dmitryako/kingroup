@@ -33,7 +33,7 @@ public class KinshipSortedMtrxView  extends MVCTableView {
   protected SysPopMtrxI mtrx;
   protected Kinship kinship;
   public final static int N_COLS = 5;
-  private int MAX_N_ROWS = 10000;
+//  private int MAX_N_ROWS = 10000;
   private static final int WRITE_TO_FILE_STEP = 1;
   private static final int WRITE_TO_JTABLE_STEP = 2;
   private static final int N_STEPS = 3;
@@ -100,13 +100,13 @@ public class KinshipSortedMtrxView  extends MVCTableView {
     int nRow = sorted.size() + nColHeaders;
     int nCol = getNCol();
 
-    if (!kinship.getShowAll() && nRow > MAX_N_ROWS) {
-      KinGroupV2MainUI.getInstance().setStatus(" !!!NOTE!!! Displayed only "+MAX_N_ROWS+" out of "+nRow+" rows");
-      nRow = MAX_N_ROWS + nColHeaders;
-    }
-    else {
+//    if (!kinship.getShowAll() && nRow > MAX_N_ROWS) {
+//      KinGroupV2MainUI.getInstance().setStatus(" !!!NOTE!!! Displayed only "+MAX_N_ROWS+" out of "+nRow+" rows");
+//      nRow = MAX_N_ROWS + nColHeaders;
+//    }
+//    else {
       KinGroupV2MainUI.getInstance().setStatus(" Displaying " + nRow + " rows ..." );
-    }
+//    }
 
     String[][] rowData = new String[nRow][nCol];
     StrMtrx.set(rowData, JTableFactory.EMPTY);
@@ -139,14 +139,14 @@ public class KinshipSortedMtrxView  extends MVCTableView {
         return new JTable();
       }
 
-      if (kinship.getShowAll()  ||  r < MAX_N_ROWS) {
+//      if (kinship.getShowAll()  ||  r < MAX_N_ROWS) {
         rowData[r+nColHeaders][0] = popView.getId(mtrx.getId(item.r));
         rowData[r+nColHeaders][1] = popView.getGroupId(mtrx.getId(item.r));
         rowData[r+nColHeaders][2] = popView.getId(mtrx.getId(item.c));
         rowData[r+nColHeaders][3] = popView.getGroupId(mtrx.getId(item.c));
         rowData[r+nColHeaders][4] = loadValue(item.d);
 //      loadMeanCol(rowData, r, item.d - avr);
-      }
+//      }
     }
 
     if (progress != null

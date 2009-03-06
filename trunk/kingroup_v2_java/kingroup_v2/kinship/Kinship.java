@@ -24,7 +24,6 @@ public class Kinship {
   private boolean displaySorted;
   private boolean displaySortedById;
   private boolean showColumnHeaders;
-//  private boolean saveToFile;
   private boolean displayAscending;
   private boolean displayByGroup;
   private boolean displayLogs;
@@ -38,7 +37,6 @@ public class Kinship {
   private float alleleErrorRate;
   private KinshipAlleleFreqOpt alleleFreqOpt;
   private boolean displayPValues;
-  private boolean showAll;
 
   public Kinship() {
     init();
@@ -283,16 +281,6 @@ public class Kinship {
     return displayPValues;
   }
 
-//  public boolean getSaveToFile()
-//  {
-//    return saveToFile;
-//  }
-//
-//  public void setSaveToFile(boolean saveToFile)
-//  {
-//    this.saveToFile = saveToFile;
-//  }
-
   public boolean getShowColumnHeaders() {
     return showColumnHeaders;
   }
@@ -301,11 +289,4 @@ public class Kinship {
     this.showColumnHeaders = showColumnHeaders;
   }
 
-  public boolean getShowAll() {
-    return showAll;
-  }
-
-  public void setShowAll(boolean showAll) {
-    this.showAll = showAll;
-  }
 }

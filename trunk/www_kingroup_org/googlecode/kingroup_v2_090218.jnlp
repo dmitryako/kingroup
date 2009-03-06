@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- JNLP File for the KINGROUP program -->
+<jnlp 
+  spec="1.0+"
+  codebase="http://kingroup.googlecode.com/files"
+  href="kingroup_v2_090218.jnlp"  >             <!-- ***VERSION HERE*** -->
+  <information>
+    <title>KINGROUP v2</title>
+    <vendor>Dmitry Konovalov</vendor>
+    <homepage href="http://kingroup.googlecode.com/" />
+    <description>The KINGROUP program</description>
+    <description kind="short">A program for pedigree relationship reconstruction and kin group assignments using genetic markers.</description>
+    <icon href="kingroup_logo.gif"/>
+    <offline-allowed/>
+    <shortcut>
+        <desktop/>
+        <menu submenu="KINGROUP"/>
+    </shortcut>
+  </information>
+  <security>
+    <!--<j2ee-application-client-permissions/>-->
+    <all-permissions/>
+  </security>
+  <resources>
+    <j2se version="1.5+" initial-heap-size="64m" max-heap-size="512m" />
+    <!--<j2se version="1.5+" />-->
+    <jar href="kingroup_v2_090218.jar" />      <!-- ***VERSION HERE*** -->
+  </resources>
+  <application-desc main-class="kingroup_v2.KinGroupV2Startup" />
+</jnlp>

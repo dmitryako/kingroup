@@ -60,6 +60,10 @@ public class UCCalcPairwiseR extends PairwiseRMtrxCalculator
     }
     System.gc();
 
+//    if (kinship.getSaveToFile()) {
+//
+//    }
+
     if (updateView != null) {
 //      updateView.setTableView(view);
       updateView.setTableView(view.getTableView());

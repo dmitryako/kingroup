@@ -24,9 +24,6 @@ public class KinshipRelatedSortedArrayView  extends MVCTableView {
     }
     JTable t = makeTableView(views);
     assemble(t);
-
-//    TableModel tm = t.getModel();
-//    tm.getValueAt()
   }
 }
 
