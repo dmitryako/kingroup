@@ -24,7 +24,7 @@ public class KinshipRMtrxView extends MVCTableView {
   protected PairwiseRMtrx mtrx;
   protected Kinship kinship;
   private ProgressWnd progress = null;
-  private static final int MAX_N_ROWS = 100;
+//  private static final int MAX_N_ROWS = 10000;
 
   public KinshipRMtrxView(PairwiseRMtrx m, Kinship kinship, String tag) {
 //    log.setLevel(Level.OFF);
@@ -42,11 +42,11 @@ public class KinshipRMtrxView extends MVCTableView {
     int nRow = sizeToNumRow(n);
     int nCol = sizeToNumCol(n);
         
-    if (nRow > sizeToNumRow(MAX_N_ROWS)) {
-      KinGroupV2MainUI.getInstance().setStatus(" !!!NOTE!!! Displayed only "+MAX_N_ROWS+" out of "+n+" rows.");
-      nRow = sizeToNumRow(MAX_N_ROWS);
-      nCol = sizeToNumCol(MAX_N_ROWS);
-    }
+//    if (nRow > sizeToNumRow(MAX_N_ROWS)) {
+//      KinGroupV2MainUI.getInstance().setStatus(" !!!NOTE!!! Displayed only "+MAX_N_ROWS+" out of "+n+" rows.");
+//      nRow = sizeToNumRow(MAX_N_ROWS);
+//      nCol = sizeToNumCol(MAX_N_ROWS);
+//    }
 
     String[][] rowData = new String[nRow][nCol];
     StrMtrx.set(rowData, JTableFactory.EMPTY);

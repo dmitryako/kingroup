@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
  */
 public class KinshipSortOptView extends GridBagView
 {
-  private JCheckBox showAll;
+//  private JCheckBox showAll;
   private JCheckBox showHeaders;
   private JCheckBox sort;
   private JRadioButton desc;
@@ -31,7 +31,7 @@ public class KinshipSortOptView extends GridBagView
     endRow(ascend);
     endRow(sortByID);
     endRow(showHeaders);
-    endRow(showAll);
+//    endRow(showAll);
   }
   private void init() {
     Border border = BorderFactory.createEtchedBorder();
@@ -55,10 +55,8 @@ public class KinshipSortOptView extends GridBagView
     showHeaders = new JCheckBox("headers");
     showHeaders.setToolTipText("show column headers");
 
-    showAll = new JCheckBox("show all");
-    showAll.setToolTipText("show all rows");
-//    showHeaders = new JCheckBox("save to file");
-//    showHeaders.setToolTipText("to save and then view large data sets");
+//    showAll = new JCheckBox("show all");
+//    showAll.setToolTipText("show all rows");
 
     sort.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e)      {
@@ -72,7 +70,7 @@ public class KinshipSortOptView extends GridBagView
     sort.setSelected(model.getDisplaySorted());
     sortByID.setSelected(model.getDisplaySortedById());
     showHeaders.setSelected(model.getShowColumnHeaders());
-    showAll.setSelected(model.getShowAll());
+//    showAll.setSelected(model.getShowAll());
     enableOptions();
   }
 
@@ -89,7 +87,7 @@ public class KinshipSortOptView extends GridBagView
     model.setDisplaySorted(sort.isSelected());
     model.setDisplaySortedById(sortByID.isSelected());
     model.setShowColumnHeaders(showHeaders.isSelected());
-    model.setShowAll(showAll.isSelected());
+//    model.setShowAll(showAll.isSelected());
   }
 }
 
