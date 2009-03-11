@@ -10,7 +10,7 @@ import java.text.ParseException;
  * Copyright KinGroup Team.
  * User: jc138691, Date: 28/04/2006, Time: 09:49:36
  */
-public class JFormattedTextFieldX  extends JFormattedTextField
+public class FormattedNumberField extends JFormattedTextField
 {
   private final Comparable min;
   private final Comparable max;
@@ -24,7 +24,7 @@ public class JFormattedTextFieldX  extends JFormattedTextField
 //      throw new RuntimeException("use setValue instead");
 //    }
 //  }
-  protected JFormattedTextFieldX(Comparable min, Comparable max, NumberFormat format) {
+  protected FormattedNumberField(Comparable min, Comparable max, NumberFormat format) {
     if (min.compareTo(max) <= 0) {
       this.min = min;
       this.max = max;

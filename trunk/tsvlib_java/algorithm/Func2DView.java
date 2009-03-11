@@ -4,7 +4,7 @@ import tsvlib.visualization.Contour;
 import tsvlib.visualization.ContourMap;
 
 import javax.swing.*;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 import javax.utilx.triplet.DoubleTriplet;
 import java.awt.*;
 import java.awt.event.*;
@@ -40,7 +40,7 @@ public class Func2DView extends JPanel implements Func2DI {
   private JPanel statusBar = new JPanel();
   private DecimalFormat decFormat = new DecimalFormat("#.##");
   private Contour[] contours;
-  private IntTextField intervalField = new IntTextField(0,
+  private IntField intervalField = new IntField(0,
       Integer.MAX_VALUE);
   private Object lock = new Object();
   private Runnable nextRunnable = new Runnable() {

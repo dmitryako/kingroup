@@ -6,7 +6,7 @@ import kingroup_v2.pop.sample.builder.view.PopBuilderView;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swingx.panelx.GridBagView;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 import java.awt.*;
 
 /**
@@ -15,7 +15,7 @@ import java.awt.*;
  */
 public class PopBuilderKinshipIBDView   extends PopBuilderView
 {
-  protected IntTextField nPairs;
+  protected IntField nPairs;
   protected JLabel nPairsLbl;
   protected final static int FIELD_SIZE = 6;
 
@@ -36,7 +36,7 @@ public class PopBuilderKinshipIBDView   extends PopBuilderView
     Border titled = BorderFactory.createTitledBorder(border, "KINSHIP pairs");
     setBorder(titled);
 
-    nPairs = new IntTextField(FIELD_SIZE, 1, 10000);
+    nPairs = new IntField(FIELD_SIZE, 1, 10000);
     nPairs.setMinimumSize(nPairs.getPreferredSize());
     nPairsLbl = new JLabel("pairs");
     nPairsLbl.setToolTipText("number of KINSHIP pairs");

@@ -11,7 +11,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.text.JTextComponent;
 import javax.swingx.panelx.GridBagView;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -31,15 +31,15 @@ public class KinshipFileFormatView extends GridBagView {
   private JTextField alleleDelim;
   private JTextField comment;
   private JCheckBox groupIdBox;
-  private IntTextField groupIdCol;
+  private IntField groupIdCol;
   private JCheckBox idBox;
-  private IntTextField idCol;
+  private IntField idCol;
   private JCheckBox matIdBox;
-  private IntTextField matIdCol;
+  private IntField matIdCol;
   private JCheckBox patIdBox;
-  private IntTextField patIdCol;
-  private IntTextField locusCol;
-  private IntTextField nLoci;
+  private IntField patIdCol;
+  private IntField locusCol;
+  private IntField nLoci;
 
   private JCheckBox freqNorm;
   private JRadioButton freqFile;
@@ -72,19 +72,19 @@ public class KinshipFileFormatView extends GridBagView {
     comment = new JTextField(2);
 
     groupIdBox = new JCheckBox("Column of group ID:");
-    groupIdCol = new IntTextField(FIELD_SIZE, 1, 100);
+    groupIdCol = new IntField(FIELD_SIZE, 1, 100);
 
     idBox = new JCheckBox("Column of individual ID:");
-    idCol = new IntTextField(FIELD_SIZE, 1, 100);
+    idCol = new IntField(FIELD_SIZE, 1, 100);
 
     matIdBox = new JCheckBox("Column of maternal ID:");
-    matIdCol = new IntTextField(FIELD_SIZE, 1, 100);
+    matIdCol = new IntField(FIELD_SIZE, 1, 100);
 
     patIdBox = new JCheckBox("Column of paternal ID:");
-    patIdCol = new IntTextField(FIELD_SIZE, 1, 100);
+    patIdCol = new IntField(FIELD_SIZE, 1, 100);
 
-    locusCol = new IntTextField(FIELD_SIZE, 1, 100);
-    nLoci = new IntTextField(FIELD_SIZE, 1, 100);
+    locusCol = new IntField(FIELD_SIZE, 1, 100);
+    nLoci = new IntField(FIELD_SIZE, 1, 100);
 
     freqNorm = new JCheckBox("Display normalized");
     freqNorm.setToolTipText("Frequencies are normalized to 1.0");

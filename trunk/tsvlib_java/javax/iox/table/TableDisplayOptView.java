@@ -3,7 +3,7 @@ import tsvlib.project.ProjectLogger;
 
 import javax.swing.*;
 import javax.swingx.panelx.GridBagView;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 import javax.textx.FractionDigitsView;
 
 /**
@@ -15,9 +15,9 @@ public class TableDisplayOptView  extends GridBagView {
 
   private static int N_VARS_FIELD_SIZE = 4;
 
-  private IntTextField maxNRows;
+  private IntField maxNRows;
   private JLabel maxNRowsLbl;
-  private IntTextField maxNCols;
+  private IntField maxNCols;
   private JLabel maxNColsLbl;
 
   protected FractionDigitsView digitsView;
@@ -31,12 +31,12 @@ public class TableDisplayOptView  extends GridBagView {
   }
   private void init() {
     maxNRowsLbl = new JLabel("rows");
-    maxNRows = new IntTextField(N_VARS_FIELD_SIZE, 1
+    maxNRows = new IntField(N_VARS_FIELD_SIZE, 1
       , TableDisplayOpt.DEFAULT_MAX_NUM_ROWS);
     maxNRows.setToolTipText("Number of rows");
 
     maxNColsLbl = new JLabel("columns");
-    maxNCols = new IntTextField(N_VARS_FIELD_SIZE, 1
+    maxNCols = new IntField(N_VARS_FIELD_SIZE, 1
       , TableDisplayOpt.DEFAULT_MAX_NUM_COLS);
     maxNCols.setToolTipText("Number of columns");
 

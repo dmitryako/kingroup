@@ -2,14 +2,14 @@ package kingroup_v2.pop.sample.builder.groups;
 import kingroup_v2.pop.sample.PopBuilderModel;
 
 import javax.swing.*;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 /**
  * Copyright KinGroup Team.
  * User: jc138691, Date: 22/11/2005, Time: 14:27:54
  */
 public class SampleBuilderGroupsSkewedView   extends PopBuilderEqualGroupsView
 {
-  protected IntTextField skew;
+  protected IntField skew;
   protected JLabel skewLbl;
   public SampleBuilderGroupsSkewedView(PopBuilderModel bean) {
     init();
@@ -22,7 +22,7 @@ public class SampleBuilderGroupsSkewedView   extends PopBuilderEqualGroupsView
     groupSizeLbl = new JLabel("g_1");
     groupSizeLbl.setToolTipText("individuals in the first group");
 
-    skew = new IntTextField(FIELD_SIZE, 1, 100);
+    skew = new IntField(FIELD_SIZE, 1, 100);
     skew.setMinimumSize(skew.getPreferredSize());
 
     skewLbl = new JLabel("q");

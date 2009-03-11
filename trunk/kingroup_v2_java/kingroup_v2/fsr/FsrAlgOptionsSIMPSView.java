@@ -5,15 +5,15 @@ import pattern.ucm.AdapterUCCToALThread;
 
 import javax.swing.*;
 import javax.swingx.panelx.GridBagView;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 
 /**
  * Copyright KinGroup Team.
  * User: jc138691, Date: 7/10/2005, Time: 09:07:17
  */
 public class FsrAlgOptionsSIMPSView extends FsrAlgOptView {
-  private IntTextField loopBreaker;
-  private IntTextField nIter;
+  private IntField loopBreaker;
+  private IntField nIter;
   private static final int FIELD_SIZE = 7;
   public FsrAlgOptionsSIMPSView() {
 
@@ -24,10 +24,10 @@ public class FsrAlgOptionsSIMPSView extends FsrAlgOptView {
     assemble("SIMPSON");
   }
   protected void init() {
-    nIter = new IntTextField(FIELD_SIZE, 100, 1000000);
+    nIter = new IntField(FIELD_SIZE, 100, 1000000);
     nIter.setToolTipText("[100, 1E+6]");
 
-    loopBreaker = new IntTextField(FIELD_SIZE, -1, 10000);
+    loopBreaker = new IntField(FIELD_SIZE, -1, 10000);
     loopBreaker.setToolTipText("[-1, 1E+4] Set to -1 to disable");
   }
   public void loadTo(Kingroup model) {

@@ -5,7 +5,8 @@ import pattern.ucm.AdapterUCCToALThread;
 
 import javax.swing.*;
 import javax.swingx.panelx.GridBagView;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
+
 /**
  * Copyright KinGroup Team.
  * User: jc138691, Date: 3/10/2005, Time: 14:25:50
@@ -18,7 +19,7 @@ public class KinshipRatioSimOptView extends GridBagView {
   private JRadioButton flag;
   private JRadioButton pvalue;
   private JCheckBox sim;
-  private IntTextField nPairs;
+  private IntField nPairs;
   public KinshipRatioSimOptView(Kinship model) {
     init();
     loadFrom(model);
@@ -44,7 +45,7 @@ public class KinshipRatioSimOptView extends GridBagView {
     flag.setToolTipText("display significance flag [*, **, ***]");
     pvalue = new JRadioButton("p");
     pvalue.setToolTipText("display p-value [%]");
-    nPairs = new IntTextField(FIELD_SIZE
+    nPairs = new IntField(FIELD_SIZE
       , DEFAULT_SIM_PAIRS, MIN_SIM_PAIRS, MAX_SIM_PAIRS);
     nPairs.setToolTipText("number of simulated pairs [0; 100 000]");
 

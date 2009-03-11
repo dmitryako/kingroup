@@ -7,7 +7,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swingx.panelx.GridBagView;
 import javax.swingx.text_fieldx.FloatTextField;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 import java.awt.*;
 
 /**
@@ -16,7 +16,7 @@ import java.awt.*;
  */
 public class AccuracyOptionsView extends GridBagView
 {
-  protected IntTextField nTrials;
+  protected IntField nTrials;
   protected FloatTextField accError;
   protected FloatTextField stdDev;
   protected DisplayOptView displayView;
@@ -40,7 +40,7 @@ public class AccuracyOptionsView extends GridBagView
 
     getStartRow().anchor = GridBagConstraints.NORTHWEST;
     getEndRow().anchor = GridBagConstraints.NORTHWEST;
-    nTrials = new IntTextField(FIELD_SIZE
+    nTrials = new IntField(FIELD_SIZE
       , DEFAULT_N_TRIALS, MIN_N_TRIALS, MAX_N_TRIALS);
 //    nTrials.setToolTipText("number of Monte Carlo simulation trials [0; 10 000]");
 

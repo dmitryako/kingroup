@@ -13,7 +13,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swingx.panelx.GridBagView;
 import javax.swingx.text_fieldx.FloatTextField;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -24,8 +24,8 @@ public class KinshipIBDComplexView extends GridBagView {
   private FloatTextField rp;
   private FloatTextField rms;
   private FloatTextField rps;
-  private IntTextField nRms;
-  private IntTextField nRps;
+  private IntField nRms;
+  private IntField nRps;
   private JCheckBox complexHypo;
   private JCheckBox complexHypo2;
 //  private FloatTextField error;
@@ -62,8 +62,8 @@ public class KinshipIBDComplexView extends GridBagView {
     rp = new FloatTextField(FIELD_SIZE, 0f, 1f);
     rms = new FloatTextField(FIELD_SIZE, 0f, 1f);
     rps = new FloatTextField(FIELD_SIZE, 0f, 1f);
-    nRms = new IntTextField(FIELD_SIZE, 1, 10);
-    nRps = new IntTextField(FIELD_SIZE, 1, 10);
+    nRms = new IntField(FIELD_SIZE, 1, 10);
+    nRps = new IntField(FIELD_SIZE, 1, 10);
     complexHypo = new JCheckBox("complex");
     complexHypo.setToolTipText("complex hypothesis");
     complexHypo2 = new JCheckBox("for action listeners");

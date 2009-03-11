@@ -12,7 +12,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swingx.panelx.GridBagView;
 import javax.swingx.tablex.JTableFactory;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,7 +27,7 @@ public class KinshipRatioSimViewV1 extends GridBagView {
   protected final static int TYPE_II_ERROR_IDX = 2;
   protected final int TABLE_COLUMN_COUNT = 3;
   private JCheckBox simulate_ = new JCheckBox("Simulate ");
-  private IntTextField numRuns_ = new IntTextField(FIELD_SIZE
+  private IntField numRuns_ = new IntField(FIELD_SIZE
     , DEFAULT_SIM_PAIRS, MIN_SIM_PAIRS, MAX_SIM_PAIRS);
   private JCheckBox sigFlag_ = new JCheckBox("Flag");
   private JTable confTable_ = new JTable();
