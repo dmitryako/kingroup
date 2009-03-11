@@ -5,7 +5,7 @@ import kingroup_v2.cervus.CervusFileBean;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swingx.panelx.GridBagView;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 import java.awt.*;
 
 /**
@@ -26,12 +26,12 @@ public class CervusFileFormatView  extends GridBagView {
   private JRadioButton colDelimComma;
 
   private JLabel idBox;
-  private IntTextField idCol;
+  private IntField idCol;
 
   private JLabel locusBox;
-  private IntTextField locusCol;
+  private IntField locusCol;
   private JLabel nLociBox;
-  private IntTextField nLoci;
+  private IntField nLoci;
   private JCheckBox freqNorm;
   private JRadioButton freqCalc;
   public CervusFileFormatView(CervusFileBean model) {
@@ -61,13 +61,13 @@ public class CervusFileFormatView  extends GridBagView {
     colDelimComma.setSelected(true); //default
 
     idBox = new JLabel("Column of individual ID ");
-    idCol = new IntTextField(FIELD_SIZE, 1, 100);
+    idCol = new IntField(FIELD_SIZE, 1, 100);
 
     locusBox = new JLabel("First allele in column ");
-    locusCol = new IntTextField(FIELD_SIZE, 1, 100);
+    locusCol = new IntField(FIELD_SIZE, 1, 100);
 
     nLociBox = new JLabel("Number of loci ");
-    nLoci = new IntTextField(FIELD_SIZE, 1, 100);
+    nLoci = new IntField(FIELD_SIZE, 1, 100);
 
     freqCalc = new JRadioButton("calculate from file", false);
     freqCalc.setEnabled(true);

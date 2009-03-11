@@ -2,6 +2,7 @@ package javax.swingx.text_fieldx;
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
 import javax.swingx.panelx.GridBagView;
+import javax.swingx.tablex.TableIntEditor;
 import javax.utilx.arrays.IntVec;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -16,7 +17,7 @@ public class IntegerList extends GridBagView
 {
   private JTable tableView;
   private ThisTableModel tableModel;
-  private IntTextField intField;
+  private IntField intField;
   private IntegerListModel model;
 
   public IntegerList(IntegerListModel model) {
@@ -45,8 +46,8 @@ public class IntegerList extends GridBagView
     tableModel = new ThisTableModel();
     tableView = new JTable(tableModel);
     tableView.setDefaultEditor(Integer.class
-      , new IntegerEditor(model.getMinValue(), model.getMaxValue()));
-    intField = new IntTextField(model.getFieldSize(), model.getMinValue(), model.getMinValue(), model.getMaxValue());
+      , new TableIntEditor(model.getMinValue(), model.getMaxValue()));
+    intField = new IntField(model.getFieldSize(), model.getMinValue(), model.getMinValue(), model.getMaxValue());
     intField.setMinimumSize(intField.getPreferredSize());
   }
 

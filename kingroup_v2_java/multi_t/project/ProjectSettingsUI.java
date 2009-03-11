@@ -7,7 +7,7 @@ import tsvlib.project.ProjectFrame;
 
 import javax.swing.*;
 import javax.swingx.panelx.GridBagView;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 import java.awt.*;
 
 /**
@@ -29,16 +29,16 @@ public class ProjectSettingsUI extends GridBagView//JPanel
   // PCR Primers
   private int FIELD_SIZE = 2;
   private JTextField fwdPrimSeq;
-  private IntTextField fwdMaxNumErrs;
+  private IntField fwdMaxNumErrs;
   private JTextField revPrimSeq;
-  private IntTextField revMaxNumErrs;
+  private IntField revMaxNumErrs;
 
   // Enzymes
 //  private int FIELD_SIZE = 2;
 //  private JTextField fwdPrimSeq;
-//  private IntTextField fwdMaxNumErrs;
+//  private IntField fwdMaxNumErrs;
 //  private JTextField revPrimSeq;
-//  private IntTextField revMaxNumErrs;
+//  private IntField revMaxNumErrs;
 
   private JButton refreshBttn;
   private JButton saveBttn;
@@ -78,8 +78,8 @@ public class ProjectSettingsUI extends GridBagView//JPanel
     revPrimSeq = new JTextField(" ");
     revPrimSeq.setEditable(false);
 
-    fwdMaxNumErrs = new IntTextField(FIELD_SIZE, 0, 10);
-    revMaxNumErrs = new IntTextField(FIELD_SIZE, 0, 10);
+    fwdMaxNumErrs = new IntField(FIELD_SIZE, 0, 10);
+    revMaxNumErrs = new IntField(FIELD_SIZE, 0, 10);
 
     // Controls
     refreshBttn = new JButton("Refresh");

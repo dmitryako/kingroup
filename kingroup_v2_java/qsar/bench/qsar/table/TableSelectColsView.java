@@ -3,7 +3,7 @@ import javax.iox.TableFormat;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swingx.panelx.GridBagView;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 import java.awt.*;
 
 /**
@@ -11,9 +11,9 @@ import java.awt.*;
  */
 public class TableSelectColsView  extends GridBagView {
   private static int FIELD_SIZE = 2;
-  private IntTextField first;
+  private IntField first;
   private JLabel firstLbl;
-  private IntTextField last;
+  private IntField last;
   private JLabel lastLbl;
   private static final int LAST_COL = 100;
 
@@ -30,10 +30,10 @@ public class TableSelectColsView  extends GridBagView {
   }
   protected void init() {
     firstLbl = new JLabel("first #");
-    first = new IntTextField(FIELD_SIZE, 1, LAST_COL-1);
+    first = new IntField(FIELD_SIZE, 1, LAST_COL-1);
     lastLbl = new JLabel("last #");
     lastLbl.setToolTipText("set 0 to select the last available column");
-    last = new IntTextField(FIELD_SIZE, 0, LAST_COL);
+    last = new IntField(FIELD_SIZE, 0, LAST_COL);
     last.setToolTipText(lastLbl.getToolTipText());
 
     setBorder(BorderFactory.createLoweredBevelBorder());

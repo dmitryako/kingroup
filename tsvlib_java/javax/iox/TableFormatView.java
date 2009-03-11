@@ -2,7 +2,7 @@ package javax.iox;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swingx.panelx.GridBagView;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 import java.awt.*;
 
 /**
@@ -19,19 +19,19 @@ public class TableFormatView  extends GridBagView {
   private JRadioButton colDelimSemi;
   private JRadioButton colDelimComma;
 
-  private IntTextField firstRow;
+  private IntField firstRow;
   private JLabel firstRowLbl;
-  private IntTextField firstCol;
+  private IntField firstCol;
   private JLabel firstColLbl;
 
-  private IntTextField lastRow;
+  private IntField lastRow;
   private JLabel lastRowLbl;
-  private IntTextField lastCol;
+  private IntField lastCol;
   private JLabel lastColLbl;
 
-  private IntTextField headerRow;
+  private IntField headerRow;
   private JLabel headerRowLbl;
-  private IntTextField headerCol;
+  private IntField headerCol;
   private JLabel headerColLbl;
 
   public TableFormatView(TableFormat model) {
@@ -60,22 +60,22 @@ public class TableFormatView  extends GridBagView {
     colDelimComma.setSelected(true); //default
 
     firstRowLbl = new JLabel("row #");
-    firstRow = new IntTextField(FIELD_SIZE, 1, 10);
+    firstRow = new IntField(FIELD_SIZE, 1, 10);
     firstColLbl = new JLabel("column #");
-    firstCol = new IntTextField(FIELD_SIZE, 1, 10);
+    firstCol = new IntField(FIELD_SIZE, 1, 10);
 
     lastRowLbl = new JLabel("row #");
-    lastRow = new IntTextField(FIELD_SIZE, 0, 100);
+    lastRow = new IntField(FIELD_SIZE, 0, 100);
     lastRow.setToolTipText("all available if 0");
     lastColLbl = new JLabel("column #");
-    lastCol = new IntTextField(FIELD_SIZE, 0, 100);
+    lastCol = new IntField(FIELD_SIZE, 0, 100);
     lastCol.setToolTipText("all available if 0");
 
     headerRowLbl = new JLabel("row #");
-    headerRow = new IntTextField(FIELD_SIZE, 0, 10);
+    headerRow = new IntField(FIELD_SIZE, 0, 10);
     headerRow.setToolTipText("ignored if 0");
     headerColLbl = new JLabel("column #");
-    headerCol = new IntTextField(FIELD_SIZE, 0, 10);
+    headerCol = new IntField(FIELD_SIZE, 0, 10);
     headerCol.setToolTipText("ignored if 0");
 
     setBorder(BorderFactory.createLoweredBevelBorder());

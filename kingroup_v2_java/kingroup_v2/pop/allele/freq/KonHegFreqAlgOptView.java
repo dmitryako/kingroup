@@ -10,7 +10,7 @@ import tsvlib.project.ProjectLogger;
 
 import javax.swing.*;
 import javax.swingx.panelx.GridBagView;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 import java.awt.*;
 
 /**
@@ -23,7 +23,7 @@ import java.awt.*;
 public class KonHegFreqAlgOptView extends GridBagView implements KingroupViewI {
   private static ProjectLogger log = ProjectLogger.getLogger(KonHegFreqAlgOptView.class);
 
-  private IntTextField nIter;
+  private IntField nIter;
   private static final int FIELD_SIZE = 7;
   private static final int MIN_N_ITER = 10;
   private static final int MAX_N_ITER = 1000000;
@@ -65,7 +65,7 @@ public class KonHegFreqAlgOptView extends GridBagView implements KingroupViewI {
     return new Dimension(d.width + EXTRA_SIZE, d.height + EXTRA_SIZE);
   }
   public void init() {
-    nIter = new IntTextField(FIELD_SIZE, MIN_N_ITER, MAX_N_ITER);
+    nIter = new IntField(FIELD_SIZE, MIN_N_ITER, MAX_N_ITER);
     nIter.setToolTipText("[min="+MIN_N_ITER+", max="+ MAX_N_ITER+"]");
 
     //setBorder(BorderFactory.createLoweredBevelBorder());

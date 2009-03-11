@@ -2,7 +2,8 @@ package kingroup_v2.pop.sample.builder.loci;
 import kingroup_v2.pop.sample.PopBuilderModel;
 
 import javax.swing.*;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
+
 /**
  * Copyright KinGroup Team.
  * User: jc138691, Date: 23/11/2005, Time: 15:31:11
@@ -10,9 +11,9 @@ import javax.swingx.text_fieldx.IntTextField;
 public class SampleBuilderLociUniformView extends SampleBuilderLociCommonView
 {
   protected final static int FIELD_SIZE = 2;
-  private IntTextField nLoci;
+  private IntField nLoci;
   private JLabel nLociLbl;
-  private IntTextField nAlleles;
+  private IntField nAlleles;
   private JLabel nAllelesLbl;
 
   public SampleBuilderLociUniformView(PopBuilderModel bean) {
@@ -21,13 +22,13 @@ public class SampleBuilderLociUniformView extends SampleBuilderLociCommonView
     assemble();
   }
   private void init() {
-    nLoci = new IntTextField(FIELD_SIZE, 5, 1, 100);
+    nLoci = new IntField(FIELD_SIZE, 5, 1, 100);
     nLoci.setMinimumSize(nLoci.getPreferredSize());
 
     nLociLbl = new JLabel("loci");
     nLociLbl.setToolTipText("number of loci");
 
-    nAlleles = new IntTextField(FIELD_SIZE, 10, 1, 100);
+    nAlleles = new IntField(FIELD_SIZE, 10, 1, 100);
     nAlleles.setMinimumSize(nAlleles.getPreferredSize());
 
     nAllelesLbl = new JLabel("locus size");

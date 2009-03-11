@@ -9,7 +9,7 @@ import tsvlib.project.ProjectFrame;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swingx.panelx.GridBagView;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
 
 /**
  * Copyright: www.DmitryKonovalov.org, jc138691, 11/03/2007, 15:09:38
@@ -18,7 +18,7 @@ public class MlrKnnOptView  extends QsarAlgOptView
 {
   private static int FIELD_SIZE = 3;
   protected JCheckBox norm;
-  private IntTextField knn;
+  private IntField knn;
   private JLabel knnLbl;
 
   public MlrKnnOptView()
@@ -36,7 +36,7 @@ public class MlrKnnOptView  extends QsarAlgOptView
     super.init();
     norm = new JCheckBox("standardize");
     knnLbl = new JLabel("neighbors");
-    knn = new IntTextField(FIELD_SIZE, 1, 1000);
+    knn = new IntField(FIELD_SIZE, 1, 1000);
     knn.setToolTipText("number of nearest neighbors");
   }
   public void loadTo(QBench model) {

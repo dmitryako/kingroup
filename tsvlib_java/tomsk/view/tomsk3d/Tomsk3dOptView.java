@@ -4,7 +4,8 @@ import tsvlib.project.ProjectLogger;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swingx.panelx.GridBagView;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
+
 /**
  * Copyright: www.DmitryKonovalov.org, jc138691, 15/05/2007, 15:16:04
  */
@@ -13,7 +14,7 @@ public class Tomsk3dOptView extends GridBagView
   private final static ProjectLogger log = ProjectLogger.getLogger(Tomsk3dOptView.class);
 
   private static int N_SEC_FIELD_SIZE = 5;
-  private IntTextField nSec;
+  private IntField nSec;
   private JLabel nSecLbl;
   private JCheckBox rotOn;
 
@@ -31,7 +32,7 @@ public class Tomsk3dOptView extends GridBagView
     rotOn = new JCheckBox("continuous");
 
     String help = "number of seconds it takes to complete one rotation";
-    nSec = new IntTextField(N_SEC_FIELD_SIZE, model.getMinRotationSecs(), model.getMaxRotationSecs());
+    nSec = new IntField(N_SEC_FIELD_SIZE, model.getMinRotationSecs(), model.getMaxRotationSecs());
     nSec.setToolTipText(help);
 
     nSecLbl = new JLabel("seconds");

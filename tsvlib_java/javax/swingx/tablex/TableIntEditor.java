@@ -1,9 +1,10 @@
-package javax.swingx.text_fieldx;
+package javax.swingx.tablex;
 /*
-* IntegerEditor is a 1.4 class used by TableFTFEditDemo.java.
+* TableIntEditor is a 1.4 class used by TableFTFEditDemo.java.
 */
 
 import javax.swing.*;
+import javax.swingx.text_fieldx.IntField;
 import java.awt.*;
 import java.text.NumberFormat;
 import java.text.ParseException;
@@ -12,13 +13,13 @@ import java.text.ParseException;
  * Implements a cell editor that uses a formatted text field
  * to edit Integer values.
  */
-public class IntegerEditor extends DefaultCellEditor {
-  IntTextField ftf;
+public class TableIntEditor extends DefaultCellEditor {
+  IntField ftf;
   NumberFormat format;
 
-  public IntegerEditor(int min, int max) {
-    super(new IntTextField(min, max));
-    ftf = (IntTextField)getComponent();
+  public TableIntEditor(int min, int max) {
+    super(new IntField(min, max));
+    ftf = (IntField)getComponent();
 
     format = ftf.getFormat();
   }
@@ -58,7 +59,7 @@ public class IntegerEditor extends DefaultCellEditor {
   //away, we need to invoke the superclass's version
   //of this method so that everything gets cleaned up.
   public boolean stopCellEditing() {
-    IntTextField ftf = (IntTextField)getComponent();
+    IntField ftf = (IntField)getComponent();
     if (ftf.isEditValid()) {
       try {
         ftf.commitEdit();

@@ -3,7 +3,8 @@ package kingroup_v2.cervus.tools;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swingx.panelx.GridBagView;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
+
 /**
  * Copyright KinGroup Team.
  * User: jc138691, Date: 29/01/2006, Time: 10:28:57
@@ -12,13 +13,13 @@ public class CervusParentageFormatView extends GridBagView {
   private static int FIELD_SIZE = 2;
 
   private JLabel idBox;
-  private IntTextField idCol;
+  private IntField idCol;
 
   private JLabel parentBox;
-  private IntTextField parentCol;
+  private IntField parentCol;
 
   private JLabel nProgeniesLbl;
-  private IntTextField nProgenies;
+  private IntField nProgenies;
 
   public CervusParentageFormatView(CervusParentageFileFormat model) {
     init();
@@ -31,13 +32,13 @@ public class CervusParentageFormatView extends GridBagView {
   }
   private void init() {
     nProgeniesLbl = new JLabel("Number of progenies ");
-    nProgenies = new IntTextField(FIELD_SIZE, 1, 1000);
+    nProgenies = new IntField(FIELD_SIZE, 1, 1000);
 
     idBox = new JLabel("Column of individual ID ");
-    idCol = new IntTextField(FIELD_SIZE, 1, 100);
+    idCol = new IntField(FIELD_SIZE, 1, 100);
 
     parentBox = new JLabel("Column of parental ID ");
-    parentCol = new IntTextField(FIELD_SIZE, 1, 100);
+    parentCol = new IntField(FIELD_SIZE, 1, 100);
   }
   private JPanel makeOptionPanel() {
     GridBagView panel = new GridBagView();

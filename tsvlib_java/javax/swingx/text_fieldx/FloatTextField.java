@@ -8,7 +8,7 @@ import java.text.DecimalFormat;
  * Copyright KinGroup Team.
  * User: jc138691, Date: 27/04/2006, Time: 16:49:56
  */
-public class FloatTextField extends JFormattedTextFieldX
+public class FloatTextField extends FormattedNumberField
 {
   public static void main(String[] args) {
       FloatTextField test = new FloatTextField();

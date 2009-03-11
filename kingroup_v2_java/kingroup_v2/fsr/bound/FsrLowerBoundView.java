@@ -5,22 +5,23 @@ import kingroup_v2.fsr.FsrLowerBoundBean;
 import javax.swing.*;
 import javax.swingx.panelx.GridBagView;
 import javax.swingx.text_fieldx.FloatTextField;
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
+
 /**
  * Copyright KinGroup Team.
  * User: jc138691, Date: 14/11/2005, Time: 08:32:16
  */
 public class FsrLowerBoundView extends GridBagView {
-  private IntTextField nGroups;
+  private IntField nGroups;
   private JLabel nGroupsLbl;
-  private IntTextField groupSize;
+  private IntField groupSize;
   private JLabel groupSizeLbl;
   protected final static int FIELD_SIZE = 2;
-  private IntTextField nLoci;
+  private IntField nLoci;
   private JLabel nLociLbl;
-  private IntTextField nAlleles;
+  private IntField nAlleles;
   private JLabel nAllelesLbl;
-  private IntTextField nTrials;
+  private IntField nTrials;
 
   protected final static int FLOAT_SIZE = 5;
   private FloatTextField gsOne; // approximation for group size = 1
@@ -46,16 +47,16 @@ public class FsrLowerBoundView extends GridBagView {
   private void init()
   {
     // POPULATION SAMPLE
-    nGroups = new IntTextField(FIELD_SIZE, 1, 50);
+    nGroups = new IntField(FIELD_SIZE, 1, 50);
     nGroupsLbl = new JLabel("groups");
-    groupSize = new IntTextField(FIELD_SIZE, 1, 50);
+    groupSize = new IntField(FIELD_SIZE, 1, 50);
     groupSizeLbl = new JLabel("group size");
     groupSizeLbl.setToolTipText("individuals in each group");
 
     // GENOTYPE
-    nLoci = new IntTextField(FIELD_SIZE, 1, 1, 3);
+    nLoci = new IntField(FIELD_SIZE, 1, 1, 3);
     nLociLbl = new JLabel("loci");
-    nAlleles = new IntTextField(FIELD_SIZE, 10, 1, 50);
+    nAlleles = new IntField(FIELD_SIZE, 10, 1, 50);
     nAllelesLbl = new JLabel("alleles");
     nAllelesLbl.setToolTipText("at each locus");
 
@@ -66,7 +67,7 @@ public class FsrLowerBoundView extends GridBagView {
     freqGroup.add(freqEqui);
 
     // MONTE CARLO
-    nTrials = new IntTextField(FLOAT_SIZE, 1000, 1, 1000000);
+    nTrials = new IntField(FLOAT_SIZE, 1000, 1, 1000000);
 
     // ACCURACY RESULTS
     gsOne = new FloatTextField(FLOAT_SIZE, 0, 100);

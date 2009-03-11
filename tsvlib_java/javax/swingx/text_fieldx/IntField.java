@@ -8,25 +8,25 @@ import java.text.NumberFormat;
  * Copyright KinGroup Team.
  * User: jc138691, Date: 27/04/2006, Time: 17:18:51
  */
-public class IntTextField extends JFormattedTextFieldX
+public class IntField extends FormattedNumberField
 {
   public static void main(String[] args) {
-    new IntTextField();
+    new IntField();
     System.exit(0);
   }
-  public IntTextField() {
+  public IntField() {
     super(new Integer(0), new Integer(10), NumberFormat.getIntegerInstance());
-    ThisTest test = new IntTextField.ThisTest();
+    ThisTest test = new IntField.ThisTest();
   }
-  public IntTextField(int min, int max) {
+  public IntField(int min, int max) {
     super(new Integer(min), new Integer(max), NumberFormat.getIntegerInstance());
     setValue(new Integer(min));
   }
-  public IntTextField(int columns, int min, int max) {
+  public IntField(int columns, int min, int max) {
     super(new Integer(min), new Integer(max), NumberFormat.getIntegerInstance());
     setColumns(columns);
   }
-  public IntTextField(int columns, int value, int min, int max) {
+  public IntField(int columns, int value, int min, int max) {
     super(new Integer(min), new Integer(max), NumberFormat.getIntegerInstance());
     setColumns(columns);
     setValue(new Integer(value));
@@ -51,29 +51,29 @@ public class IntTextField extends JFormattedTextFieldX
       JPanel field = new JPanel();
 
       field = new JPanel();
-      field.add(new IntTextField(2, 3));  // columns=2
+      field.add(new IntField(2, 3));  // columns=2
       panel.add(field);
-      panel.add(new JLabel("IntTextField(columns=2, value=3)"));
+      panel.add(new JLabel("IntField(columns=2, value=3)"));
 
       field = new JPanel();
-      field.add(new IntTextField(10, 0, 9));  // number [0, 9]
+      field.add(new IntField(10, 0, 9));  // number [0, 9]
       panel.add(field);
-      panel.add(new JLabel("IntTextField(columns=10, value=minIdx=0, maxIdx=9)"));
+      panel.add(new JLabel("IntField(columns=10, value=minIdx=0, maxIdx=9)"));
 
       field = new JPanel();
-      field.add(new IntTextField(3, 1, 0, 9));  // number [0, 9]
+      field.add(new IntField(3, 1, 0, 9));  // number [0, 9]
       panel.add(field);
-      panel.add(new JLabel("IntTextField(columns=3, 1, minIdx=0, maxIdx=9)"));
+      panel.add(new JLabel("IntField(columns=3, 1, minIdx=0, maxIdx=9)"));
 
       field = new JPanel();
-      field.add(new IntTextField(4, -1, 0, 9)); // number [0, 9]
+      field.add(new IntField(4, -1, 0, 9)); // number [0, 9]
       panel.add(field);
-      panel.add(new JLabel("IntTextField(columns=4, -1, minIdx=0, maxIdx=9)"));
+      panel.add(new JLabel("IntField(columns=4, -1, minIdx=0, maxIdx=9)"));
 
       field = new JPanel();
-      field.add(new IntTextField(5, -1, 9, 0)); // any number
+      field.add(new IntField(5, -1, 9, 0)); // any number
       panel.add(field);
-      panel.add(new JLabel("IntTextField(columns=5, -1, minIdx=9, maxIdx=0 [note: minIdx > maxIdx!])"));
+      panel.add(new JLabel("IntField(columns=5, -1, minIdx=9, maxIdx=0 [note: minIdx > maxIdx!])"));
 
       ApplyDialogUI dlg = new ApplyDialogUI(panel, this, true);
       dlg.setVisible(true);

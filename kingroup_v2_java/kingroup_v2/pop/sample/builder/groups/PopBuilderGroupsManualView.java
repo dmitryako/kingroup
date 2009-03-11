@@ -15,7 +15,7 @@ public class PopBuilderGroupsManualView
 {
   private IntegerList list;
   private static final int FIELD_SIZE = 2;
-  private static final int MIN_VAL = 1;
+  private static final int MIN_VAL = 0;
   private static final int MAX_VAL = 100;
   private static final int LIST_WIDTH = 50;
   private static final int LIST_HEIGHT = 50;

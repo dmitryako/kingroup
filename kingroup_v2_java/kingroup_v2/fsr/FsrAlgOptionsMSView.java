@@ -3,13 +3,14 @@ import kingroup_v2.Kingroup;
 import pattern.ucm.UCController;
 import pattern.ucm.AdapterUCCToALThread;
 
-import javax.swingx.text_fieldx.IntTextField;
+import javax.swingx.text_fieldx.IntField;
+
 /**
  * Copyright KinGroup Team.
  * User: jc138691, Date: 10/10/2005, Time: 11:06:15
  */
 public class FsrAlgOptionsMSView extends FsrAlgOptView {
-  private IntTextField wSize;
+  private IntField wSize;
   private static final int FIELD_SIZE = 3;
   public FsrAlgOptionsMSView(Kingroup model) {
     init();
@@ -17,7 +18,7 @@ public class FsrAlgOptionsMSView extends FsrAlgOptView {
     assemble();
   }
   private void init() {
-    wSize = new IntTextField(FIELD_SIZE, 1, 100);
+    wSize = new IntField(FIELD_SIZE, 1, 100);
     wSize.setToolTipText("window size [1, 100]");
   }
   public void loadTo(Kingroup model) {
