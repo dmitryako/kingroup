@@ -16,39 +16,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/groups/PopBuilderEqualGroupsView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/groups/PopBuilderEqualGroupsView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_java/kingroup/view/KinshipRatioSimViewV1.java" afterPath="$PROJECT_DIR$/../kingroup_java/kingroup/view/KinshipRatioSimViewV1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/groups/PopBuilderHalfSibOptView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/groups/PopBuilderHalfSibOptView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/PopBuilderKinshipIBDView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/PopBuilderKinshipIBDView.java" />
-      <change type="MOVED" beforePath="C:\dev\kingroup\kingroup_src_090202_from_svn\tsvlib_java\javax\swingx\text_fieldx\IntTextField.java" afterPath="$PROJECT_DIR$/../tsvlib_java/javax/swingx/text_fieldx/IntField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/qsar/bench/qsar/table/TableSelectColsView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/qsar/bench/qsar/table/TableSelectColsView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/loci/SampleBuilderLociUniformView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/loci/SampleBuilderLociUniformView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tsvlib_java/tomsk/view/tomsk3d/Tomsk3dOptView.java" afterPath="$PROJECT_DIR$/../tsvlib_java/tomsk/view/tomsk3d/Tomsk3dOptView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/cervus/tools/CervusParentageFormatView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/cervus/tools/CervusParentageFormatView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tsvlib_java/javax/swingx/text_fieldx/IntegerList.java" afterPath="$PROJECT_DIR$/../tsvlib_java/javax/swingx/text_fieldx/IntegerList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/qsar/bench/qsar/cv/mccv/MccvOptView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/qsar/bench/qsar/cv/mccv/MccvOptView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/fsr/accuracy/AccuracyOptionsView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/fsr/accuracy/AccuracyOptionsView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_java/kingroup_v2/kinship/view/KinshipIBDComplexView.java" afterPath="$PROJECT_DIR$/../kingroup_java/kingroup_v2/kinship/view/KinshipIBDComplexView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/fsr/FsrAlgOptionsSIMPSView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/fsr/FsrAlgOptionsSIMPSView.java" />
+      <change type="MOVED" beforePath="C:\dev\kingroup\kingroup_src_090202_from_svn\tsvlib_java\javax\utilx\arrays\ByteArr.java" afterPath="$PROJECT_DIR$/../tsvlib_java/javax/utilx/arrays/ByteVec.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipLikeMtrxView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipLikeMtrxView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/sys/HWEquiAlg.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/sys/HWEquiAlg.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/like/view/KinshipRatioSimOptView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/like/view/KinshipRatioSimOptView.java" />
-      <change type="MOVED" beforePath="C:\dev\kingroup\kingroup_src_090202_from_svn\tsvlib_java\javax\swingx\text_fieldx\JFormattedTextFieldX.java" afterPath="$PROJECT_DIR$/../tsvlib_java/javax/swingx/text_fieldx/FormattedNumberField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tsvlib_java/javax/iox/TableFormatView.java" afterPath="$PROJECT_DIR$/../tsvlib_java/javax/iox/TableFormatView.java" />
-      <change type="MOVED" beforePath="C:\dev\kingroup\kingroup_src_090202_from_svn\tsvlib_java\javax\swingx\text_fieldx\IntegerEditor.java" afterPath="$PROJECT_DIR$/../tsvlib_java/javax/swingx/tablex/TableIntEditor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/allele/freq/KonHegFreqAlgOptView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/allele/freq/KonHegFreqAlgOptView.java" />
-      <change type="DELETED" beforePath="C:\dev\kingroup\kingroup_src_090202_from_svn\tsvlib_java\javax\swingx\text_fieldx\IntegerEditor.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tsvlib_java/algorithm/Func2DView.java" afterPath="$PROJECT_DIR$/../tsvlib_java/algorithm/Func2DView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tsvlib_java/pattern/ucm/UCShowHelpMssg.java" afterPath="$PROJECT_DIR$/../tsvlib_java/pattern/ucm/UCShowHelpMssg.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/fsr/FsrAlgOptionsMSView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/fsr/FsrAlgOptionsMSView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/groups/SampleBuilderGroupsSkewedView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/groups/SampleBuilderGroupsSkewedView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tsvlib_java/javax/iox/table/TableDisplayOptView.java" afterPath="$PROJECT_DIR$/../tsvlib_java/javax/iox/table/TableDisplayOptView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/fsr/bound/FsrLowerBoundView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/fsr/bound/FsrLowerBoundView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/multi_t/project/ProjectSettingsUI.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/multi_t/project/ProjectSettingsUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/groups/PopBuilderGroupsManualView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/groups/PopBuilderGroupsManualView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/qsar/bench/qsar/cv/mcvs/McvsOptView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/qsar/bench/qsar/cv/mcvs/McvsOptView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/cervus/view/CervusFileFormatView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/cervus/view/CervusFileFormatView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/qsar/bench/qsar/MLR/MlrKnnOptView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/qsar/bench/qsar/MLR/MlrKnnOptView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tsvlib_java/javax/swingx/text_fieldx/FloatTextField.java" afterPath="$PROJECT_DIR$/../tsvlib_java/javax/swingx/text_fieldx/FloatTextField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipFileFormatView.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipFileFormatView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ant/kingroup_v2_jar.xml" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ant/kingroup_v2_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/sys/SysPopNullHypothesisFactory.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/sys/SysPopNullHypothesisFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KinGroupV2Startup.java" afterPath="$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KinGroupV2Startup.java" />
     </list>
     <ignored path="kingroup_intellij.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,91 +86,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="KingroupFrame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KingroupFrame.java">
+      <file leaf-file-name="UCKinshipShowRatioOpt.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/kinship/UCKinshipShowRatioOpt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="393" column="73" selection-start="15296" selection-end="15296" vertical-scroll-proportion="0.0">
+            <state line="39" column="60" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UCShowPairwiseROpt.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/kinship/UCShowPairwiseROpt.java">
+      <file leaf-file-name="UCKinshipCalcRatioMtrx.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/kinship/UCKinshipCalcRatioMtrx.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="48" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0">
+            <state line="87" column="47" selection-start="3025" selection-end="3025" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PairwiseROptView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/PairwiseROptView.java">
+      <file leaf-file-name="KinshipRatioMtrxViewFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipRatioMtrxViewFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="29" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
+            <state line="23" column="49" selection-start="918" selection-end="918" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PairwiseREstimatorView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/PairwiseREstimatorView.java">
+      <file leaf-file-name="KinshipSortedMtrxFlag.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipSortedMtrxFlag.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="56" selection-start="5644" selection-end="5644" vertical-scroll-proportion="0.0">
+            <state line="19" column="21" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UCShowHelpMssg.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../tsvlib_java/pattern/ucm/UCShowHelpMssg.java">
+      <file leaf-file-name="KinshipSortedMtrxView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipSortedMtrxView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="18" selection-start="169" selection-end="169" vertical-scroll-proportion="0.14745973">
+            <state line="81" column="36" selection-start="2631" selection-end="2631" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PopBuilderGroupsManualView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/groups/PopBuilderGroupsManualView.java">
+      <file leaf-file-name="KinGroupV2Startup.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KinGroupV2Startup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="21" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.0">
+            <state line="17" column="29" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IntegerList.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../tsvlib_java/javax/swingx/text_fieldx/IntegerList.java">
+      <file leaf-file-name="kingroup_v2_jar.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ant/kingroup_v2_jar.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="20" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
+            <state line="26" column="36" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.99774265">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableIntEditor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../tsvlib_java/javax/swingx/tablex/TableIntEditor.java">
+      <file leaf-file-name="KinshipLikeMtrxArrView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipLikeMtrxArrView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="247" selection-end="342" vertical-scroll-proportion="0.0">
+            <state line="17" column="32" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IntField.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../tsvlib_java/javax/swingx/text_fieldx/IntField.java">
+      <file leaf-file-name="KinshipLikeMtrxView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipLikeMtrxView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="17" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+            <state line="21" column="45" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormattedNumberField.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../tsvlib_java/javax/swingx/text_fieldx/FormattedNumberField.java">
+      <file leaf-file-name="MVCTableView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../tsvlib_java/pattern/mvc/MVCTableView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="16" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
+            <state line="10" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -219,50 +193,7 @@
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
   <component name="PackagesPane">
-    <subPane>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="kingroup_intellij" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="kingroup" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="kingroup_intellij" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="kingroup" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="pattern" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="ucm" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="kingroup_intellij" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="kingroup" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="pattern" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-        </PATH_ELEMENT>
-      </PATH>
-    </subPane>
+    <subPane />
   </component>
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="true" id="Add" />
@@ -277,13 +208,78 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectPane">
-    <subPane />
+    <subPane>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup_intellij" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup_intellij" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup_src_090202_from_svn" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup_intellij" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup_src_090202_from_svn" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup_v2_java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup_intellij" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup_src_090202_from_svn" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup_v2_java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="kingroup_v2" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </subPane>
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="0.16666667" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="0.16666667" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -298,7 +294,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="RunManagerConfig.showSettingsBeforeRunnig" value="false" />
@@ -309,8 +305,8 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -447,22 +443,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1435" y="36" width="1288" height="998" extended-state="0" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1288" height="998" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18775511" sideWeight="0.644752" order="1" side_tool="false" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5536332" sideWeight="0.5" order="1" side_tool="false" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13138686" sideWeight="0.644752" order="1" side_tool="false" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5524798" sideWeight="0.5" order="1" side_tool="false" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34717417" sideWeight="0.5" order="10" side_tool="false" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34717417" sideWeight="0.5" order="10" side_tool="false" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36009732" sideWeight="0.43829295" order="0" side_tool="false" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2676399" sideWeight="0.644752" order="0" side_tool="false" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871974" sideWeight="0.5" order="2" side_tool="false" />
@@ -550,114 +546,114 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipRDisplayOptView.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipDisplayWithLogView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+        <state line="10" column="57" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/relatedness/PairwiseRMtrxCalculator.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipOptionsView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="35" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.0">
+        <state line="13" column="29" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipRMtrxArrView.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipLikeOptView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="9" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+        <state line="12" column="24" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/save_results/UCSaveResultsFile.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/like/view/KinshipRatioSimOptView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
+        <state line="17" column="48" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/UCPopBuilderFullSibs.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/like/view/KinshipRatioSimView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="27" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0">
+        <state line="12" column="25" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/groups/PopBuilderFullSibView.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/like/view/KinshipRatioOptView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="33" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0">
+        <state line="19" column="25" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/pop/sample/builder/groups/PopBuilderGroupsManualView.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/kinship/UCKinshipShowRatioOpt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="21" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.0">
+        <state line="39" column="60" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tsvlib_java/javax/swingx/text_fieldx/IntegerList.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/kinship/UCKinshipCalcRatioMtrx.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="20" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
+        <state line="87" column="47" selection-start="3025" selection-end="3025" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tsvlib_java/javax/swingx/text_fieldx/FormattedNumberField.java">
+    <entry file="file://$PROJECT_DIR$/../tsvlib_java/pattern/mvc/MVCTableView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="16" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tsvlib_java/javax/swingx/text_fieldx/IntField.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipLikeMtrxView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="17" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+        <state line="21" column="45" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tsvlib_java/javax/swingx/tablex/TableIntEditor.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipLikeMtrxArrView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="247" selection-end="342" vertical-scroll-proportion="0.0">
+        <state line="17" column="32" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KingroupFrame.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipRatioMtrxViewFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="393" column="73" selection-start="15296" selection-end="15296" vertical-scroll-proportion="0.0">
+        <state line="23" column="49" selection-start="918" selection-end="918" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ucm/kinship/UCShowPairwiseROpt.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipSortedMtrxFlag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="48" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0">
+        <state line="19" column="21" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/PairwiseROptView.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/KinshipSortedMtrxView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="29" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
+        <state line="81" column="36" selection-start="2631" selection-end="2631" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/kinship/view/PairwiseREstimatorView.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/KinGroupV2Startup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="56" selection-start="5644" selection-end="5644" vertical-scroll-proportion="0.0">
+        <state line="17" column="29" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tsvlib_java/pattern/ucm/UCShowHelpMssg.java">
+    <entry file="file://$PROJECT_DIR$/../kingroup_v2_java/kingroup_v2/ant/kingroup_v2_jar.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="169" selection-end="169" vertical-scroll-proportion="0.14745973">
+        <state line="26" column="36" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.99774265">
           <folding />
         </state>
       </provider>

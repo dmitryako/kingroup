@@ -15,7 +15,7 @@ public class KinshipRatioSimOptView extends GridBagView {
   private final static int FIELD_SIZE = 5;
   private final static int MIN_SIM_PAIRS = 1;
   private final static int DEFAULT_SIM_PAIRS = 1000;
-  private final static int MAX_SIM_PAIRS = 100000;
+  private final static int MAX_SIM_PAIRS = 10000000;
   private JRadioButton flag;
   private JRadioButton pvalue;
   private JCheckBox sim;

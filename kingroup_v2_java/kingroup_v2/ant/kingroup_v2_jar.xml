@@ -7,7 +7,7 @@
   -->
 <!--  <target name="build_jar" depends="compile_with_1_4" description="build a jar file" >-->
   <target name="build_jar" description="build a jar file" >
-    <jar destfile="kingroup_v2_090306.jar" manifest="kingroup_v2_jar.mf" >
+    <jar destfile="kingroup_v2_090320.jar" manifest="kingroup_v2_jar.mf" >
       <fileset dir="..\..\..\..\classes" casesensitive="yes" >
         <filename name="**/*.class" />
       </fileset>
@@ -24,8 +24,8 @@
     <signjar keystore="webstart/v2/kingroup_v2_keys"
              alias="kingroup_v2"
              storepass="kingroup"
-             jar="kingroup_v2_090306.jar"/>
-    <move file="kingroup_v2_090306.jar" todir="..\..\..\www_kingroup_org\googlecode" overwrite="true" />
+             jar="kingroup_v2_090320.jar"/>
+    <move file="kingroup_v2_090320.jar" todir="..\..\..\www_kingroup_org\googlecode" overwrite="true" />
   </target>
 
   <target name="build_jar_2" description="build a jar file" >

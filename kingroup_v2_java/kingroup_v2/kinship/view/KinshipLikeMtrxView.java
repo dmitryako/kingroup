@@ -24,8 +24,8 @@ public class KinshipLikeMtrxView extends MVCTableView {
   protected SysPopMtrxI mtrx;
   protected Kinship kinship;
   private ProgressWnd progress = null;
-  private int MAX_N_ROWS = 100;
-  private int MAX_N_COLS = 100;
+//  private int MAX_N_ROWS = 100;
+//  private int MAX_N_COLS = 100;
 
   public KinshipLikeMtrxView(SysPopMtrxI m, Kinship kinship) {
 //    log.setLevel(Level.OFF);
@@ -52,11 +52,11 @@ public class KinshipLikeMtrxView extends MVCTableView {
     int nRow = sizeToNumRow(n);
     int nCol = sizeToNumCol(n);
 
-    if (nRow > sizeToNumRow(MAX_N_ROWS)) {
-      KinGroupV2MainUI.getInstance().setStatus(" !!!NOTE!!! Displayed only "+MAX_N_ROWS+" out of "+n+" rows.");
-      nRow = sizeToNumRow(MAX_N_ROWS);
-      nCol = sizeToNumCol(MAX_N_ROWS);
-    }    
+//    if (nRow > sizeToNumRow(MAX_N_ROWS)) {
+//      KinGroupV2MainUI.getInstance().setStatus(" !!!NOTE!!! Displayed only "+MAX_N_ROWS+" out of "+n+" rows.");
+//      nRow = sizeToNumRow(MAX_N_ROWS);
+//      nCol = sizeToNumCol(MAX_N_ROWS);
+//    }
 
     String[][] rowData = new String[nRow][nCol];
     StrMtrx.set(rowData, EMPTY);

@@ -29,7 +29,7 @@ public class HWEquiAlg {
       }
       int nAlleles = pop.getFreq().getLocFreq(L).length;
       int[] allAlleles = SysPopFactory.loadAllAllelels(L, pop);  // array od alleles
-//    log.info("allAlleles=\n" + ByteArr.toString(allAlleles));
+//    log.info("allAlleles=\n" + ByteVec.toString(allAlleles));
 
       int[] idxArr = IntVec.makeIdxArr(allAlleles.length);
       IntSymmMtrx m = makeMtrxFromOrder(allAlleles, idxArr, nAlleles);
