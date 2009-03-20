@@ -20,7 +20,7 @@ public class SysPopNullHypothesisFactory
 
     for (int L = 0; L < nLoci; L++) {
       int[] allAlleles = SysPopFactory.loadAllAllelels(L, from);  // array od alleles
-//      log.info("allAlleles=\n" + ByteArr.toString(allAlleles));
+//      log.info("allAlleles=\n" + ByteVec.toString(allAlleles));
       int[] rndOrder = IntVec.makeRandIdxArr(allAlleles.length);
 //      log.info("rndOrder=\n" + IntVec.toString(rndOrder));
       int idx = 0;

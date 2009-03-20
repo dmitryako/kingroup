@@ -4,7 +4,7 @@ package javax.utilx.arrays;
  * Created by: jc1386591
  * Date: 15/06/2006. Time: 13:31:45
  */
-public class ByteArr {
+public class ByteVec {
   static public String toString(byte[] arr) {
     StringBuffer buff = new StringBuffer();
     buff.append("{");
