@@ -7,8 +7,9 @@ package kingroup.util;
 import java.util.TreeMap;
 public class FastId {
   public final static int FAST_ID_NONE = -1;
-  private static FastIdManager manageId_ = FastIdManager.getInstance();
-  private int id_ = FAST_ID_NONE;
+  private static FastIdManager idManager = FastIdManager.getInstance();
+  private int id = FAST_ID_NONE;
+
   public FastId() {
   }
   public FastId(String from) {
@@ -18,25 +19,25 @@ public class FastId {
     setId(from);
   }
   final public String getId() {
-    return manageId_.getStringId(id_);
+    return idManager.getStringId(id);
   }
   final public void setId(FastId from) {
-    id_ = from.id_;
+    id = from.id;
   }
   final public void setId(String from) {
-    id_ = manageId_.getId(from);
+    id = idManager.getId(from);
   }
   final public boolean equals(FastId to) {
-    return to.id_ == id_;
+    return to.id == id;
   }
   final public boolean equals(String to) {
-    return id_ == manageId_.getId(to);
+    return id == idManager.getId(to);
   }
   public String toString() {
     return getId();
   }
   final protected void copyFastIdFrom(FastId from) {
-    id_ = from.id_;
+    id = from.id;
   }
   public FastId[] add(FastId[] to) {
     FastId[] newArray = null;
@@ -52,30 +53,31 @@ public class FastId {
   }
 }
 class FastIdManager {
-  static private int nextId_ = 0;
-  private TreeMap mapStrToInt_ = new TreeMap();
-  private TreeMap mapIntToStr_ = new TreeMap();
+  static private int nextId = 0;
+  private TreeMap mapStrToInt = new TreeMap();
+  private TreeMap mapIntToStr = new TreeMap();
+
   public synchronized int getId(String s) {
     if (s == null || s.length() < 1)
       return FastId.FAST_ID_NONE;
-    Integer id = (Integer) mapStrToInt_.get(s);
+    Integer id = (Integer) mapStrToInt.get(s);
     if (id == null) {
-      id = new Integer(nextId_++);
-      mapStrToInt_.put(s, id);
-      mapIntToStr_.put(id, s);
+      id = new Integer(nextId++);
+      mapStrToInt.put(s, id);
+      mapIntToStr.put(id, s);
     }
     return id.intValue();
   }
   public synchronized String getStringId(int i) {
-    return (String) mapIntToStr_.get(new Integer(i));
+    return (String) mapIntToStr.get(new Integer(i));
   }
   //Singleton
-  private static FastIdManager instance_ = null;
+  private static FastIdManager instance = null;
   private FastIdManager() {
   }
   final public static FastIdManager getInstance() {
-    if (instance_ == null)
-      instance_ = new FastIdManager();
-    return instance_;
+    if (instance == null)
+      instance = new FastIdManager();
+    return instance;
   }
 }
