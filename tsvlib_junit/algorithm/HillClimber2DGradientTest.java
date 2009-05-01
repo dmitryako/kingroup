@@ -25,8 +25,8 @@ public class HillClimber2DGradientTest extends TestCase
         return - (x - 1)*(x - 1) - (y - 2)*(y - 2);
       }
     };
-//    alg.findMax(new Func2DFrame(func));
-    alg.findMax(func);
+    alg.findMax(new Func2DFrame(func));
+//    alg.findMax(func);
     log.info("\ncount = " + alg.getCount());
     assertEquals(1, alg.getResult().getX(), eps);
     assertEquals(2, alg.getResult().getY(), eps);

@@ -63,8 +63,11 @@ public class KinshipIBDArrView
 
   public void loadFrom(Kinship model) {
     ibdView = new KinshipIBDView(model.getComplexNullIBD());
-    for (KinshipIBD v: model.getNullArr())
+    for (KinshipIBD v: model.getNullArr())  {
+      if (v == null)
+        continue;
       tableModel.addIBD(v);
+    }
   }
 
   protected void init()   {

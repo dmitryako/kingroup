@@ -27,8 +27,8 @@ public class UCKinshipCalcSigLevels implements UCKinshipCalcSigLevelsI
   public boolean run() {
     Kingroup project = KinGroupV2Project.getInstance();
     Kinship kinship = project.getKinship();
-    optView.loadTo(project);
-    project.saveProjectToDefaultLocation();
+//    optView.loadTo(project);  // this must be done in the calling UCC
+//    project.saveProjectToDefaultLocation();
     if (!kinship.getPerformSigTest())
       return true; // this is not an error
 

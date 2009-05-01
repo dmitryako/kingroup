@@ -4,10 +4,7 @@ import kingroup_v2.KinGroupV2Project;
 import kingroup_v2.Kingroup;
 import kingroup_v2.KingroupFrame;
 import kingroup_v2.ucm.save_results.UCSaveResultsFileUI;
-import kingroup_v2.kinship.Kinship;
-import kingroup_v2.kinship.KinshipIBD;
-import kingroup_v2.kinship.KinshipIBDFactory;
-import kingroup_v2.kinship.KinshipFileFormat;
+import kingroup_v2.kinship.*;
 import kingroup_v2.kinship.like.KinshipLogMtrx;
 import kingroup_v2.kinship.like.KinshipRatioMtrx;
 import kingroup_v2.kinship.like.KinshipRatioSimTable;
@@ -48,27 +45,47 @@ public class UCKinshipCalcRatioMtrx implements UCController {
     return mtrx;
   }
   public boolean run() {
-    if (!sigTest.run())
-      return false;
-    KinshipRatioSimTable sigTable = sigTest.getRatioSimTable();
-
     // LOAD FROM OPTIONS VIEW
+    KinGroupV2MainUI mainUI = KinGroupV2MainUI.getInstance();
     Kingroup project = KinGroupV2Project.getInstance();
     Kinship kinship = project.getKinship();
     optView.loadTo(project);
     project.saveProjectToDefaultLocation();
 
-    if (!isValid())
-      return false;
+    KinshipIBDComplex primIBD = kinship.getComplexPrimIBD();
+    KinshipIBD[] nullArr = kinship.getNullArr();
+    if (KinshipIBDFactory.find(primIBD, nullArr)) {
+      if (nullArr.length == 1) {
+        String error = "Unable to proceed:"
+          +"\nthe null hypothesis is the same as the primary hypothesis.";
+        log.severe(error);
+        JOptionPane.showMessageDialog(mainUI, error);
+        return false;
+      }
+      else {
+        String mssg = "This is NOT an error! Ignoring one of the null hypotheses which is the same as the primary hypothesis.";
+        mainUI.setStatusWithTime(mssg);
+      }
+    }
+    KinshipIBD[] savedNullArr = nullArr;              // this removes redundant null hypo
+    nullArr = KinshipIBDFactory.remove(nullArr, primIBD);
+    kinship.setNullArr(nullArr);
 
-    KinGroupV2MainUI mainUI = KinGroupV2MainUI.getInstance();
+    if (!sigTest.run())  {
+      return false;
+    }
+    KinshipRatioSimTable sigTable = sigTest.getRatioSimTable();
+
+    if (!isValid()) {
+      return false;
+    }
+
     SysPop sysPop = mainUI.getSysPop();
     UsrPopView popView = mainUI.getUsrPopView();
     MVCTableView view = null;
 
     if (kinship.getDisplayByGroup()) {
       progress = new ProgressWnd(KingroupFrame.getInstance(), "Groups");
-
       SysPop[] arr = mainUI.getSysGroups();
       KinshipLogMtrx[] mtrxArr = new KinshipLogMtrx[arr.length];
       for (int i = 0; i < arr.length; i++) {
@@ -77,7 +94,6 @@ public class UCKinshipCalcRatioMtrx implements UCController {
           cleanup();
           return false;
         }
-
 //        // log.info("group =\n" + arr[i]);
         mtrxArr[i] = makeRatioMtrx(arr[i]);
         mtrxArr[i].calcComplexNull(project);
@@ -94,6 +110,7 @@ public class UCKinshipCalcRatioMtrx implements UCController {
 
       view = KinshipRatioMtrxViewFactory.makeView(m, kinship, sigTable);
     }
+    kinship.setNullArr(savedNullArr);  // restore
 
     if (progress != null)
       progress.close();
