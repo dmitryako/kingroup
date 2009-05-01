@@ -30,8 +30,8 @@ public class UCPedigreeCalcSigLevels extends UCKinshipCalcSigLevels
     KinGroupV2MainUI mainGui = KinGroupV2MainUI.getInstance();
     Kingroup project = KinGroupV2Project.getInstance();
     Kinship kinship = project.getKinship();
-    optView.loadTo(project);
-    project.saveProjectToDefaultLocation();
+//    optView.loadTo(project);    // this must be done in the calling UCC
+//    project.saveProjectToDefaultLocation();
     if (!kinship.getPerformSigTest())
       return true; // this is not an error
 
@@ -44,14 +44,6 @@ public class UCPedigreeCalcSigLevels extends UCKinshipCalcSigLevels
       JOptionPane.showMessageDialog(mainGui, error);
       return false;
     }
-//    if (nullArr.length > 1  && !kinship.getDisplaySigFlag()) {
-//      String error = "Significance levels with complex null hypothesis is working"
-//        +"\nBUT p-values are needed to be checked.\n"
-//        +"Please contact dmitry.konovalov@jcu.edu.au if you need this functionality.";
-//      log.severe(error);
-//      JOptionPane.showMessageDialog(mainGui, error);
-//      return false;
-//    }
     if (nullArr.length == 0) {
       String error = "Unable to proceed with the significance test:"
         +"\nMissing null hypothesis.";
@@ -61,11 +53,12 @@ public class UCPedigreeCalcSigLevels extends UCKinshipCalcSigLevels
     }
     if (KinshipIBDFactory.find(primIBD, nullArr)) {
       String error = "Unable to proceed with the significance test:"
-        +"\nOne of null hypotheses is the same as the primary hypothesis.";
+        +"\none of the null hypotheses is the same as the primary hypothesis.";
       log.severe(error);
       JOptionPane.showMessageDialog(mainGui, error);
       return false;
     }
+
     SysPop pop = mainGui.getSysPop();
     kinship.getComplexPrimIBD().setComplex(false);
     KinshipIBDComplex complexNullIBD = kinship.getComplexNullIBD();
@@ -76,7 +69,6 @@ public class UCPedigreeCalcSigLevels extends UCKinshipCalcSigLevels
     table = null;
     for (KinshipIBD nullIBD : nullArr)     {
       nullIBD.copyTo(complexNullIBD);
-
       if (table == null) {
         table = new KinshipRatioSimArr(kinship);
         table.calc(kinship, pop);

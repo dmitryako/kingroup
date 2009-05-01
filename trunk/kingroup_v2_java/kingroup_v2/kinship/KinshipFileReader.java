@@ -400,7 +400,8 @@ public class KinshipFileReader
       }
       locusIdx++;
       if (token.length() == 0) {
-        String error = "Unable to import: Missing locus_id#" + (locusIdx + 1);
+        String error = "Unable to import: Missing locus_id#" + (locusIdx + 1)
+          + "\n from the following line:\n" + line;
         token = error;
         log.severe(error);
         JOptionPane.showMessageDialog(frame, error);
