@@ -89,7 +89,7 @@ public class IntVec {
     }
     return false;
   }
-  public static int[] makeArray(int size, int val) {
+  public static int[] make(int size, int val) {
     int[] res = new int[size];
     Arrays.fill(res, val);
     return res;

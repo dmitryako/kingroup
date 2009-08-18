@@ -131,7 +131,7 @@ public class SimpsEfficiencyMS extends SimpsAccuracyMS {
     allDist_ = new DoubleArrayByInt();
     count_ = new SumByInt();
     for (int groupSize = MIN_GROUP_SIZE; groupSize <= MAX_GROUP_SIZE; groupSize += groupSizeStep) {
-      int[] groups = IntVec.makeArray(N_GROUPS, groupSize);
+      int[] groups = IntVec.make(N_GROUPS, groupSize);
       POP_MODEL.setSize(N_GROUPS * groupSize);
       POP_MODEL.setNumLoci(N_LOCI);
       POP_MODEL.setNumAlleles(N_ALLELES);

@@ -74,7 +74,7 @@ public class UCPopFreqCalcFreq_dev implements UCController {
 
     double[] obsHet = AlleleAnalysisFactory.calcObservHeteroz(givenPop);
     log.info("\nobsHet=" + Vec.toString(obsHet));
-    double obsHetAvr = Vec.avr(obsHet);
+    double obsHetAvr = Vec.mean(obsHet);
 
     RandomSeed rand = RandomSeed.getInstance();
     for (int i = 0; i < MAX_COUNT; i++) {
@@ -96,7 +96,7 @@ public class UCPopFreqCalcFreq_dev implements UCController {
       newGroup.setFreq(newGroupFreq);
 
       double[] newHet = AlleleAnalysisFactory.calcTrueHeteroz(newGroup.getFreq());
-      double newHetAvr = Vec.avr(newHet);
+      double newHetAvr = Vec.mean(newHet);
       double newZ = calcCost(obsHetAvr, newHetAvr);
 
       if (i == 0  ||  newZ < bestZ) {
@@ -125,11 +125,11 @@ public class UCPopFreqCalcFreq_dev implements UCController {
     SysAlleleFreq givenFreq = givenPop.getFreq();
 
     double[] trueHet = AlleleAnalysisFactory.calcTrueHeteroz(givenPop.getFreq());
-    double trueHetAvr = Vec.avr(trueHet);
+    double trueHetAvr = Vec.mean(trueHet);
 
     double[] obsHet = AlleleAnalysisFactory.calcObservHeteroz(givenPop);
     log.info("\nobsHet=" + Vec.toString(obsHet));
-    double obsHetAvr = Vec.avr(obsHet);
+    double obsHetAvr = Vec.mean(obsHet);
 
     //double[] obsArr = SimilarityIndex.calcFromPop(newGroup);
     //double obs = SimilarityIndex.averageOverLoci(obsArr);
@@ -138,7 +138,7 @@ public class UCPopFreqCalcFreq_dev implements UCController {
     //double est = SimilarityIndex.averageOverLoci(estArr);
     double[] estHet = AlleleAnalysisFactory.calcTrueHeteroz(newGroup.getFreq());
     log.info("\nestHet=" + Vec.toString(obsHet));
-    double estHetAvr = Vec.avr(obsHet);
+    double estHetAvr = Vec.mean(obsHet);
 
 //    double[] biasedArr = SimilarityIndex.calcFromFreq(newGroupFreq);
 //    double biased = SimilarityIndex.averageOverLoci(biasedArr);

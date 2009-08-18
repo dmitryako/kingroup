@@ -116,7 +116,7 @@ public class AlleleAnalysisFactory
   }
   public static double calcNeiHeterozAvr(SysPop pop)
   {
-    return Vec.avr(calcNeiHeteroz(pop));
+    return Vec.mean(calcNeiHeteroz(pop));
   }
   public static double[] calcTrueHeteroz(SysAlleleFreq freq)  {
     int nLoci = freq.getNumLoci();
@@ -136,18 +136,18 @@ public class AlleleAnalysisFactory
     pop.setFreq(observedFreq);
     double[] varL = AlleleAnalysisFactory.calcVarX(pop);
     pop.setFreq(saved);
-    return Vec.avr(varL);
+    return Vec.mean(varL);
   }
 
   public static double calcTrueHeterozAvr(SysAlleleFreq freq)
   {
-    return Vec.avr(calcTrueHeteroz(freq));
+    return Vec.mean(calcTrueHeteroz(freq));
   }
 
   public static double calcObservHeterozAvr(SysPop pop)
   {
     double[] obsHet = AlleleAnalysisFactory.calcObservHeteroz(pop);
-    return Vec.avr(obsHet);
+    return Vec.mean(obsHet);
   }
 
   public static double[] calcObservHeteroz(SysPop pop)

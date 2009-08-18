@@ -44,7 +44,7 @@ public class MSAlgGroups extends LinkedList<MSAlgGroup>
         dist[r][c] = d;
         dist[c][r] = d;
         avrDist += d;
-//        log.info("d["+r+"]["+c+"]=" + (float)d + ", avr=" + (float)(avrDist/count));
+//        log.info("d["+r+"]["+c+"]=" + (float)d + ", mean=" + (float)(avrDist/count));
       }
     }
     avrDist /= count;

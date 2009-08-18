@@ -140,7 +140,7 @@ public class PartitionAccuracyTester //extends PerformanceChart
     count_ = new SumByInt();
     for (int groupSize = MIN_GROUP_SIZE; groupSize <= MAX_GROUP_SIZE
       ; groupSize += GROUP_SIZE_STEP) {
-      int[] groups = IntVec.makeArray(N_GROUPS, groupSize);
+      int[] groups = IntVec.make(N_GROUPS, groupSize);
       POP_MODEL.setSize(N_GROUPS * groupSize);
       POP_MODEL.setNumLoci(N_LOCI);
       POP_MODEL.setNumAlleles(N_ALLELES);
@@ -169,7 +169,7 @@ public class PartitionAccuracyTester //extends PerformanceChart
     allDist_ = new DoubleArrayByInt();
     count_ = new SumByInt();
     for (N_GROUPS = MIN_N_GROUPS; N_GROUPS <= MAX_N_GROUPS; N_GROUPS += N_GROUPS_STEP) {
-      int[] groups = IntVec.makeArray(N_GROUPS, GROUP_SIZE);
+      int[] groups = IntVec.make(N_GROUPS, GROUP_SIZE);
       POP_MODEL.setSize(N_GROUPS * GROUP_SIZE);
       POP_MODEL.setNumLoci(N_LOCI);
       POP_MODEL.setNumAlleles(N_ALLELES);

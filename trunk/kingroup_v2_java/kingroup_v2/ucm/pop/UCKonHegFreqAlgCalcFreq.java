@@ -123,7 +123,7 @@ public class UCKonHegFreqAlgCalcFreq implements UCController
 
     double[] obsHet = AlleleAnalysisFactory.calcObservHeteroz(givenPop);
     log.info("\nobsHet=" + Vec.toString(obsHet));
-    double obsHetAvr = Vec.avr(obsHet);
+    double obsHetAvr = Vec.mean(obsHet);
 
     RandomSeed rand = RandomSeed.getInstance();
     for (int i = 0; i < MAX_COUNT; i++) {
@@ -145,7 +145,7 @@ public class UCKonHegFreqAlgCalcFreq implements UCController
       newGroup.setFreq(newGroupFreq);
 
       double[] newHet = AlleleAnalysisFactory.calcTrueHeteroz(newGroup.getFreq());
-      double newHetAvr = Vec.avr(newHet);
+      double newHetAvr = Vec.mean(newHet);
       double newZ = calcCost(obsHetAvr, newHetAvr);
 
       if (i == 0  ||  newZ < bestZ) {

@@ -90,6 +90,6 @@ public class LowTriangleMatrix implements MtrxReadI {
   }
 
   public double calcAvr() {
-    return Vec.avr(v);
+    return Vec.mean(v);
   }
 }

@@ -33,7 +33,7 @@ public class RMtrxOutbredKonHeg extends PairwiseRMtrx
 //    double Hs = AlleleAnalysisFactory.calcTrueHeterozAvr(freq);
 //    PairwisePMtrx pm = new PairwisePMtrx(new PairwiseRMtrxFactory(Kingroup.PAIRWISE_DIST_SQR));
 //    double[] nullDistArr = pm.calcNullDistr(refPop);
-//    double avrDist = DoubleArr.avr(nullDistArr);
+//    double avrDist = DoubleArr.mean(nullDistArr);
 //    double avrDist = 4. * Hs;
 //    avrDist *= (2. * n / (2. * n - 1));
 

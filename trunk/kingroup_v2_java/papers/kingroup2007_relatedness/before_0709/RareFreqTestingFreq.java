@@ -59,11 +59,11 @@ public class RareFreqTestingFreq extends RareFreqKinship
 
     double[] trueHet = AlleleAnalysisFactory.calcTrueHeteroz(sysPop.getFreq());
     log.info("\ntrueHet=" + Vec.toString(trueHet));
-    log.info("\ntrueHet Avr=" + (float)Vec.avr(trueHet));
+    log.info("\ntrueHet Avr=" + (float)Vec.mean(trueHet));
 
     double[] obsHet = AlleleAnalysisFactory.calcObservHeteroz(sysPop);
     log.info("\nobsHet=" + Vec.toString(obsHet));
-    log.info("\nobsHet Avr=" + (float)Vec.avr(obsHet));
+    log.info("\nobsHet Avr=" + (float)Vec.mean(obsHet));
     log.info("\nobsHet Avr2=" + (float)AlleleAnalysisFactory.calcObservHeterozAvr(sysPop));
 
     double[] currW = Vec.makeArray(1./n, n);
@@ -71,7 +71,7 @@ public class RareFreqTestingFreq extends RareFreqKinship
     sysPop.setFreq(tmpFreq);
     double[] tmpHet = AlleleAnalysisFactory.calcTrueHeteroz(sysPop.getFreq());
     log.info("\ntmpHet=" + Vec.toString(tmpHet));
-    log.info("\ntmpHet Avr=" + (float) Vec.avr(tmpHet));
+    log.info("\ntmpHet Avr=" + (float) Vec.mean(tmpHet));
 
     int ITERS = 20;
     double[] steps = {0.80, 1.2, 0.9, 1.1, 0.95, 1.05};

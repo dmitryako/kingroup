@@ -65,11 +65,11 @@ public class LogBBKriging   extends LogBB_2007_paper
 //      double[] vi = x[i];
 //      add(vi, list, count);
 //    }
-//    avr(list, count);
+//    mean(list, count);
 //    return DoubleArr.asArray2D(list);
 //  }
 //
-//  private void avr(ArrayList<double[]> list, ArrayList<Integer> count)
+//  private void mean(ArrayList<double[]> list, ArrayList<Integer> count)
 //  {
 //    for (int s = 0; s < list.size(); s++) {
 //      double[] vs = list.get(s);
