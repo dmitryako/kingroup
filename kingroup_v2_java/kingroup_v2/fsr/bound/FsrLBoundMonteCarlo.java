@@ -27,7 +27,7 @@ public class FsrLBoundMonteCarlo extends FsrLBound
   )  {
     RandomSeed rand = RandomSeed.getInstance();
     BitSet boxes = new BitSet();
-    int[] qm = IntVec.makeArray(N_PHENOTYPES, 0);
+    int[] qm = IntVec.make(N_PHENOTYPES, 0);
     int count = 0;
     for (int i = 0; i < r; i++)
     {
@@ -61,7 +61,7 @@ public class FsrLBoundMonteCarlo extends FsrLBound
   )  {
     RandomSeed rand = RandomSeed.getInstance();
     ArrayList<int[]> boxes = new ArrayList<int[]>();
-    int[] qm = IntVec.makeArray(N_PHENOTYPES, 0);
+    int[] qm = IntVec.make(N_PHENOTYPES, 0);
     int count = 0;
     for (int i = 0; i < r; i++)
     {
@@ -139,7 +139,7 @@ public class FsrLBoundMonteCarlo extends FsrLBound
 
   public FsrLBoundResults runSim(int gs, int nTrials)
   {
-    int[] qm = IntVec.makeArray(N_PHENOTYPES, 0);
+    int[] qm = IntVec.make(N_PHENOTYPES, 0);
     int count = 0;
     for (int i = 0; i < nTrials; i++)
     {
@@ -163,7 +163,7 @@ public class FsrLBoundMonteCarlo extends FsrLBound
 //  public int calcDist(int gs // group size
 //  )  {
 //    RandomSeed rand = RandomSeed.getInstance();
-//    int[] box = IntVec.makeArray(s, 0);
+//    int[] box = IntVec.make(s, 0);
 //    int count = 0;
 //    for (int i = 0; i < r; i++)
 //    {
@@ -172,7 +172,7 @@ public class FsrLBoundMonteCarlo extends FsrLBound
 //      int y = rand.nextInt(na); // parent #2
 //      int y2 = rand.nextInt(na);
 //
-//      int[] saved = IntVec.makeArray(s, 0);
+//      int[] saved = IntVec.make(s, 0);
 //      for (int g = 0; g < gs; g++) {
 //        int z = makeOffspringAllele(x, x2);
 //        int z2 = makeOffspringAllele(y, y2);

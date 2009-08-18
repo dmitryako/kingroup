@@ -43,7 +43,7 @@ public class MSAlgPairs extends PairArray
       }
     }
     avrDist /= arrSize;
-//    log.info("avr=" + (float)avrDist);
+//    log.info("mean=" + (float)avrDist);
     Arrays.sort(arr, new Comparator() {
       public int compare(Object a, Object b) {
         return Double.compare(((MSAlgDistance) a).dist, ((MSAlgDistance) b).dist);

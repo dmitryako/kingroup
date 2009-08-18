@@ -34,7 +34,7 @@ public class SimilarityIndex {
   public static double averageOverLoci(double[] arr) {
     if (arr == null  ||  arr.length == 0)
       return 0;
-    return Vec.avr(arr);
+    return Vec.mean(arr);
   }
   public static double[] calcFromFreq(SysAlleleFreq freq) {
     if (freq == null  ||  freq.getNumLoci() == 0)

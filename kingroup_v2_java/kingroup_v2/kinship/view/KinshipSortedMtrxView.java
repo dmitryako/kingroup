@@ -1,17 +1,12 @@
 package kingroup_v2.kinship.view;
 import kingroup_v2.KinGroupV2MainUI;
-import kingroup_v2.KinGroupV2Project;
-import kingroup_v2.Kingroup;
 import kingroup_v2.KingroupFrame;
 import kingroup_v2.kinship.Kinship;
-import kingroup_v2.kinship.KinshipFileFormat;
 import kingroup_v2.pop.sample.sys.SysPopMtrxI;
 import kingroup_v2.pop.sample.usr.UsrPopView;
-import kingroup_v2.ucm.save_results.UCSaveResultsFileUI;
 import pattern.mvc.MVCTableView;
 import tsvlib.project.ProjectLogger;
 
-import javax.iox.TextFile;
 import javax.swing.*;
 import javax.swingx.ProgressWnd;
 import javax.swingx.tablex.JTableFactory;
@@ -19,7 +14,6 @@ import javax.swingx.tablex.ReadOnlyTableModel;
 import javax.utilx.arrays.StrMtrx;
 import javax.utilx.arrays.StrVec;
 import javax.utilx.arrays.vec.Vec;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -145,7 +139,7 @@ public class KinshipSortedMtrxView  extends MVCTableView {
         rowData[r+nColHeaders][2] = popView.getId(mtrx.getId(item.c));
         rowData[r+nColHeaders][3] = popView.getGroupId(mtrx.getId(item.c));
         rowData[r+nColHeaders][4] = loadValue(item.d);
-//      loadMeanCol(rowData, r, item.d - avr);
+//      loadMeanCol(rowData, r, item.d - mean);
 //      }
     }
 

@@ -103,7 +103,7 @@ public abstract class AlgAccuracyTester
     allTimes = new DoubleArrayByInt();
     allDist = new DoubleArrayByInt();
     for (N_GROUPS = MIN_N_GROUPS; N_GROUPS <= MAX_N_GROUPS; N_GROUPS += N_GROUPS_STEP) {
-//      int[] groups = IntVec.makeArray(N_GROUPS, GROUP_SIZE);
+//      int[] groups = IntVec.make(N_GROUPS, GROUP_SIZE);
       BUILDER_MODEL.setGroupSize(GROUP_SIZE);
       BUILDER_MODEL.setNumGroups(N_GROUPS);
       BUILDER_MODEL.setNumLoci(N_LOCI);

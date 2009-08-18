@@ -46,7 +46,7 @@ public class SysPopBuilderKinshipPairs extends PopBuilder
   }
   public UsrPopSLOW makeUsrPop(SysPop sysPop, PopBuilderModel model)
   {
-    int[] groups = IntVec.makeArray(model.getNumGroups(), model.getGroupSize());
+    int[] groups = IntVec.make(model.getNumGroups(), model.getGroupSize());
     return makeUsrPop(sysPop, groups, model.getIncParents());
   }
 

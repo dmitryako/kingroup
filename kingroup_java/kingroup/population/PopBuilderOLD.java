@@ -26,7 +26,7 @@ public class PopBuilderOLD extends GenotypeBuilder
     super(freq);
   }
   public int[] buildUniform(int n, int nGroups) {
-    return IntVec.makeArray(nGroups, n / nGroups);
+    return IntVec.make(nGroups, n / nGroups);
   }
   public int[] buildGroupSizes(ButlerPopBuilderModel model) {
     int r = model.getNumFullSibGroups() + model.getNumHalfSibGroups();

@@ -75,7 +75,7 @@ public class FsrLBoundApproxGSOne extends FsrLBound// approximation for lower bo
     double delta2 = 0;
     double bigP[][] = calcBigP();
     int kmax = min(r-1, s);
-//    Pk = DoubleArr.makeArray(0., kmax+1);
+//    Pk = DoubleArr.make(0., kmax+1);
     for (int k = kmax; k >= 1; k--)
     {
       double delta = bigP[k][r] * (r-k);

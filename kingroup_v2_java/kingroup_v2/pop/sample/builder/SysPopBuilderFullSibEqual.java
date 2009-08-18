@@ -18,7 +18,7 @@ public class SysPopBuilderFullSibEqual extends PopBuilder
 
   public SysPop makeSysPop(PopBuilderModel model, SysAlleleFreq freq)
   {
-    int[] groups = IntVec.makeArray(model.getNumGroups(), model.getGroupSize());
+    int[] groups = IntVec.make(model.getNumGroups(), model.getGroupSize());
     SysPop pop = makeFSGroups(groups, freq, model.getIncParents()
       , model.getIncMatPatIds());
 
@@ -31,7 +31,7 @@ public class SysPopBuilderFullSibEqual extends PopBuilder
   }
   public UsrPopSLOW makeUsrPop(SysPop sysPop, PopBuilderModel model)
   {
-    int[] groups = IntVec.makeArray(model.getNumGroups(), model.getGroupSize());
+    int[] groups = IntVec.make(model.getNumGroups(), model.getGroupSize());
     return makeUsrPop(sysPop, groups, model.getIncParents());
   }
 

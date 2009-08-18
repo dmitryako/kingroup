@@ -111,7 +111,7 @@ public class RareFreqFromOuterGroupsByNA extends Relate2007_Common
       grpAvr[i] = mtrx.calcAvr();
 //      log.info("\ngrpAvr[i]=" + (float)grpAvr[i]);
     }
-    return Vec.avr(grpAvr);
+    return Vec.mean(grpAvr);
   }
 
 }

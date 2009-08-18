@@ -71,7 +71,7 @@ public class HuberIrlsMlrAlg extends MlrAlg
     Vec.add(yt, -1, yPred); // result is in yt
     err = yt;           log.debug("err=", new Vec(err)); // residual errors
     Vec.abs(err);       log.debug("abs(err)=", new Vec(err));
-    double MAE = Vec.avr(err);  log.debug("MAE=", MAE);// mean absolute error
+    double MAE = Vec.mean(err);  log.debug("MAE=", MAE);// mean absolute error
     return MAE;
   }
 

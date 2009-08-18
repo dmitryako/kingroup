@@ -160,7 +160,7 @@ public class KonHegFreqAlg {
 
 //    double[] obsHet = AlleleAnalysisFactory.calcObservHeteroz(givenPop);
 //    log.info("\nobsHet=" + Vec.toString(obsHet));
-//    double obsHetAvr = Vec.avr(obsHet);
+//    double obsHetAvr = Vec.mean(obsHet);
 //
 
     int N_TABLES = 2;

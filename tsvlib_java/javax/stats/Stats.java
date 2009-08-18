@@ -27,7 +27,7 @@ public class Stats extends StatsRes {
       return ;
     }
     final int n = from.length;
-    double m = Vec.avr(from);
+    double m = Vec.mean(from);
     double sum = 0;
     for (int i = 0; i < n; i++) {
       double v = from[i] - m;
@@ -205,8 +205,8 @@ public class Stats extends StatsRes {
   {
     if (A.length != B.length)
       throw new RuntimeException("A.length != B.length");
-    double a = Vec.avr(A);
-    double b = Vec.avr(B);
+    double a = Vec.mean(A);
+    double b = Vec.mean(B);
 
     double res = 0;
     for (int i = 0; i < A.length; i++) {

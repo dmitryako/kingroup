@@ -16,7 +16,7 @@ public class FsrUnrelatedEmpirical extends FsrLBoundApproxGSOne
   public double calcEmpiricalDist()
   {
     RandomSeed rand = RandomSeed.getInstance();
-    int[] box = IntVec.makeArray(s, 0);
+    int[] box = IntVec.make(s, 0);
     int count = 0;
     for (int i = 0; i < r; i++)
     {

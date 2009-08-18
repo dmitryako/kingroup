@@ -93,8 +93,8 @@ public class HillClimber2DRandomGradient   extends HillClimber2DGradient
         arrY[i-1] -= p.getY();
       }
     }
-    double avrX = Vec.avr(arrX);
-    double avrY = Vec.avr(arrY);
+    double avrX = Vec.mean(arrX);
+    double avrY = Vec.mean(arrY);
     stepP.setLocation(3. * avrX, 3. * avrY); // NOTE *2!!! otherwise it can only decrease
 //    log.info("\n steps("+(float)stepP.getX()+", "+(float)stepP.getY()+")");
   }

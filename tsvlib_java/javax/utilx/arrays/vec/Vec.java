@@ -108,7 +108,7 @@ public class Vec
     return res;
   }
   // PRE: v != null  &&  v.length > 0
-  public static double avr(double[] v) {
+  public static double mean(double[] v) {
     return sum(v) / v.length;
   }
   // PRE: v != null
