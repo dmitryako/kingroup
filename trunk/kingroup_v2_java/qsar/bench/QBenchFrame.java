@@ -81,6 +81,7 @@ public class QBenchFrame extends ProjectFrame {
     addMenuMinZeroMaxOne(menu2);
 
     menu2 = addSortMenu(menu); // MENU | EDIT | SORT
+    addMenuFindCol(menu2);
     addMenuSortZRowsByY(menu2);
     addMenuSortXColsByCorrToY(menu2);
     addMenuSortXColsByAbsCorrToY(menu2);
@@ -246,6 +247,14 @@ public class QBenchFrame extends ProjectFrame {
     JMenuItem item = new JMenuItem(help);
     item.setToolTipText("Delete constant columns in Z-matrix");
     item.addActionListener(new AdapterUCCToALThread(new UCDelConstCols()));
+    item.setMnemonic(KeyEvent.VK_C);
+    menu.add(item);
+  }
+  private void addMenuFindCol(JMenu menu) {
+    String help = "Find column by name in Z";
+    JMenuItem item = new JMenuItem(help);
+    item.setToolTipText("Find column by name in Z-matrix and move it after Y");
+    item.addActionListener(new AdapterUCCToALThread(new UCFindCol()));
     item.setMnemonic(KeyEvent.VK_C);
     menu.add(item);
   }

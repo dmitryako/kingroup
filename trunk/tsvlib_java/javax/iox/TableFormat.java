@@ -12,6 +12,7 @@ public class TableFormat
   private int lastRow;
   private int headerRow;
   private int headerCol;
+  private String colName;
 
   public TableFormat() {
     loadDefaults();
@@ -123,5 +124,13 @@ public class TableFormat
   public void setLastRow(int lastRow)
   {
     this.lastRow = lastRow;
+  }
+
+  public String getColName() {
+    return colName;
+  }
+
+  public void setColName(String colName) {
+    this.colName = colName;
   }
 }
