@@ -248,5 +248,26 @@ public class Table extends Mtrx
     int[] orderIdx = StrVec.find(names, getColIds());
     return getCols(orderIdx);
   }
+  public Table moveColByName(String name, int idxDest)
+  {
+    int idx = StrVec.find(name, getColIds());
+    if (idx == -1)
+      return null;
+    String[] names = getColIds();
+    int[] orderIdx = new int[names.length];
+    int idxFrom = 0;
+    for (int idxTo = 0; idxTo < orderIdx.length; idxTo++) {
+      if (idxTo == idxDest) {
+        orderIdx[idxTo] = idx;
+        continue;
+      }
+      if (idxFrom == idx) {
+        orderIdx[idxTo] = ++idxFrom;
+        continue;
+      }
+      orderIdx[idxTo] = idxFrom++;
+    }    
+    return getCols(orderIdx);
+  }
 
 }
