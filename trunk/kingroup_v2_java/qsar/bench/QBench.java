@@ -12,6 +12,7 @@ import tsvlib.project.ProjectModel;
 import javax.iox.TableFormat;
 import javax.iox.table.TableDisplayOpt;
 import javax.textx.FractionDigitsModel;
+import java.awt.*;
 
 /**
  * Copyright KinGroup Team.
@@ -71,6 +72,7 @@ public class QBench    extends Project
   private Mccv mccv;
   private Mcvs mcvs;
   private TableFormat selectTable;
+  private Color colorConsole;
 
   public QBench() {
     init();
@@ -146,6 +148,8 @@ public class QBench    extends Project
     tableDisplayOpt.loadDefault();
     tableDisplayOpt.getDigitsModel().setSelectedIdx(7);
 
+    colorConsole = new Color(255, 255, 255);
+
     setMeanZeroVarOne(false);
     setKnn(70);
     setQsarType(QSAR_CALIB);
@@ -157,6 +161,7 @@ public class QBench    extends Project
     setProjectFileExtension("qbp");
 
     setCltsNumStarts(-1);
+    setLookFeel(ProjectModel.SYSTEM_LOOK);
   }
   public void copyTo(ProjectModel to) {
     super.copyTo(to);
@@ -428,6 +433,14 @@ public class QBench    extends Project
   public void setRobustParamInt(int robustParamInt)
   {
     this.robustParamInt = robustParamInt;
+  }
+
+  public Color getColorConsole() {
+    return colorConsole;
+  }
+
+  public void setColorConsole(Color colorConsole) {
+    this.colorConsole = colorConsole;
   }
 }
 

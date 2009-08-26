@@ -6,7 +6,7 @@
    3.
   -->
   <target name="build_v2" description="build a jar file" >
-    <jar destfile="qsar_bench_v2_090817.jar" manifest="qsar_bench_jar.mf" >      <!-- ***VERSION HERE*** -->
+    <jar destfile="qsar_bench_v2_090820b.jar" manifest="qsar_bench_jar.mf" >      <!-- ***VERSION HERE*** -->
       <fileset dir="../../../../../classes" casesensitive="yes" >
         <filename name="**/*.class" />
       </fileset>
@@ -20,8 +20,8 @@
     <signjar keystore="webstart/qsar_bench_keys"
              alias="qsar_bench"
              storepass="kingroup"
-             jar="qsar_bench_v2_090817.jar"/>                                   <!-- ***VERSION HERE*** -->
-    <copy file="qsar_bench_v2_090817.jar" todir="E:\dev\chem\www\www_qsar_bench_org\qsar_bench_v2" overwrite="true" />     <!-- ***VERSION HERE*** -->
+             jar="qsar_bench_v2_090820b.jar"/>                                   <!-- ***VERSION HERE*** -->
+    <move file="qsar_bench_v2_090820b.jar" todir="..\googlecode" overwrite="true" />     <!-- ***VERSION HERE*** -->
   </target>
 
 </project>

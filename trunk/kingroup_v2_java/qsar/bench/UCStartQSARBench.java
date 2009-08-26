@@ -13,7 +13,7 @@ public class UCStartQSARBench implements UCController {
   public static final String REFERENCE = LogBB_2007_paper.REFERENCE;
 
   static private final String appName = "QSAR_BENCH";
-  static private final String appVersion = "v2_090817";
+  static private final String appVersion = "v2_090820b";
 
   private static QBenchLogger log = QBenchLogger.getInstance(appName);
 
@@ -48,10 +48,8 @@ public class UCStartQSARBench implements UCController {
     QBench project = QBenchProject.makeInstance(appName, appVersion);
 
     QBenchFrame frame = new QBenchFrame(project);
-    frame.pack();
-    frame.setSize(new Dimension(300, 300));
-    frame.setVisible(true);
-
+    frame.showSmallScreen();
+//    frame.showFullScreen();
     return true;
   }
 }

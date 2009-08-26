@@ -26,17 +26,23 @@ import tsvlib.project.Project;
 import tsvlib.project.ProjectFrame;
 
 import javax.swing.*;
+import javax.swingx.textx.TextView;
+import javax.utilx.log.PStreamToTextView;
+import javax.utilx.log.Log;
+import javax.iox.SplitPStream;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+import java.io.PrintStream;
 
 /**
  * Copyright KinGroup Team.
  * User: jc138691, Date: 6/03/2007, Time: 11:06:35
  */
 public class QBenchFrame extends ProjectFrame {
+  public static Log log = Log.getLog(QBenchFrame.class);
   protected QBenchFrame(Project model) {
     super(model);
     setInstance(this);
@@ -118,10 +124,10 @@ public class QBenchFrame extends ProjectFrame {
     menu = addMenuSettings();      // MENU | SETTINGS
     addMenuLookFeel(menu, model);
 
-    menu = addMenuTools();         // MENU | TOOLS
-//    menu2 = addMenuTables(menu);
-    addMenuRunGarbageCollector(menu);
-    addMenuViewErrors(menu);
+//    menu = addMenuTools();         // MENU | TOOLS
+////    menu2 = addMenuTables(menu);
+//    addMenuRunGarbageCollector(menu);
+//    addMenuViewErrors(menu);
 
     menu = addMenuHelp();          // MENU | HELP
     JMenuItem helpAbout = addMenuAbout(menu);
@@ -188,9 +194,27 @@ public class QBenchFrame extends ProjectFrame {
     setLayout(new BorderLayout());
     add(ui, BorderLayout.CENTER);
 
-//    LineStreamView logView = ProjectLogger.getInstance().getLineStreamView();
-//    logView.setOutputStream(ProjectLogger.getInstance().getOutputStream());
-//    add(logView.getView(), BorderLayout.SOUTH);
+    // setup and show CONSOLE
+    TextView view = new TextView();
+    ui.setConsoleView(view);
+    PrintStream out = new PStreamToTextView(view);
+
+    SplitPStream split = new SplitPStream(System.out);
+    split.add(out);
+    System.setOut(split);
+    Log.addGlobal(split);
+
+    split = new SplitPStream(System.err);
+    split.add(out);
+    System.setErr(split);
+
+    log.info("Test: QBenchFrame.log.info()");
+    System.out.println("Test: System.out.println()");
+    System.err.println("Test: System.err.println()");
+
+    String welcome = "Welcome to QSAR-BENCH.";
+    log.info(welcome);
+    ui.setStatusWithTime(welcome);
   }
   private void addMenuTables2(JMenu menu) {
     JMenuItem menuItem = new JMenuItem("Large Tables");
