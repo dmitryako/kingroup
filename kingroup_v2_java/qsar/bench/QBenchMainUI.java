@@ -11,6 +11,7 @@ import javax.iox.table.TableDisplayOpt;
 import javax.iox.table.TableView;
 import javax.swing.*;
 import javax.swingx.JTabbedPaneX;
+import javax.swingx.textx.TextView;
 import java.awt.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -23,6 +24,10 @@ public class QBenchMainUI  extends JPanel {
   private static QBenchMainUI instance;
   private JTabbedPaneX tabbedPane;
   private JLabel status;
+
+  private TextView consoleView;
+  private int consoleIdx = -1;
+  private JRadioButton consoleFocus;
 
   private TextFileView importFileView;
   private int importFileIdx = -1;
@@ -97,6 +102,7 @@ public class QBenchMainUI  extends JPanel {
   }
   private void init()
   {
+    consoleFocus = new JRadioButton();
     importFileFocus = new JRadioButton();
     zFocus = new JRadioButton();
     resultFocus = new JRadioButton();
@@ -106,6 +112,7 @@ public class QBenchMainUI  extends JPanel {
     lferFocus = new JRadioButton();
     smilesFocus = new JRadioButton();
     ButtonGroup group = new ButtonGroup();
+    group.add(consoleFocus);
     group.add(importFileFocus);
     group.add(zFocus);
     group.add(resultFocus);
@@ -141,10 +148,13 @@ public class QBenchMainUI  extends JPanel {
     if (maxCols > 0)
       maxNColsMssg = " [first " + maxCols + " columns]";
 
+    consoleIdx = tabbedPane.processView(consoleView, consoleIdx, consoleFocus.isSelected()
+      , "Console", "Console output for system-wide messages.");
+    if (consoleIdx != -1) {
+      tabbedPane.setBackgroundAt(consoleIdx, project.getColorConsole());
+    }
     importFileIdx = tabbedPane.processView(importFileView, importFileIdx, importFileFocus.isSelected()
       , "Imported File", "Last Imported File");
-//    smilesIdx = tabbedPane.processView(smilesView, smilesIdx, smilesFocus.isSelected()
-//      , "SMILES", "SMILES");
     zIdx = tabbedPane.processView(zTableView, zIdx, zFocus.isSelected()
       , "Z", "Z=(Y,X), e.g. CALIBRATION/TRAINING Table" + maxNColsMssg);
     testIdx = tabbedPane.processView(testTableView, testIdx, testFocus.isSelected()
@@ -337,6 +347,12 @@ public class QBenchMainUI  extends JPanel {
     }
     return null;
   }
+  public void setConsoleView(TextView view) {
+    this.consoleView = view;
+    consoleFocus.setSelected(true);
+    rebuild();
+  }
+
 
   public void resetAll()
   {

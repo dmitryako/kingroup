@@ -29,6 +29,11 @@ public class ProjectFrame extends JFrame {
     setTitle(model.getAppName() + " " + model.getAppVersion());
     setJMenuBar(new JMenuBar());
   }
+  public void showSmallScreen() {
+    pack();
+    setSize(new Dimension(300, 300));
+    setVisible(true);
+  }
   protected JMenu addMenuFile() {
     JMenu menu = new JMenu("File");
     getJMenuBar().add(menu);
@@ -135,10 +140,10 @@ public class ProjectFrame extends JFrame {
 
     if (model.getLookFeel().equals(ProjectModel.CROSS_PLATFORM_LOOK)) {
       crossLook.setSelected(true);
-//      crossLook.doClick();
+      crossLook.doClick();
     } else {
       defaultLook.setSelected(true);
-//      defaultLook.doClick();
+      defaultLook.doClick();
     }
   }
   protected JMenuItem addMenuAbout(JMenu menu) {
