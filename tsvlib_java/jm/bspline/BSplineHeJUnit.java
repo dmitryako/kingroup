@@ -2,10 +2,10 @@ package jm.bspline;
 import Jama.EigenvalueDecomposition;
 import jm.angular.Spin;
 import jm.atom.HMtrx;
-import jm.atom.SlaterLCR;
+import jm.atom.SlaterLcr;
 import jm.atom.SysTwoE;
 import jm.bspline.junit.BSplineLogCRTest;
-import jm.grid.WFQuadrLogCR;
+import jm.grid.WFQuadrLcr;
 import jm.shell.ConfigArr;
 import jm.shell.ConfigArrFactory;
 import jm.shell.ShellLS;
@@ -33,14 +33,14 @@ public class BSplineHeJUnit extends BSplineLogCRTest {
     int NUM_STEPS = 441;
     double LAST = 2; //
     StepGrid x = new StepGrid(FIRST, LAST, NUM_STEPS);
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
+    WFQuadrLcr w = new WFQuadrLcr(x);
     int k = 5;
     int N = 20;
 //      int knotsNum = calcKnotsNumFromBasisSize(basisSize, k); //
     FuncArr arr = BSplineFactory.makeBSplineLogCR(w, N, k);
     double res = w.calcMaxOrthonErr(arr);
     assertEquals(0, res, NORM_ERROR);
-    SlaterLCR slater = new SlaterLCR(w);
+    SlaterLcr slater = new SlaterLcr(w);
     ShellLS S1 = new ShellLS(0, Spin.SINGLET);
     SysTwoE sys = new SysTwoE(-2., slater);
 

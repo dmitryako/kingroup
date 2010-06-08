@@ -4,7 +4,7 @@ import stlx.valarrayx.valarray;
  * Copyright KinGroup Team.
  * User: jc138691, Date: 19/03/2005, Time: 16:41:15
  */
-public class LagrrR extends LagrrOrthon {
+public class LagrrR extends LagrrOrth {
   public LagrrR(valarray r, int size, int alpha, double lambda) {
     super(r, size, alpha, lambda);
 //      loadLogRBasis();

@@ -3,7 +3,7 @@ import kingroup.KinGroupError;
 import kingroup_v2.pop.sample.sys.SysPop;
 
 import javax.utilx.bitset.CompBitSet;
-import javax.utilx.pair.IntPair;
+import javax.utilx.pair.Int2;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.TreeSet;
@@ -56,24 +56,24 @@ public class DiploidSibship extends SibshipAlg
     LinkedList pA = new LinkedList(); // parent A
     LinkedList pB = new LinkedList();
     for (Iterator it = locusSet.iterator(); it.hasNext();) {
-      IntPair L = (IntPair) it.next(); // given get
+      Int2 L = (Int2) it.next(); // given get
       if (!makeParents(L, pA, pB))
         return false;
     }
     return true;
   }
-  public static boolean makeParents(IntPair L, LinkedList pA, LinkedList pB) {
+  public static boolean makeParents(Int2 L, LinkedList pA, LinkedList pB) {
 //      LOG.report(this, "+" + L);
     if (pA.size() == 0) {       // first time
-      IntPair A = new IntPair(L.a, NOT_SET);
+      Int2 A = new Int2(L.a, NOT_SET);
       pA.add(A);
-      IntPair B = new IntPair(L.b, NOT_SET);
+      Int2 B = new Int2(L.b, NOT_SET);
       pB.add(B);
       return true;
     }
     for (int i = 0; i < pA.size(); i++) {
-      IntPair A = (IntPair) pA.get(i);
-      IntPair B = (IntPair) pB.get(i);
+      Int2 A = (Int2) pA.get(i);
+      Int2 B = (Int2) pB.get(i);
       if (A.b == NOT_SET && B.b == NOT_SET) { // second time
         assert(!(A.a == B.a && L.a == L.b && A.a == L.a)); // NOTE A/? A/? + A/A is not possible!!!
         if (A.a == B.a) {
@@ -101,19 +101,19 @@ public class DiploidSibship extends SibshipAlg
           assert(B.a != L.b);
           B.b = L.b;  // A/? B/? + A/c => parents A/? B/c
           i++;
-          pA.add(i, new IntPair(A.a, L.b)); // A/? B/? + A/c => parents A/c B/A
-          pB.add(i, new IntPair(B.a, L.a));
+          pA.add(i, new Int2(A.a, L.b)); // A/? B/? + A/c => parents A/c B/A
+          pB.add(i, new Int2(B.a, L.a));
         } else if (A.a == L.b) {
           assert(B.a != L.a);
           B.b = L.a;  // A/? B/? + c/A => parents A/? B/c
           i++;
-          pA.add(i, new IntPair(A.a, L.a)); // A/? B/? + c/A => parents A/c B/A
-          pB.add(i, new IntPair(B.a, L.b));
+          pA.add(i, new Int2(A.a, L.a)); // A/? B/? + c/A => parents A/c B/A
+          pB.add(i, new Int2(B.a, L.b));
         } else if (B.a == L.a) {// x/? y/? + y/z => parents x/z y/?
           assert(A.a != L.b);
           i++; // must be done first since A and B will be swapped later
-          pA.add(i, new IntPair(A.a, L.a)); // x/? y/? + y/z => parents x/y y/z
-          pB.add(i, new IntPair(B.a, L.b));
+          pA.add(i, new Int2(A.a, L.a)); // x/? y/? + y/z => parents x/y y/z
+          pB.add(i, new Int2(B.a, L.b));
           int Aa = A.a; // convert to y/? x/z
           A.a = B.a;
           B.a = Aa;
@@ -121,8 +121,8 @@ public class DiploidSibship extends SibshipAlg
         } else if (B.a == L.b) {// x/? y/? + z/y => parents x/z y/?
           assert(A.a != L.a);
           i++; // must be done first since A and B will be swapped later
-          pA.add(i, new IntPair(A.a, L.b)); // x/? y/? + z/y => parents x/y y/z
-          pB.add(i, new IntPair(B.a, L.a));
+          pA.add(i, new Int2(A.a, L.b)); // x/? y/? + z/y => parents x/y y/z
+          pB.add(i, new Int2(B.a, L.a));
           int Aa = A.a; // convert to y/? x/z
           A.a = B.a;
           B.a = Aa;
@@ -135,16 +135,16 @@ public class DiploidSibship extends SibshipAlg
           A.b = L.a;  // A/? B/? + c/d => parents A/c B/d
           B.b = L.b;
           i++;
-          pA.add(i, new IntPair(A.a, L.b)); // A/? B/? + c/d => parents A/d B/c
-          pB.add(i, new IntPair(B.a, L.a));
+          pA.add(i, new Int2(A.a, L.b)); // A/? B/? + c/d => parents A/d B/c
+          pB.add(i, new Int2(B.a, L.a));
         }
         continue;
       } else if (A.b == NOT_SET && (A.a != L.a && A.a != L.b)
         && ((L.a == B.a && L.b == B.b) || (L.a == B.b && L.b == B.a))) {
         A.b = L.a;  // x/? y/z + y/z => x/y y/z
         i++;
-        pA.add(i, new IntPair(A.a, L.b)); // x/? y/z + y/z => x/z + y/z
-        pB.add(i, new IntPair(B));
+        pA.add(i, new Int2(A.a, L.b)); // x/? y/z + y/z => x/z + y/z
+        pB.add(i, new Int2(B));
       } else if (!makeParents(L, A, B)) {
         pA.remove(i);
         pB.remove(i);
@@ -155,7 +155,7 @@ public class DiploidSibship extends SibshipAlg
 //      LOG.report(this, "new parentB=" + pB);
     return (pA.size() != 0);
   }
-  private static boolean makeParents(IntPair L, IntPair A, IntPair B) {
+  private static boolean makeParents(Int2 L, Int2 A, Int2 B) {
     assert(!(A.b == NOT_SET && B.b == NOT_SET));
     assert(B.b != NOT_SET);
     if (A.b == NOT_SET) {

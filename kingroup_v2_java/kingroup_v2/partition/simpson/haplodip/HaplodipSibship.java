@@ -4,7 +4,7 @@ import kingroup_v2.partition.simpson.SibshipAlg;
 import kingroup_v2.pop.sample.sys.SysPop;
 
 import javax.utilx.bitset.CompBitSet;
-import javax.utilx.pair.IntPair;
+import javax.utilx.pair.Int2;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.TreeSet;
@@ -56,25 +56,25 @@ public class HaplodipSibship extends SibshipAlg
     LinkedList pA = new LinkedList(); // parent A
     LinkedList pB = new LinkedList();
     for (Iterator it = locusSet.iterator(); it.hasNext();) {
-      IntPair L = (IntPair) it.next(); // given get
+      Int2 L = (Int2) it.next(); // given get
       if (!makeParents(L, pA, pB))
         return false;
     }
     return true;
   }
-  public static boolean makeParents(IntPair L, LinkedList pA, LinkedList pB) {
+  public static boolean makeParents(Int2 L, LinkedList pA, LinkedList pB) {
     if (pA.size() == 0) {       // first time
       pA.add(new Integer(L.a));            // (a) (b,?)
-      pB.add(new IntPair(L.b, NOT_SET));
+      pB.add(new Int2(L.b, NOT_SET));
       if (L.a != L.b) {                    // (b) (a,?)
         pA.add(new Integer(L.b));
-        pB.add(new IntPair(L.a, NOT_SET));
+        pB.add(new Int2(L.a, NOT_SET));
       }
       return true;
     }
     for (int i = 0; i < pA.size(); i++) {
       int A = ((Integer) pA.get(i)).intValue();
-      IntPair B = (IntPair) pB.get(i);
+      Int2 B = (Int2) pB.get(i);
       if (B.b == NOT_SET) { // second time
         if (A == B.a && L.a == L.b && A == L.a) { //A A/? + A/A
           continue;
@@ -118,7 +118,7 @@ public class HaplodipSibship extends SibshipAlg
 //      LOG.report(null, "new parentB=" + pB);
     return (pA.size() != 0);
   }
-  private static boolean makeParents(IntPair L, int A, IntPair B) {
+  private static boolean makeParents(Int2 L, int A, Int2 B) {
     if (B.b == NOT_SET) {
       throw new KinGroupError("B.b == NOT_SET");
     }

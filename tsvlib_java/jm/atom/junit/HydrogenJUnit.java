@@ -3,12 +3,12 @@ import Jama.EigenvalueDecomposition;
 import jm.angular.Spin;
 import jm.atom.HMtrx;
 import jm.atom.HMtrxFactory;
-import jm.atom.SlaterLCR;
+import jm.atom.SlaterLcr;
 import jm.atom.SysOneE;
 import jm.atom.coulomb.CoulombWFFactory;
-import jm.grid.TransLogCRToR;
+import jm.grid.TransLcrToR;
 import jm.grid.TransLogRToR;
-import jm.grid.WFQuadrLogCR;
+import jm.grid.WFQuadrLcr;
 import jm.shell.Shell;
 import jm.shell.ShellConfig;
 import jm.shell.ShellLS;
@@ -45,7 +45,7 @@ public class HydrogenJUnit extends TestCase {
     double FIRST = -3;
     double LAST = 5; // exp(4.605) =100
     HMtrx H
-      = HMtrxFactory.makeHyFromLaguerreLogCR(FIRST, LAST, SIZE, N, L, alpha, lambda);
+      = HMtrxFactory.makeHyFromLagrrLcr(FIRST, LAST, SIZE, N, L, alpha, lambda);
     EigenvalueDecomposition eig = H.eig();
     LOG.report(this, H.toString(eig, 0));
     LOG.report(this, H.toString(eig, 1));
@@ -65,8 +65,8 @@ public class HydrogenJUnit extends TestCase {
 //      int NUM_STEPS = 220;
 //      double STEP = 1./16.;
 //      StepGrid x = new StepGrid(FIRST, NUM_STEPS, STEP);
-    WFQuadrLogCR wCR = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = wCR.getLogCRToR();
+    WFQuadrLcr wCR = new WFQuadrLcr(x);
+    TransLcrToR xToR = wCR.getLogCRToR();
     valarray r = xToR;
     double Zeff = 1;
     FuncVec f = CoulombWFFactory.makeP1s(r, Zeff);
@@ -86,7 +86,7 @@ public class HydrogenJUnit extends TestCase {
     ShellLS LS = new ShellLS(L, Spin.ELECTRON);
     Shell sh = new Shell(1, f, 1, LS.L, LS);
     ShellConfig fc = new ShellConfig(sh);
-    SlaterLCR slater = new SlaterLCR(wCR);
+    SlaterLcr slater = new SlaterLcr(wCR);
     SysOneE sys = new SysOneE(-1., slater);
     double kin = sys.calcKin(fc, fc);
     assertEquals(0, Math.abs(testKin - kin), 4e-12);
@@ -183,9 +183,9 @@ public class HydrogenJUnit extends TestCase {
     int S_SIZE = 101;
     int R_SIZE = F_SIZE + S_SIZE - 1;
     HMtrx Ham
-      = HMtrxFactory.makeHyFromLaguerreLogCR(FIRST, LAST, R_SIZE, N, L, alpha, lambda);
+      = HMtrxFactory.makeHyFromLagrrLcr(FIRST, LAST, R_SIZE, N, L, alpha, lambda);
     HMtrx Ham2
-      = HMtrxFactory.makeHyFromLaguerreLogCR(F_HALF, LAST, S_SIZE, N, L, alpha, lambda);
+      = HMtrxFactory.makeHyFromLagrrLcr(F_HALF, LAST, S_SIZE, N, L, alpha, lambda);
     EigenvalueDecomposition eig = Ham2.eig();
     LOG.report(this, "x=[0,5]=" + Vec.toString(eig.getRealEigenvalues()));
     double e0 = eig.getRealEigenvalues()[0];
@@ -276,14 +276,14 @@ public class HydrogenJUnit extends TestCase {
     double FIRST = -3;
     double LAST = 5; // exp(4.605) =100
     HMtrx H
-      = HMtrxFactory.makeHyFromLaguerreLogCR(FIRST, LAST, SIZE, N, L, alpha, lambda);
+      = HMtrxFactory.makeHyFromLagrrLcr(FIRST, LAST, SIZE, N, L, alpha, lambda);
     EigenvalueDecomposition eig = H.eig();
     double e0 = eig.getRealEigenvalues()[0];
     LOG.report(this, "eigX=" + Vec.toString(eig.getRealEigenvalues()));
 //      assertEquals(test0, e0, 3e-16);
     assertEquals(0, Math.abs(test0 - e0), 2e-13);
     N = 10;
-    H = HMtrxFactory.makeHyFromLaguerreLogCR(FIRST, LAST, SIZE, N, L, alpha, lambda);
+    H = HMtrxFactory.makeHyFromLagrrLcr(FIRST, LAST, SIZE, N, L, alpha, lambda);
     eig = H.eig();
     e0 = eig.getRealEigenvalues()[0];
     double e1 = eig.getRealEigenvalues()[1];

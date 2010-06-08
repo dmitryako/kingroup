@@ -1,6 +1,6 @@
 package jm.papers.jm2005_shifted;
 import jm.bspline.BSplineFactory;
-import jm.grid.WFQuadrLogCR;
+import jm.grid.WFQuadrLcr;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import stlx.valarrayx.valarray;
@@ -25,7 +25,7 @@ public class ShiftedLogBSpline extends LogCRTestCase {
     int NUM_STEPS = 221;
     double LAST = 2; //
     StepGrid x = new StepGrid(FIRST, LAST, NUM_STEPS);
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
+    WFQuadrLcr w = new WFQuadrLcr(x);
     int k = 5;
     int N = 13;
     FuncArr arr = BSplineFactory.makeBSplineLogCR(w, N, k);

@@ -16,7 +16,8 @@ public class Project extends ProjectModel {
   private static final ProjectLogger log = ProjectLogger.getLogger(Project.class);
 
   public void loadDefault(String appName, String appVersion) {
-    setLookFeel(ProjectModel.CROSS_PLATFORM_LOOK);
+    setLookFeel(ProjectModel.SYSTEM_LOOK);
+//    setLookFeel(ProjectModel.CROSS_PLATFORM_LOOK);
     setOrgType("org");
     setAppName(appName);
     setAppVersion(appVersion);

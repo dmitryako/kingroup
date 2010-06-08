@@ -1,5 +1,5 @@
 package javax.utilx.arrays;
-import javax.utilx.pair.IntPair;
+import javax.utilx.pair.Int2;
 
 /**
  * Copyright KinGroup Team.
@@ -7,11 +7,11 @@ import javax.utilx.pair.IntPair;
  */
 public class IntPairArrays
 {
-  public static IntPair[] make(int size)
+  public static Int2[] make(int size)
   {
-    IntPair[] res = new IntPair[size];
+    Int2[] res = new Int2[size];
     for (int i = 0; i < res.length; i++) {
-      res[i] = new IntPair(0, 0);
+      res[i] = new Int2(0, 0);
     }
     return res;
   }

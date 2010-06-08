@@ -119,6 +119,8 @@ public class Kingroup extends Project {
     milligan.loadDefault();
     thompson.loadDefault();
     cervus.loadDefault();
+
+    setLookFeel(ProjectModel.SYSTEM_LOOK);
   }
   public void copyTo(ProjectModel to) {
     super.copyTo(to);

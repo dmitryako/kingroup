@@ -1,7 +1,7 @@
 package jm.laguerre;
-import jm.grid.TransLogCRToR;
+import jm.grid.TransLcrToR;
 import jm.grid.TransLogRToR;
-import jm.grid.WFQuadrLogCR;
+import jm.grid.WFQuadrLcr;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -29,14 +29,14 @@ public class LaguerreLogCRJUnit extends TestCase {
     int NUM_STEPS = 261;
     double LAST = 5;
     StepGrid x = new StepGrid(FIRST, LAST, NUM_STEPS);
-    WFQuadrLogCR wCR = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = wCR.getLogCRToR();
+    WFQuadrLcr wCR = new WFQuadrLcr(x);
+    TransLcrToR xToR = wCR.getLogCRToR();
     int L = 1;
     double Zeff = 1.6875;// from p445 of Clementi Roetti, Atomic Data 14, 177 (1974)
     int alpha = 2 * L + 2;
     double lambda = 2. * Zeff;
     int N = 12;
-    FuncArr arr = new LagrrLogCR(xToR, N, alpha, lambda);
+    FuncArr arr = new JmLagrrOrthLcr(xToR, N, alpha, lambda);
     double res = wCR.calcMaxOrthonErr(arr);
     assertEquals(0, res, 3e-11);
   }
@@ -50,7 +50,7 @@ public class LaguerreLogCRJUnit extends TestCase {
     BooleQuadr wx = new BooleQuadr(x);
     TransLogRToR xToR = new TransLogRToR(x);
     FuncVec xToR2 = xToR.getMapLogRToR2();
-    TransLogCRToR cToR = new TransLogCRToR(x);
+    TransLcrToR cToR = new TransLcrToR(x);
     valarray xToY2 = cToR.getCR2();
     LAST = Math.exp(FIRST); // e.g. FIRST = -5;
     int SMALL_R_SIZE = 5;
@@ -60,9 +60,9 @@ public class LaguerreLogCRJUnit extends TestCase {
     int N = 4;
     int alpha = 2 * L + 2;
     double lambda = 0.7;
-    FuncArr arS = new LagrrOrthon(rS, N, alpha, lambda);
-    FuncArr arX = new LaguerreLogR(xToR, N, alpha, lambda);
-    FuncArr arC = new LagrrLogCR(cToR, N, alpha, lambda);
+    FuncArr arS = new LagrrOrth(rS, N, alpha, lambda);
+    FuncArr arX = new LagrrLr(xToR, N, alpha, lambda);
+    FuncArr arC = new JmLagrrOrthLcr(cToR, N, alpha, lambda);
     double resX = FastLoop.dot(arX.get(0), arX.get(0), wx, xToR2);
     double resS = FastLoop.dot(arS.get(0), arS.get(0), wS);
     double resC = FastLoop.dot(arC.get(0), arC.get(0), wx, xToY2);

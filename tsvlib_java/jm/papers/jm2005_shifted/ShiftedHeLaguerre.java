@@ -2,9 +2,9 @@ package jm.papers.jm2005_shifted;
 import Jama.EigenvalueDecomposition;
 import jm.angular.Spin;
 import jm.atom.*;
-import jm.grid.TransLogCRToR;
-import jm.grid.WFQuadrLogCR;
-import jm.laguerre.LagrrLogCR;
+import jm.grid.TransLcrToR;
+import jm.grid.WFQuadrLcr;
+import jm.laguerre.JmLagrrOrthLcr;
 import jm.shell.ConfigArr;
 import jm.shell.ConfigArrFactory;
 import jm.shell.ShellLS;
@@ -246,8 +246,8 @@ public class ShiftedHeLaguerre extends LogCRTestCase {
     , String fileName
     , String fileName2) {
     StepGrid x = new StepGrid(FIRST - Math.log(Z), NUM_STEPS, STEP);
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     DoubleArrayList arrDiff = new DoubleArrayList();
     DoubleArrayList arrDiff2 = new DoubleArrayList();
     DoubleArrayList arrE = new DoubleArrayList();
@@ -264,10 +264,10 @@ public class ShiftedHeLaguerre extends LogCRTestCase {
       for (int N = 1; N <= maxNL[L]; N++) {
         if (N == maxNL[L] && L == alphaL.length - 1)
           isLast = true;
-        FuncArr arr = new LagrrLogCR(xToR, N, alphaL[L], lambda[L]);
+        FuncArr arr = new JmLagrrOrthLcr(xToR, N, alphaL[L], lambda[L]);
         res = w.calcMaxOrthonErr(arr);
         TestCase.assertEquals(0, res, NORM_ERROR);
-        SlaterLCR slater = new SlaterLCR(w);
+        SlaterLcr slater = new SlaterLcr(w);
         SysTwoE sys = new SysTwoE(-Z, slater);
         currBasis = ConfigArrFactory.makeTwoElecFrom(cumBasis, LS, N, L, arr);
         int totN = currBasis.size();
@@ -323,8 +323,8 @@ public class ShiftedHeLaguerre extends LogCRTestCase {
     , String fileName
     , String fileName2) {
     StepGrid x = new StepGrid(FIRST - Math.log(Z), NUM_STEPS, STEP);
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     DoubleArrayList arrDiff = new DoubleArrayList();
     DoubleArrayList arrE = new DoubleArrayList();
     DoubleArrayList arrN = new DoubleArrayList();
@@ -337,10 +337,10 @@ public class ShiftedHeLaguerre extends LogCRTestCase {
         isLast = true;
       ConfigArr currBasis = null; // current
       for (int N = 1; N <= maxNL[L]; N++) {
-        FuncArr arr = new LagrrLogCR(xToR, N, alphaL[L], lambda[L]);
+        FuncArr arr = new JmLagrrOrthLcr(xToR, N, alphaL[L], lambda[L]);
         res = w.calcMaxOrthonErr(arr);
         TestCase.assertEquals(0, res, NORM_ERROR);
-        SlaterLCR slater = new SlaterLCR(w);
+        SlaterLcr slater = new SlaterLcr(w);
         SysTwoE sys = new SysTwoE(-Z, slater);
         currBasis = ConfigArrFactory.makeTwoElecFrom(cumBasis, LS, N, L, arr);
         int totN = currBasis.size();

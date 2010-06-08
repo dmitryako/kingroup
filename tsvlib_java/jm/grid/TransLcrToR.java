@@ -7,7 +7,7 @@ import javax.vecmathx.function.FuncVec;
  * Copyright KinGroup Team.
  * User: jc138691, Date: 11/03/2005, Time: 10:28:36
  */
-public class TransLogCRToR extends FuncVec {
+public class TransLcrToR extends FuncVec {
   private valarray CR2OverR2;
   private valarray CR2DivR;
   private valarray R2;
@@ -21,11 +21,12 @@ public class TransLogCRToR extends FuncVec {
   // Just to help keeping track
   // equal step in x=ln(CR); CR=c+r; c > 0
   // firstX=ln(param)
-  public TransLogCRToR(valarray x) {
+  public TransLcrToR(valarray x) {
     super(x, null);
     param = Math.exp(x.getFirst());
     calc(new FuncLogCRToR(param));
   }
+
   public valarray getR2() {
     if (R2 == null)
       R2 = new FuncVec(x, new FuncLogCRToR2(param));

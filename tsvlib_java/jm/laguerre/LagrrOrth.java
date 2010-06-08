@@ -26,12 +26,13 @@ import javax.vecmathx.function.ApplyToArr;
 //Set of orthonormal functions L_n(r), such that I L_n(r) L_n'(r) dr = delta_nn'
 //                                                0
 // NOTE: integration is dr  not  r**2 dr
-public class LagrrOrthon extends LagrrArr {
-  public LagrrOrthon(valarray x, int size, int alpha, double lambda) {
+public class LagrrOrth extends LagrrArr {
+  public LagrrOrth(valarray x, int size, int alpha, double lambda) {
     super(x, size, alpha, lambda);
     ApplyToArr.mult(this, new ThisNormFunc());
     normalize();
   }
+
   private class ThisNormFunc implements Func {
     public double calc(double r) {
       double x = lambda * r;

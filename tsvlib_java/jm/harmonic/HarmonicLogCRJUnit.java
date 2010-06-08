@@ -1,6 +1,6 @@
 package jm.harmonic;
-import jm.grid.TransLogCRToR;
-import jm.grid.WFQuadrLogCR;
+import jm.grid.TransLcrToR;
+import jm.grid.WFQuadrLcr;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -24,8 +24,8 @@ public class HarmonicLogCRJUnit extends TestCase {
     int NUM_STEPS = 221;
     double LAST = 2.5;
     StepGrid x = new StepGrid(FIRST, LAST, NUM_STEPS);
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     double B = 1;
     int N = 10;
     int L = 0;

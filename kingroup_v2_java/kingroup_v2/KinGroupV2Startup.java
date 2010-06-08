@@ -1,4 +1,7 @@
 package kingroup_v2;
+import tsvlib.project.ProjectModel;
+import tsvlib.project.UCSelectLookFeel;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -9,7 +12,7 @@ import java.awt.*;
 public class KinGroupV2Startup {
   public static final String REFERENCE = "Konovalov,Manning&Henshaw(2004)MolEcolNotes4,p779";
   static private String appName = "KINGROUP";
-  static private String appVersion = "v2_090501";
+  static private String appVersion = "v2_091112e";
 
 //  private final static ProjectLogger log = ProjectLogger.getLogger(KinGroupV2Startup.class.getName());
   private static KingroupLogger log = KingroupLogger.getInstance(appName);
@@ -60,5 +63,7 @@ public class KinGroupV2Startup {
     frame.pack();
     frame.setSize(new Dimension(300, 300));
     frame.setVisible(true);
+
+    new UCSelectLookFeel(frame, project, project.getLookFeel()).run();    
   }
 }

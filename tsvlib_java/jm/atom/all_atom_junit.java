@@ -1,8 +1,8 @@
 package jm.atom;
 import jm.atom.coulomb.all_coulomb_junit;
 import jm.atom.junit.HydrogenJUnit;
-import jm.atom.junit.RkLogCRJUnit;
-import jm.atom.junit.YkLogCRJUnit;
+import jm.atom.junit.RkLcrTest;
+import jm.atom.junit.YkLcrTest;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 /**
@@ -17,8 +17,8 @@ public class all_atom_junit {
     TestSuite suite = new TestSuite("All JUnit for jm.atom.*");
     suite.addTest(all_coulomb_junit.suite());
     suite.addTest(HydrogenJUnit.suite());
-    suite.addTest(YkLogCRJUnit.suite());
-    suite.addTest(RkLogCRJUnit.suite());
+    suite.addTest(YkLcrTest.suite());
+    suite.addTest(RkLcrTest.suite());
     return suite;
   }
 }

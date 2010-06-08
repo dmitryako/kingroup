@@ -1,5 +1,5 @@
 package jm.atom;
-import jm.grid.TransLogCRToR;
+import jm.grid.TransLcrToR;
 import stlx.valarrayx.valarray;
 
 import javax.iox.LOG;
@@ -44,7 +44,7 @@ import javax.vecmathx.interpolation.PolynomInterpol;
 //  exp(-mh(k+1)) with (ri/rim)^(k+1);   and
 //  exp(-(k+1)*(x-xi)) with  y/r*(r/rim)^(k+1)
 //
-public class YkLogCR {
+public class YkLcr {
   private final valarray f;
   private final valarray f2;
   private final valarray CR2;//(c+r)^2
@@ -57,7 +57,7 @@ public class YkLogCR {
   private final double H;
   private final double H2;
   private final double H3;
-  public YkLogCR(final TransLogCRToR xToR, final valarray f, final valarray f2, final int K) {
+  public YkLcr(final TransLcrToR xToR, final valarray f, final valarray f2, final int K) {
     this.K = K;
     this.f = f;
     this.f2 = f2;
@@ -78,6 +78,7 @@ public class YkLogCR {
     // MX is used to trace simpson's rule errors
     //EH = DEXP(-H)   // from SUBROUTINE INIT
   }
+
   public FuncVec calcZk() {
     FuncVec res = new FuncVec(r, r.size());
     //      DEN = L(I) + L(J) + 3+ K                                          AATK4107

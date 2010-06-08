@@ -1,6 +1,6 @@
 package jm.papers.jm2005_shifted;
-import jm.grid.TransLogCRToR;
-import jm.grid.WFQuadrLogCR;
+import jm.grid.TransLcrToR;
+import jm.grid.WFQuadrLcr;
 import jm.harmonic.HarmonicLogCR;
 import junit.framework.Test;
 import junit.framework.TestSuite;
@@ -20,8 +20,8 @@ public class ShiftedLogHarmonic extends LogCRTestCase {
     junit.textui.TestRunner.run(suite());
   }
   public void testLaguerreLogCR() {
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     int N = 10;
     int L = 0;
     double B = 0.5;

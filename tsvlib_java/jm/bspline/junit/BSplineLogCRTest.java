@@ -1,7 +1,7 @@
 package jm.bspline.junit;
 import jm.bspline.BSplineFactory;
-import jm.grid.TransLogCRToR;
-import jm.grid.WFQuadrLogCR;
+import jm.grid.TransLcrToR;
+import jm.grid.WFQuadrLcr;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 
@@ -23,8 +23,8 @@ public class BSplineLogCRTest extends BSplineBasisJUnit {
     int NUM_STEPS = 101;
     double LAST = 2; //
     StepGrid x = new StepGrid(FIRST, LAST, NUM_STEPS);
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     int k = 5;
     int N = 6;
     FuncArr arr = BSplineFactory.makeBSplineLogCR(w, N, k);
