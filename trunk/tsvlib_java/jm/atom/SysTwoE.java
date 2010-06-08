@@ -14,9 +14,9 @@ import javax.vecmathx.function.FuncVec;
  */
 public class SysTwoE extends Atom {
   private final static int TWO_ELEC = 2;
-  private final SlaterLCR siLogCR;
+  private final SlaterLcr siLogCR;
   //public static final SysTwoE HELIUM = new SysTwoE(-2);
-  public SysTwoE(double z, SlaterLCR si) {
+  public SysTwoE(double z, SlaterLcr si) {
     super(z, si);
     siLogCR = si;
   }
@@ -88,7 +88,7 @@ public class SysTwoE extends Atom {
     return dir;
   }
   public double calcRk(Shell a, Shell b, Shell a2, Shell b2, int kk) {
-    return RkLCR.calcRkLogCR(siLogCR.getWeightsLogCR()
+    return RkLcr.calc(siLogCR.getWeightsLogCR()
       , a.wf, b.wf, a2.wf, b2.wf, kk);
   }
 }

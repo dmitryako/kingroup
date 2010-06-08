@@ -7,7 +7,7 @@ import kingroup.partition.PartitionV2DescRatioPairs;
 import kingroup.partition.PartitionV2Pool;
 
 import javax.iox.LOG;
-import javax.utilx.pair.IntPair;
+import javax.utilx.pair.Int2;
 /**
  * Copyright KinGroup Team.
  * User: jc138691, Date: 4/03/2005, Time: 13:55:48
@@ -44,7 +44,7 @@ public class DescRatioMethodV2 extends PartitionMethodV2 {
 //         res = random(pool_.firstInt(), pool_.lastInt());
 //      }
     else {
-      IntPair pair = pairs_.removeFirstPair();
+      Int2 pair = pairs_.removeFirstPair();
       res = random(pair.b, pair.a);
       currPair_ = pair.pair(res);
     }

@@ -2,7 +2,7 @@ package kingroup.algorithm.window;
 import tsvlib.project.ProjectLogger;
 
 import javax.utilx.bitset.CompBitSet;
-import javax.utilx.pair.IntPair;
+import javax.utilx.pair.Int2;
 
 /**
  * Copyright KinGroup Team.
@@ -26,9 +26,9 @@ public class AlgAccessViaPairs extends AlgWinAccessOrder {
   public int nextIdx() {
     int res = currPairIdx;
     if (currPairIdx == NOT_SET) {
-      IntPair pair = (IntPair)pairs.removeFirstPair();
+      Int2 pair = (Int2)pairs.removeFirstPair();
       while (pair != null && !pool.get(pair.a) && !pool.get(pair.b)) {
-        pair = (IntPair)pairs.removeFirstPair();
+        pair = (Int2)pairs.removeFirstPair();
       }
       if (pair == null)
         return NOT_SET;

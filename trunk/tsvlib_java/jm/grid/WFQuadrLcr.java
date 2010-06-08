@@ -6,14 +6,15 @@ import javax.vecmathx.grid.StepGrid;
  * Copyright KinGroup Team.
  * User: jc138691, Date: 17/03/2005, Time: 18:01:14
  */
-public class WFQuadrLogCR extends WFQuadrLogR {
+public class WFQuadrLcr extends WFQuadrLogR {
   private valarray wCR2;
   private valarray wCR2DivR;
-  private final TransLogCRToR logCRToR;
-  public WFQuadrLogCR(StepGrid x) {
+  private final TransLcrToR logCRToR;
+  public WFQuadrLcr(StepGrid x) {
     super(x);
-    logCRToR = new TransLogCRToR(x);
+    logCRToR = new TransLcrToR(x);
   }
+
   public valarray getWithCR2DivR() {
     if (wCR2DivR == null) {
       wCR2DivR = new valarray(logCRToR.getCR2DivR());
@@ -21,7 +22,7 @@ public class WFQuadrLogCR extends WFQuadrLogR {
     }
     return wCR2DivR;
   }
-  public TransLogCRToR getLogCRToR() {
+  public TransLcrToR getLogCRToR() {
     return logCRToR;
   }
   public valarray getWithCR2() {

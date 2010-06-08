@@ -140,10 +140,10 @@ public class ProjectFrame extends JFrame {
 
     if (model.getLookFeel().equals(ProjectModel.CROSS_PLATFORM_LOOK)) {
       crossLook.setSelected(true);
-      crossLook.doClick();
+//      crossLook.doClick();
     } else {
       defaultLook.setSelected(true);
-      defaultLook.doClick();
+//      defaultLook.doClick();
     }
   }
   protected JMenuItem addMenuAbout(JMenu menu) {

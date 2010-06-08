@@ -19,13 +19,14 @@ import javax.vecmathx.function.FuncVec;
 //  |  r^2 dx Fn'(exp(x)) H Fn(exp(x)) = delta_n'n
 // -oo
 // w are for 'x' integral
-public class LaguerreLogR extends LagrrOrthon {
-  public LaguerreLogR(FuncVec xToR, int size, int alpha, double lambda) {
+public class LagrrLr extends LagrrOrth {
+  public LagrrLr(FuncVec xToR, int size, int alpha, double lambda) {
     super(xToR, size, alpha, lambda); // NOTE!!! y is passed not x
     loadLogRBasis();
     changeGrid(xToR.x); // set to X-x !!!!!******
     JMatrix.trimTailSLOW(this);
   }
+
   //   Rn(r) = Ln(r) / r; since Ln is interable with dr not r^2dr
   //   Fn(x) = sqrt(r) L_n(y) / r = L_n(y) / sqrt(r);  with rdr  or  r^2dx   for the integral
   private void loadLogRBasis() {

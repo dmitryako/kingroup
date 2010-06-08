@@ -1,10 +1,10 @@
 package jm.papers.jm2005_shifted;
 import jm.angular.Spin;
-import jm.atom.SlaterLCR;
+import jm.atom.SlaterLcr;
 import jm.atom.SysTwoE;
 import jm.atom.coulomb.CoulombWFFactory;
-import jm.grid.TransLogCRToR;
-import jm.grid.WFQuadrLogCR;
+import jm.grid.TransLcrToR;
+import jm.grid.WFQuadrLcr;
 import jm.shell.Shell;
 import jm.shell.ShellLS;
 import jm.shell.TwoEShells;
@@ -29,8 +29,8 @@ public class ShiftedLogZetaHe extends LogCRTestCase {
   public void test_He_1S_LogCR() {
     double Z = 2;
     StepGrid x = new StepGrid(FIRST - Math.log(Z), NUM_STEPS, STEP);
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     valarray r = xToR;
 
     // WF
@@ -47,7 +47,7 @@ public class ShiftedLogZetaHe extends LogCRTestCase {
     ShellLS LS = new ShellLS(L, Spin.SINGLET);
     Shell sh = new Shell(1, f, 2, LS.L, LS);
     TwoEShells fc = new TwoEShells(sh);
-    SlaterLCR slater = new SlaterLCR(w);
+    SlaterLcr slater = new SlaterLcr(w);
     SysTwoE sys = new SysTwoE(-Z, slater);
     double kin = sys.calcKin(fc, fc);
     assertAndView("Hy kin(LogCR)=", testKin - kin, 2e-10);

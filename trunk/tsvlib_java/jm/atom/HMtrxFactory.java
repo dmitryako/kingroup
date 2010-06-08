@@ -1,11 +1,11 @@
 package jm.atom;
 import Jama.EigenvalueDecomposition;
 import jm.grid.TransLogRToR;
-import jm.grid.WFQuadrLogCR;
+import jm.grid.WFQuadrLcr;
 import jm.grid.WFQuadrLogR;
 import jm.grid.WFQuadrR;
-import jm.laguerre.LagrrLogCR;
-import jm.laguerre.LaguerreLogR;
+import jm.laguerre.JmLagrrOrthLcr;
+import jm.laguerre.LagrrLr;
 import jm.laguerre.LagrrR;
 import jm.shell.ConfigArr;
 import jm.shell.ConfigArrFactory;
@@ -47,36 +47,36 @@ public class HMtrxFactory {
     StepGrid x = new StepGrid(first, last, size);
     TransLogRToR xToR = new TransLogRToR(x);
     WFQuadrLogR w = new WFQuadrLogR(x);
-    FuncArr arr = new LaguerreLogR(xToR, N, alpha, lambda);
+    FuncArr arr = new LagrrLr(xToR, N, alpha, lambda);
     ConfigArr basis = ConfigArrFactory.makeOneElec(N, L, arr);
     Slater slater = new SlaterLR(w);
     SysOneE hyd = new SysOneE(-1., slater);
     return new HMtrx(basis, hyd);
   }
-  public static HMtrx makeHyFromLaguerreLogCR(
+  public static HMtrx makeHyFromLagrrLcr(
     double firstX, double last, int size
     , int N, int L, int alpha, double lambda) {
     StepGrid x = new StepGrid(firstX, last, size);
     // x=firstX -> r=0
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    FuncArr arr = new LagrrLogCR(w.getLogCRToR(), N, alpha, lambda);
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    FuncArr arr = new JmLagrrOrthLcr(w.getLogCRToR(), N, alpha, lambda);
     ConfigArr basis = ConfigArrFactory.makeOneElec(N, L, arr);
-    Slater slater = new SlaterLCR(w);
+    Slater slater = new SlaterLcr(w);
     SysOneE hyd = new SysOneE(-1., slater);
     return new HMtrx(basis, hyd);
   }
-  public static HMtrx makeHeFromLaguerreLogCR(StepGrid xToR
+  public static HMtrx makeHeFromLagrrLcr(StepGrid xToR
     , int N, int L, int alpha, double lambda, ShellLS LS) {
-    WFQuadrLogCR w = new WFQuadrLogCR(xToR);
-    FuncArr arr = new LagrrLogCR(w.getLogCRToR(), N, alpha, lambda);
+    WFQuadrLcr w = new WFQuadrLcr(xToR);
+    FuncArr arr = new JmLagrrOrthLcr(w.getLogCRToR(), N, alpha, lambda);
     ConfigArr basis = ConfigArrFactory.makeTwoElec(LS, N, L, arr);
-    Slater slater = new SlaterLCR(w);
+    Slater slater = new SlaterLcr(w);
     SysOneE hyd = new SysOneE(-1., slater);
     return new HMtrx(basis, hyd);
   }
   public static EigenvalueDecomposition calcHeEnergies(StepGrid xToR
     , int N, int L, int alpha, double lambda, ShellLS LS) {
-    HMtrx H = makeHeFromLaguerreLogCR(xToR, N, L, alpha, lambda, LS);
+    HMtrx H = makeHeFromLagrrLcr(xToR, N, L, alpha, lambda, LS);
     return H.eig();
   }
 }

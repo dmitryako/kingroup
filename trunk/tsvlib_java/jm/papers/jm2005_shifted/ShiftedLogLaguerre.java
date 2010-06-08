@@ -1,10 +1,10 @@
 package jm.papers.jm2005_shifted;
-import jm.grid.TransLogCRToR;
+import jm.grid.TransLcrToR;
 import jm.grid.TransLogRToR;
-import jm.grid.WFQuadrLogCR;
+import jm.grid.WFQuadrLcr;
 import jm.grid.WFQuadrLogR;
-import jm.laguerre.LagrrLogCR;
-import jm.laguerre.LaguerreLogR;
+import jm.laguerre.JmLagrrOrthLcr;
+import jm.laguerre.LagrrLr;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import stlx.valarrayx.valarray;
@@ -23,12 +23,12 @@ public class ShiftedLogLaguerre extends LogCRTestCase {
     junit.textui.TestRunner.run(suite());
   }
   public void testLaguerreLogCR() {
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     int N = 10;
     int alpha = 2;
     double lambda = 4;
-    FuncArr arr = new LagrrLogCR(xToR, N, alpha, lambda);
+    FuncArr arr = new JmLagrrOrthLcr(xToR, N, alpha, lambda);
     LOG.saveToFile(valarray.asArray(x), valarray.asArray(arr.get(0)), "wf", "LaguerreLogCR_n0.csv");
     LOG.saveToFile(valarray.asArray(x), valarray.asArray(arr.get(0).getDeriv()), "wf"
       , "LaguerreLogCR_n0_deriv.csv");
@@ -45,7 +45,7 @@ public class ShiftedLogLaguerre extends LogCRTestCase {
     int N = 20;
     int alpha = 2;
     double lambda = 9.5;
-    FuncArr arr = new LaguerreLogR(xToR, N, alpha, lambda);
+    FuncArr arr = new LagrrLr(xToR, N, alpha, lambda);
     LOG.saveToFile(valarray.asArray(x), valarray.asArray(arr.get(0)), "wf", "LaguerreLogR_n0.csv");
     LOG.saveToFile(valarray.asArray(x), valarray.asArray(arr.get(0).getDeriv())
       , "wf", "LaguerreLogR_n0_deriv.csv");

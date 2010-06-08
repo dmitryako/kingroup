@@ -39,8 +39,8 @@ public class LaguerreLogRJUnit extends TestCase {
     int N = 4;
     int alpha = 2 * L + 2;
     double lambda = 0.7;
-    FuncArr arS = new LagrrOrthon(rS, N, alpha, lambda);
-    FuncArr arX = new LaguerreLogR(xToR, N, alpha, lambda);
+    FuncArr arS = new LagrrOrth(rS, N, alpha, lambda);
+    FuncArr arX = new LagrrLr(xToR, N, alpha, lambda);
     double resX = FastLoop.dot(arX.get(0), arX.get(0), wx, xToR2);
     double resS = FastLoop.dot(arS.get(0), arS.get(0), wS);
     assertEquals(0, Math.abs(resX - 1), 2e-8);//BETTER!

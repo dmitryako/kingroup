@@ -1,6 +1,6 @@
 package jm.laguerre;
 import jm.JMatrix;
-import jm.grid.TransLogCRToR;
+import jm.grid.TransLcrToR;
 /**
  * Copyright KinGroup Team.
  * User: jc138691, Date: 11/03/2005, Time: 10:49:15
@@ -41,8 +41,8 @@ import jm.grid.TransLogCRToR;
 //    check r->oo; R=P(r)/sqrt(r); x=ln(r)
 //
 // w are for 'x' integral
-public class LagrrLogCR extends LagrrOrthon {
-  public LagrrLogCR(TransLogCRToR xToR, int size, int alpha, double lambda) {
+public class JmLagrrOrthLcr extends LagrrOrth {
+  public JmLagrrOrthLcr(TransLcrToR xToR, int size, int alpha, double lambda) {
     super(xToR, size, alpha, lambda);
     loadLogCRBasis(xToR);
     changeGrid(xToR.x); // set to X-x !!!!!******
@@ -51,7 +51,7 @@ public class LagrrLogCR extends LagrrOrthon {
   //   Rn(r) = Ln(r) / r; since Ln is integrable with dr not r^2dr
   // INTL r^2dr Rn*Rn' = INTL r^2 ydx y/r^2 Fn*Fn' = INTL y^2 dx Fn*Fn'
   //   Fn(x) = r/sqrt(c+r) L_n(y) / r = L_n(y) / sqrt(c+r);  with rdr  or  r^2dx   for the integral
-  private void loadLogCRBasis(TransLogCRToR xToR) {
+  private void loadLogCRBasis(TransLcrToR xToR) {
     for (int n = 0; n < size(); n++) {
       get(n).mult(xToR.getDivSqrtCR());
     }

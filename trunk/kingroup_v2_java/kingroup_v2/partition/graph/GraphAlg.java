@@ -38,7 +38,7 @@ public class GraphAlg extends PartitionAlg {
       array[rows][0] = rows;
       System.err.print("Indiv " + rows + ": ");
       for (int cols = 1; cols <= numLoci; cols++) {
-        // [dk20060509] changed IntPairSorted to IntPair
+        // [dk20060509] changed IntPairSorted to Int2
         pair = pop.getAllelePair((short) rows, (int) (cols - 1));
         array[rows][cols * 2] = pair.b;
         array[rows][(cols * 2) - 1] = pair.a;

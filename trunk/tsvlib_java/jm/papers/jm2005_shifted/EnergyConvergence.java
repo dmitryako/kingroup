@@ -2,11 +2,11 @@ package jm.papers.jm2005_shifted;
 import Jama.EigenvalueDecomposition;
 import jm.angular.Spin;
 import jm.atom.HMtrx;
-import jm.atom.SlaterLCR;
+import jm.atom.SlaterLcr;
 import jm.atom.SysTwoE;
-import jm.grid.TransLogCRToR;
-import jm.grid.WFQuadrLogCR;
-import jm.laguerre.LagrrLogCR;
+import jm.grid.TransLcrToR;
+import jm.grid.WFQuadrLcr;
+import jm.laguerre.JmLagrrOrthLcr;
 import jm.shell.ConfigArr;
 import jm.shell.ConfigArrFactory;
 import jm.shell.ShellLS;
@@ -48,8 +48,8 @@ public class EnergyConvergence //extends PerformanceChart
     int NUM_STEPS = 381;
     double LAST = 5; // exp(7) = 1096
     StepGrid x = new StepGrid(FIRST, LAST, NUM_STEPS);
-    WFQuadrLogCR wCR = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = wCR.getLogCRToR();
+    WFQuadrLcr wCR = new WFQuadrLcr(x);
+    TransLcrToR xToR = wCR.getLogCRToR();
     DoubleArrayList arrE = new DoubleArrayList();
     DoubleArrayList arrN = new DoubleArrayList();
     int runningN = 1;
@@ -59,10 +59,10 @@ public class EnergyConvergence //extends PerformanceChart
       for (int N = 1; N < MAX_N[L]; N++) {
         int alpha = 2 * L + 2;
         double lambda = 2. * Z[L];
-        FuncArr arr = new LagrrLogCR(xToR, N, alpha, lambda);
+        FuncArr arr = new JmLagrrOrthLcr(xToR, N, alpha, lambda);
         double res = wCR.calcMaxOrthonErr(arr);
         TestCase.assertEquals(0, res, NORM_ERROR);
-        SlaterLCR slater = new SlaterLCR(wCR);
+        SlaterLcr slater = new SlaterLcr(wCR);
         SysTwoE sys = new SysTwoE(-2., slater);
         currBasis = ConfigArrFactory.makeTwoElecFrom(cumBasis, LS, N, L, arr);
         HMtrx H = new HMtrx(currBasis, sys);

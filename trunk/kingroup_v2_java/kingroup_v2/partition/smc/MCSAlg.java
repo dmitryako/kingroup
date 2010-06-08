@@ -9,7 +9,7 @@ import kingroup_v2.pop.sample.sys.SysPop;
 import javax.iox.LOG;
 import javax.utilx.RandomSeed;
 import javax.utilx.bitset.CompBitSet;
-import javax.utilx.pair.IntPair;
+import javax.utilx.pair.Int2;
 import javax.utilx.pair.IntPairFactory;
 
 /**
@@ -47,7 +47,7 @@ public class MCSAlg extends SIMPS2Alg {
     for (int i = 0; i < model.getNumIters(); i++) {
       distChain[i + 1] = currDist;
       simpsChain[i + 1] = currSimps;
-      IntPair p = IntPairFactory.makeRandomIdxPair(pop.size()); // STEP 1, from p1591 of Butler etal MolEcol(2004)13, p1589
+      Int2 p = IntPairFactory.makeRandomIdxPair(pop.size()); // STEP 1, from p1591 of Butler etal MolEcol(2004)13, p1589
 //         LOG.report(this, "STEP 2: (i,j)=" + p);
       CompBitSet gI = curr.getGroupByIdIdx(p.a); // STEP 2
       CompBitSet gJ = curr.getGroupByIdIdx(p.b);

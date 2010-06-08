@@ -6,7 +6,7 @@ import kingroup_v2.pop.sample.sys.SysPop;
 import tsvlib.project.ProjectLogger;
 
 import javax.utilx.bitset.CompBitSet;
-import javax.utilx.pair.IntPair;
+import javax.utilx.pair.Int2;
 import javax.utilx.pair.IntPairFactory;
 
 /**
@@ -42,7 +42,7 @@ public class SIMPS2Alg extends PartitionAlg
     double bestSimps = 0;
     for (int i = 0; i < model.getNumIters(); i++) {
       count++;
-      IntPair p = IntPairFactory.makeRandomIdxPair(pop.size()); // STEP 1, from p1591 of Butler etal MolEcol(2004)13, p1589
+      Int2 p = IntPairFactory.makeRandomIdxPair(pop.size()); // STEP 1, from p1591 of Butler etal MolEcol(2004)13, p1589
       CompBitSet gI = currPart.getGroupByIdIdx(p.a); log.info("gI=", gI); // STEP 2
       CompBitSet gJ = currPart.getGroupByIdIdx(p.b); log.info("gJ=", gJ);
       if (gI == gJ) {

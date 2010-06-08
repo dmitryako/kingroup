@@ -97,7 +97,7 @@ public class JWAlg {
       toPartition[i][2] = -1;
       toPartition[i][3] = -1;
       for (int j = 2; j < 2 + (((toPartition[i].length - 4) / 2)); j++) {
-        // [dk20060509] changed IntPairSorted to IntPair
+        // [dk20060509] changed IntPairSorted to Int2
         p = pop.getAllelePair((short) i, (int) (j - 2));
         toPartition[i][j * 2] = p.a + 1;
         toPartition[i][j * 2 + 1] = p.b + 1;

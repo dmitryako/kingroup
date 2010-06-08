@@ -1,6 +1,6 @@
 package jm.papers.jm2005_shifted;
 import jm.angular.Spin;
-import jm.atom.SlaterLCR;
+import jm.atom.SlaterLcr;
 import jm.atom.SlaterLR;
 import jm.atom.SlaterR;
 import jm.atom.SysOneE;
@@ -28,8 +28,8 @@ public class LogCRZetaHy extends LogCRTestCase {
     junit.textui.TestRunner.run(suite());
   }
   public void test_Hy_1S_LogCR() {
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     valarray r = xToR;
 
     // WF
@@ -46,7 +46,7 @@ public class LogCRZetaHy extends LogCRTestCase {
     ShellLS LS = new ShellLS(L, Spin.ELECTRON);
     Shell sh = new Shell(1, f, 1, LS.L, LS);
     ShellConfig fc = new ShellConfig(sh);
-    SlaterLCR slater = new SlaterLCR(w);
+    SlaterLcr slater = new SlaterLcr(w);
     SysOneE sys = new SysOneE(-1., slater);
     double kin = sys.calcKin(fc, fc);
     assertAndView("Hy kin(LogCR)=", testKin - kin, 4e-11);

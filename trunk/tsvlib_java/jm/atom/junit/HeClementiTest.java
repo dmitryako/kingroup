@@ -3,12 +3,12 @@ import Jama.EigenvalueDecomposition;
 import jm.JMatrix;
 import jm.angular.Spin;
 import jm.atom.HMtrx;
-import jm.atom.SlaterLCR;
+import jm.atom.SlaterLcr;
 import jm.atom.SysTwoE;
 import jm.atom.coulomb.CoulombWFFactory;
-import jm.grid.TransLogCRToR;
-import jm.grid.WFQuadrLogCR;
-import jm.laguerre.LagrrLogCR;
+import jm.grid.TransLcrToR;
+import jm.grid.WFQuadrLcr;
+import jm.laguerre.JmLagrrOrthLcr;
 import jm.shell.*;
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -25,9 +25,9 @@ import javax.vecmathx.grid.StepGrid;
  * Copyright KinGroup Team.
  * User: jc138691, Date: 29/03/2005, Time: 17:15:59
  */
-public class HeliumClementiJUnit extends TestCase {
+public class HeClementiTest extends TestCase {
   public static Test suite() {
-    return new TestSuite(HeliumClementiJUnit.class);
+    return new TestSuite(HeClementiTest.class);
   }
   public static void main(String[] args) {
     junit.textui.TestRunner.run(suite());
@@ -38,8 +38,8 @@ public class HeliumClementiJUnit extends TestCase {
     int NUM_STEPS = 261;
     double LAST = 7; // exp(7) = 1096
     StepGrid x = new StepGrid(FIRST, LAST, NUM_STEPS);
-    WFQuadrLogCR wCR = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = wCR.getLogCRToR();
+    WFQuadrLcr wCR = new WFQuadrLcr(x);
+    TransLcrToR xToR = wCR.getLogCRToR();
     valarray r = xToR;
 
     // from p445 of Clementi Roetti, Atomic Data 14, 177 (1974)
@@ -52,7 +52,7 @@ public class HeliumClementiJUnit extends TestCase {
     ShellLS LS = new ShellLS(0, Spin.SINGLET);
     Shell sh = new Shell(1, f, 2, LS.L, LS);
     TwoEShells fc = new TwoEShells(sh);
-    SlaterLCR slater = new SlaterLCR(wCR);
+    SlaterLcr slater = new SlaterLcr(wCR);
     SysTwoE sys = new SysTwoE(-2., slater);
     double kin = sys.calcKin(fc, fc);
 //      job.addLine(CTestableDH(new CTestableD(He.calc_kin(c_1s2_He, c_1s2_He)))
@@ -76,18 +76,18 @@ public class HeliumClementiJUnit extends TestCase {
     int NUM_STEPS = 381;
     double LAST = 7; // exp(7) = 1096
     StepGrid x = new StepGrid(FIRST, LAST, NUM_STEPS);
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     int L = 0;
     double Zeff = 1.6875;// from p445 of Clementi Roetti, Atomic Data 14, 177 (1974)
     int alpha = 2 * L + 2;
     double lambda = 2. * Zeff;
     int N = 12;
-    FuncArr arr = new LagrrLogCR(xToR, N, alpha, lambda);
+    FuncArr arr = new JmLagrrOrthLcr(xToR, N, alpha, lambda);
     JMatrix.trimTailSLOW(arr);
     double res = w.calcMaxOrthonErr(arr);
     assertEquals(0, res, 2e-11);
-    SlaterLCR slater = new SlaterLCR(w);
+    SlaterLcr slater = new SlaterLcr(w);
     ShellLS LS = new ShellLS(0, Spin.SINGLET);
     SysTwoE sys = new SysTwoE(-2., slater);
 

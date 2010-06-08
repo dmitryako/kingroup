@@ -3,7 +3,7 @@ package javax.utilx.pair;
  * Copyright KinGroup Team.
  * User: jc138691, Date: 11/05/2005, Time: 08:36:03
  */
-public class IntPairSymmKey extends IntPair implements Comparable {
+public class IntPairSymmKey extends Int2 implements Comparable {
   public IntPairSymmKey(int a, int b) {
     super(a, b);
   }

@@ -3,12 +3,12 @@ import Jama.EigenvalueDecomposition;
 import jm.angular.Spin;
 import jm.atom.Energy;
 import jm.atom.HMtrx;
-import jm.atom.SlaterLCR;
+import jm.atom.SlaterLcr;
 import jm.atom.SysTwoE;
 import jm.atom.coulomb.CoulombWFFactory;
-import jm.grid.TransLogCRToR;
-import jm.grid.WFQuadrLogCR;
-import jm.laguerre.LagrrLogCR;
+import jm.grid.TransLcrToR;
+import jm.grid.WFQuadrLcr;
+import jm.laguerre.JmLagrrOrthLcr;
 import jm.shell.*;
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -35,8 +35,8 @@ public class ShiftedLogDensity extends LogCRTestCase {
     LOG.setTrace(true);
     double Z = 2;
 //      StepGrid x = new StepGrid(FIRST - Math.log(Z), NUM_STEPS, STEP);
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     valarray r = xToR;
 
     // from p445 of Clementi Roetti, Atomic Data 14, 177 (1974)
@@ -55,7 +55,7 @@ public class ShiftedLogDensity extends LogCRTestCase {
     ShellLS LS = new ShellLS(0, Spin.SINGLET);
     Shell sh = new Shell(1, f, 2, LS.L, LS);
     TwoEShells fc = new TwoEShells(sh);
-    SlaterLCR slater = new SlaterLCR(w);
+    SlaterLcr slater = new SlaterLcr(w);
     SysTwoE sys = new SysTwoE(-Z, slater);
     res = sys.calcTot(fc, fc);
     assertEquals(0, Math.abs(-2.84765625 - res), 4e-12);
@@ -68,18 +68,18 @@ public class ShiftedLogDensity extends LogCRTestCase {
   }
   public void testEnergy() {
     double Z = 2;
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     int sN = 10;
     int sAlpha = 2;
 //      double sLambda = 2 * 1.6875;
     double sLambda = 4;
     int L = 0;
     ShellLS LS = new ShellLS(0, Spin.SINGLET);
-    FuncArr arr = new LagrrLogCR(xToR, sN, sAlpha, sLambda);
+    FuncArr arr = new JmLagrrOrthLcr(xToR, sN, sAlpha, sLambda);
     double res = w.calcMaxOrthonErr(arr);
     TestCase.assertEquals(0, res, NORM_ERROR);
-    SlaterLCR slater = new SlaterLCR(w);
+    SlaterLcr slater = new SlaterLcr(w);
     SysTwoE sys = new SysTwoE(-Z, slater);
     ConfigArr currBasis = ConfigArrFactory.makeTwoElecFrom(null, LS, sN, L, arr);
     int totN = currBasis.size();

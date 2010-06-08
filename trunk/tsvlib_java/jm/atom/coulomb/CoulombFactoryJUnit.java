@@ -1,5 +1,5 @@
 package jm.atom.coulomb;
-import jm.grid.TransLogCRToR;
+import jm.grid.TransLcrToR;
 import jm.grid.TransLogRToR;
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -26,7 +26,7 @@ public class CoulombFactoryJUnit extends TestCase {
     double FIRST = -4;
     double STEP = 1. / 16.;
     StepGrid x = new StepGrid(FIRST, NUM_STEPS, STEP);
-    TransLogCRToR logCR = new TransLogCRToR(x);
+    TransLcrToR logCR = new TransLcrToR(x);
     TransLogRToR logR = new TransLogRToR(x);
     valarray r = logR;
     BooleQuadr w = new BooleQuadr(x);
@@ -51,7 +51,7 @@ public class CoulombFactoryJUnit extends TestCase {
     double FIRST = -4;
     double STEP = 1. / 16.;
     StepGrid x = new StepGrid(FIRST, NUM_STEPS, STEP);
-    TransLogCRToR logCR = new TransLogCRToR(x);
+    TransLcrToR logCR = new TransLcrToR(x);
     valarray r = logCR;
     BooleQuadr w = new BooleQuadr(x);
     FuncVec f = CoulombWFFactory.makeP2s(r, 1.); // by log(c+r)
@@ -78,7 +78,7 @@ public class CoulombFactoryJUnit extends TestCase {
     double FIRST = -4;
     double STEP = 1. / 16.;
     StepGrid x = new StepGrid(FIRST, NUM_STEPS, STEP);
-    TransLogCRToR logCR = new TransLogCRToR(x);
+    TransLcrToR logCR = new TransLcrToR(x);
     valarray r = logCR;
     BooleQuadr w = new BooleQuadr(x);
     FuncVec f = CoulombWFFactory.makeP3s(r, 1.); // by log(c+r)

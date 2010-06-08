@@ -41,9 +41,9 @@ public class LagrrOrthonTest extends TestCase {
     int N = 4;
     int alpha = 2 * L + 2;
     double lambda = 0.7;
-    FuncArr arr = new LagrrOrthon(r, N, alpha, lambda);
-    FuncArr arS = new LagrrOrthon(rS, N, alpha, lambda);
-    FuncArr arX = new LagrrOrthon(xToR, N, alpha, lambda);
+    FuncArr arr = new LagrrOrth(r, N, alpha, lambda);
+    FuncArr arS = new LagrrOrth(rS, N, alpha, lambda);
+    FuncArr arX = new LagrrOrth(xToR, N, alpha, lambda);
     double res = FastLoop.dot(arr.get(0), arr.get(0), w);
     double resX = FastLoop.dot(arX.get(0), arX.get(0), wx, xToR);
     double resS = FastLoop.dot(arS.get(0), arS.get(0), wS);

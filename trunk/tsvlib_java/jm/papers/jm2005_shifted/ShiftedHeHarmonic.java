@@ -3,10 +3,10 @@ import Jama.EigenvalueDecomposition;
 import jm.angular.Spin;
 import jm.atom.HMtrx;
 import jm.atom.Helium;
-import jm.atom.SlaterLCR;
+import jm.atom.SlaterLcr;
 import jm.atom.SysTwoE;
-import jm.grid.TransLogCRToR;
-import jm.grid.WFQuadrLogCR;
+import jm.grid.TransLcrToR;
+import jm.grid.WFQuadrLcr;
 import jm.harmonic.HarmonicLogCR;
 import jm.shell.ConfigArr;
 import jm.shell.ConfigArrFactory;
@@ -79,8 +79,8 @@ public class ShiftedHeHarmonic extends LogCRTestCase {
     , String fileName2) {
 //      StepGrid x = new StepGrid(FIRST - Math.log(Z), NUM_STEPS, STEP);
     StepGrid x = new StepGrid(FIRST, NUM_STEPS, STEP);
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     DoubleArrayList arrDiff = new DoubleArrayList();
     DoubleArrayList arrE = new DoubleArrayList();
     DoubleArrayList arrN = new DoubleArrayList();
@@ -97,7 +97,7 @@ public class ShiftedHeHarmonic extends LogCRTestCase {
         FuncArr arr = new HarmonicLogCR(xToR, N, L, beta);
         res = w.calcMaxOrthonErr(arr);
         TestCase.assertEquals(0, res, NORM_ERROR);
-        SlaterLCR slater = new SlaterLCR(w);
+        SlaterLcr slater = new SlaterLcr(w);
         SysTwoE sys = new SysTwoE(-Z, slater);
         currBasis = ConfigArrFactory.makeTwoElecFrom(cumBasis, LS, N, L, arr);
         int totN = currBasis.size();

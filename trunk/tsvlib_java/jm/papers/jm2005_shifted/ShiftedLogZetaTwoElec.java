@@ -1,11 +1,11 @@
 package jm.papers.jm2005_shifted;
 import jm.JMatrix;
 import jm.angular.Spin;
-import jm.atom.SlaterLCR;
+import jm.atom.SlaterLcr;
 import jm.atom.SysTwoE;
 import jm.atom.coulomb.CoulombWFFactory;
-import jm.grid.TransLogCRToR;
-import jm.grid.WFQuadrLogCR;
+import jm.grid.TransLcrToR;
+import jm.grid.WFQuadrLcr;
 import jm.shell.Shell;
 import jm.shell.ShellLS;
 import jm.shell.TwoEShells;
@@ -56,8 +56,8 @@ public class ShiftedLogZetaTwoElec extends LogCRTestCase {
   }
   public double calcTotEnergyLogCR(double Z, double zeta) {
     StepGrid x = new StepGrid(FIRST - Math.log(Z), NUM_STEPS, STEP);
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     valarray r = xToR;
 
     // WF
@@ -71,7 +71,7 @@ public class ShiftedLogZetaTwoElec extends LogCRTestCase {
     ShellLS LS = new ShellLS(L, Spin.SINGLET);
     Shell sh = new Shell(1, f, 2, LS.L, LS);
     TwoEShells fc = new TwoEShells(sh);
-    SlaterLCR slater = new SlaterLCR(w);
+    SlaterLcr slater = new SlaterLcr(w);
     SysTwoE sys = new SysTwoE(-Z, slater);
     return sys.calcTot(fc, fc);
   }
@@ -79,8 +79,8 @@ public class ShiftedLogZetaTwoElec extends LogCRTestCase {
     double testPot = 2 * testTot;
     double testKin = -testTot;
     StepGrid x = new StepGrid(FIRST - Math.log(Z), NUM_STEPS, STEP);
-    WFQuadrLogCR w = new WFQuadrLogCR(x);
-    TransLogCRToR xToR = w.getLogCRToR();
+    WFQuadrLcr w = new WFQuadrLcr(x);
+    TransLcrToR xToR = w.getLogCRToR();
     valarray r = xToR;
 
     // WF
@@ -92,7 +92,7 @@ public class ShiftedLogZetaTwoElec extends LogCRTestCase {
     ShellLS LS = new ShellLS(L, Spin.SINGLET);
     Shell sh = new Shell(1, f, 2, LS.L, LS);
     TwoEShells fc = new TwoEShells(sh);
-    SlaterLCR slater = new SlaterLCR(w);
+    SlaterLcr slater = new SlaterLcr(w);
     SysTwoE sys = new SysTwoE(-Z, slater);
     double tot = sys.calcTot(fc, fc);
     double kin = sys.calcKin(fc, fc);

@@ -96,8 +96,8 @@ public class KingroupFrame extends ProjectFrame {
 //    addMenuFSRLowerBound(menu);
 
     // MENU | SETTINGS
-//    menu = addMenuSettings();
-//    addMenuLookFeel(menu, model);
+    menu = addMenuSettings();
+    addMenuLookFeel(menu, model);
 
     // MENU | TOOLS
 //    menu = addMenuTools();

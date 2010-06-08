@@ -9,7 +9,7 @@ import javax.utilx.RandomSeed;
 public class IntPairFactory
 {
   private static final int LOOP_COUNT_LIMIT = 100;
-  public static IntPair makeRandomIdxPair(int size) {
+  public static Int2 makeRandomIdxPair(int size) {
     RandomSeed rand = RandomSeed.getInstance();
     int a = rand.nextInt(size);
     int b = rand.nextInt(size);
@@ -19,6 +19,6 @@ public class IntPairFactory
       if (count++ > LOOP_COUNT_LIMIT)
         throw new RuntimeException("count > LOOP_COUNT_LIMIT");
     }
-    return new IntPair(a, b);
+    return new Int2(a, b);
   }
 }

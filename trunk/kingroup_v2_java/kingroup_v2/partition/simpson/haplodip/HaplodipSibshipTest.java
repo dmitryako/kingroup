@@ -3,7 +3,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-import javax.utilx.pair.IntPair;
+import javax.utilx.pair.Int2;
 import javax.utilx.pair.IntPairSymmKey;
 import java.util.LinkedList;
 import java.util.TreeSet;
@@ -22,24 +22,24 @@ public class HaplodipSibshipTest extends TestCase {
     LinkedList pA = new LinkedList();
     LinkedList pB = new LinkedList();
     pA.add(new Integer(0));
-    pB.add(new IntPair(1, -1));
-    IntPair newPair = new IntPair(4, 0);
+    pB.add(new Int2(1, -1));
+    Int2 newPair = new Int2(4, 0);
     assertEquals(true, HaplodipSibship.makeParents(newPair, pA, pB));
   }
   public void testMakeParents_41() {
     LinkedList pA = new LinkedList();
     LinkedList pB = new LinkedList();
     pA.add(new Integer(0));
-    pB.add(new IntPair(1, -1));
-    IntPair newPair = new IntPair(4, 1);
+    pB.add(new Int2(1, -1));
+    Int2 newPair = new Int2(4, 1);
     assertEquals(false, HaplodipSibship.makeParents(newPair, pA, pB));
   }
   public void testMakeParents_00() {
     LinkedList pA = new LinkedList();
     LinkedList pB = new LinkedList();
     pA.add(new Integer(0));
-    pB.add(new IntPair(1, -1));
-    IntPair newPair = new IntPair(0, 0);
+    pB.add(new Int2(1, -1));
+    Int2 newPair = new Int2(0, 0);
     assertEquals(true, HaplodipSibship.makeParents(newPair, pA, pB));
   }
   public void testMakeParents2_f() {

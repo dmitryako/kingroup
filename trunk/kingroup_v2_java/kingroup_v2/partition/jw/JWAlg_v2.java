@@ -261,7 +261,7 @@ public class JWAlg_v2
       }
       buf.append("    -1  -1");
       for (int j = 0; j < pop.getNumLoci(); j++) {
-        // [dk20060509] changed IntPairSorted to IntPair
+        // [dk20060509] changed IntPairSorted to Int2
         p = pop.getAllelePair(i, j);
         buf.append("   ").append(p.a + 1).append(" ").append(p.b + 1);
       }
