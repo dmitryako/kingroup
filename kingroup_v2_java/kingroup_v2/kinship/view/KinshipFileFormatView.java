@@ -84,7 +84,7 @@ public class KinshipFileFormatView extends GridBagView {
     patIdCol = new IntField(FIELD_SIZE, 1, 100);
 
     locusCol = new IntField(FIELD_SIZE, 1, 100);
-    nLoci = new IntField(FIELD_SIZE, 1, 100);
+    nLoci = new IntField(FIELD_SIZE, 1, 1000);
 
     freqNorm = new JCheckBox("Display normalized");
     freqNorm.setToolTipText("Frequencies are normalized to 1.0");
