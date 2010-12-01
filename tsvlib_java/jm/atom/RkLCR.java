@@ -1,5 +1,5 @@
 package jm.atom;
-import jm.grid.WFQuadrLogCR;
+import jm.grid.WFQuadrLcr;
 import stlx.FastLoop;
 import stlx.valarrayx.valarray;
 
@@ -14,9 +14,9 @@ import javax.vecmathx.function.FuncVec;
 //                     0  0
 // = INTL dr P(a; r) P(a2; r) 1/r Y(b, b2, K, r); NOTE 1/r!!!
 //  U^k(r,s) = y^k/x^(k+1)   y = min(r,s)   x = max(r,s)
-public class RkLCR {
-  public static double calcRkLogCR(WFQuadrLogCR w, valarray a, valarray b, valarray a2, valarray b2, int K) {
-    FuncVec yk = new YkLogCR(w.getLogCRToR(), b, b2, K).calcYk();
+public class RkLcr {
+  public static double calc(WFQuadrLcr w, valarray a, valarray b, valarray a2, valarray b2, int K) {
+    FuncVec yk = new YkLcr(w.getLogCRToR(), b, b2, K).calcYk();
     double res = FastLoop.dot(a, a2, yk, w.getWithCR2DivR());
     return res;
 //      return 0;
